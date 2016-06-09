@@ -14,10 +14,8 @@
     padding: 20px;
 }
 
-
-.todo .todo {width:50em;} 
-
 .todo {
+    width:50em;
     padding: 10px;
     font-size: 16px;
     border-bottom: 1px solid;
