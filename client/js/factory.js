@@ -18,5 +18,11 @@ todoApp.factory('todosFactory', function($http) {
     return $http.delete(urlBase + '/' + id);
   };
 
+//kps 04/06/16
+   _todoService.blogTodo = function(id) {
+    return $http.get(urlBase+ '/' + id);
+    alert(urlBase+ '/' + id);
+  };
+
   return _todoService;
 });

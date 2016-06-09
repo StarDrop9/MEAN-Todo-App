@@ -13,7 +13,7 @@
 }
 .todo {
     padding: 10px;
-    font-size: 21px;
+    font-size: 14px;
     border-bottom: 1px solid;
 }
 .todo .btn {
@@ -28,7 +28,7 @@
         margin-bottom: 10px;
     }
     .todo input[type=checkbox] {
-        width: 25px;
+        width: 10px;
         height: 25px;
     }
 }
