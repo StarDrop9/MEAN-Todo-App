@@ -10,15 +10,13 @@
 }
 
 
-textarea {
-    width: 50em;
-    height: 1em;
-}
-
-
 .todos {
     padding: 20px;
 }
+
+
+.todo .text {width:50em;} 
+
 .todo {
     padding: 10px;
     font-size: 16px;
