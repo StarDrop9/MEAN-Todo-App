@@ -8,12 +8,20 @@
     text-decoration: line-through;
     color: #ccc;
 }
+
+
+textarea {
+    width: 50em;
+    height: 1em;
+}
+
+
 .todos {
     padding: 20px;
 }
 .todo {
     padding: 10px;
-    font-size: 14px;
+    font-size: 16px;
     border-bottom: 1px solid;
 }
 .todo .btn {
