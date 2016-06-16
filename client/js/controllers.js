@@ -3,7 +3,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.todos = [];
   $scope.isEditable = [];
 
-  // get all Todos on Load
+  // get all Todos on Load would like to add label and priority focus for loads
   todosFactory.getTodos().then(function(data) {
     $scope.todos = data.data;
   });
