@@ -62,6 +62,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   // Delete a Todo
   $scope.delete = function(i) {
     todosFactory.deleteTodo($scope.todos[i]._id).then(function(data) {
+      alert(i);
       if (data.data) {
         $scope.todos.splice(i, 1);
       }
@@ -71,7 +72,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
 // Blog a Todo kps 04/06/16
  $scope.blogTodo = function($event, i) {
-    //alert(i);
+    alert(i);
    
 
     todosFactory.blogTodo($scope.todos[i]._id).then(function(data) {
