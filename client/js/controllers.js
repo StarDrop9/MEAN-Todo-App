@@ -70,8 +70,8 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
 
 // Blog a Todo kps 04/06/16
- $scope.blogit = function($event, i) {
-    alert(i);
+ $scope.blogTodo = function($event, i) {
+    //alert(i);
    
 
     todosFactory.blogTodo($scope.todos[i]._id).then(function(data) {
