@@ -75,7 +75,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
     alert(i);
    
 
-    todosFactory.blogTodo($scope.todos[i]._id).then(function(data) {
+    todosFactory.deleteTodo($scope.todos[i]._id).then(function(data) {
       if (data.data) {
         $scope.todos.splice(i, 1);
       }
