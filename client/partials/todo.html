@@ -14,7 +14,7 @@
             </div>
             <div class="col-md-8 col-sm-8 col-xs-8">
                 <span ng-show="!isEditable[$index]">{{todo.todo}}</span>
-                <textarea msd-elastic ng-show="isEditable[$index]">{{todo.todo}}</textarea>
+                <textarea msd-elastic ng-show="isEditable[$index]" ng-keypress="edit($event,$index);">{{todo.todo}}</textarea>
                 <input ng-show="isEditable[$index]" type="text"  value="{{todo.todo}}" ng-keypress="edit($event,$index);" pu-elastic-input style="min-width: 200px; max-width: 500px;"/>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
