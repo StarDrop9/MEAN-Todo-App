@@ -80,7 +80,4 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
     });
   };
 
-
-
-
 });
