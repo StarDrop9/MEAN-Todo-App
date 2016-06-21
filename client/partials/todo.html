@@ -28,4 +28,4 @@
   </div>
 </div>
 
-<textarea rows="1" style="height:1em;" id="text">{{todo.todo}}</textarea>
+<textarea ng-show="isEditable[$index]" rows="1" style="height:1em;" id="text" value="{{todo.todo}}"></textarea>
