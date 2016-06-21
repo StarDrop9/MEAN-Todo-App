@@ -21,9 +21,8 @@ todoApp.factory('todosFactory', function($http) {
 
 //kps 04/06/16
    _todoService.blogTodo = function(id) {
-    alert(urlHome);
-   return $http.get(urlHome);
-    
+   // alert(urlHome);
+   return $http.get(urlHome + '/' + id)    
   };
 
   return _todoService;
