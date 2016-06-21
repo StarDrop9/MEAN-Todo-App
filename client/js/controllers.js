@@ -82,3 +82,9 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   };
 
 });
+
+
+
+ todoApp.controller('homeCtrl', function($scope) {
+            $scope.message = "This page will be used to display all the students";
+         });
