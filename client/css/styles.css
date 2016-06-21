@@ -69,9 +69,12 @@
 }
 
 
+
 textarea {
-  box-sizing: border-box;
-  max-height: 94px; /* optional, but recommended */
-  min-height: 31px;
-  overflow-x: hidden; /* for Firefox (issue #5) */
+    border: 0 none white;
+    overflow: hidden;
+    padding: 0;
+    outline: none;
+    background-color: lightgray;
+    resize: none;
 }
