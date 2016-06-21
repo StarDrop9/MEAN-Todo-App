@@ -73,7 +73,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 // Blog a Todo kps 04/06/16
  $scope.blogTodo = function(i) {
    alert(i);
-  todosFactory.deleteTodo($scope.todos[i]._id).then(function(data) {
+  todosFactory.getTodos($scope.todos[i]._id).then(function(data) {
       //alert(i);
       if (data.data) {
         $scope.todos[i];
