@@ -1,4 +1,4 @@
-todoApp = angular.module('todoApp', ['ngRoute'],['puElasticInput'])
+todoApp = angular.module('todoApp', ['ngRoute'])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
