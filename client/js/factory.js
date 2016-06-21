@@ -1,7 +1,7 @@
 todoApp.factory('todosFactory', function($http) {
   var urlBase = '/api/todos';
   var _todoService = {};
-  var urlHome = '/home' 
+  var urlHome = '/home'; 
 
   _todoService.getTodos = function() {
     return $http.get(urlBase);
