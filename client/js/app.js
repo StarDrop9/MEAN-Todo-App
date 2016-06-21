@@ -10,6 +10,6 @@ todoApp = angular.module('todoApp', ['ngRoute','puElasticInput','monospaced.elas
         controller: 'TodoCtrl'
 
       }).otherwise({
-        redirectTo: '/'
+        redirectTo: '/home'
       });
   });
