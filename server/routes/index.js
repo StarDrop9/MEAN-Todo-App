@@ -16,7 +16,7 @@
 /* GET Home page. */
 
 router.get('/home', function(req, res) {
-    res.render('index');
+    res.render('home');
   });
   
 
