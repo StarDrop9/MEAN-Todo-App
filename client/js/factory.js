@@ -1,6 +1,7 @@
 todoApp.factory('todosFactory', function($http) {
   var urlBase = '/api/todos';
   var _todoService = {};
+  var urlHome = '/home' 
 
   _todoService.getTodos = function() {
     return $http.get(urlBase);
@@ -21,7 +22,7 @@ todoApp.factory('todosFactory', function($http) {
 //kps 04/06/16
    _todoService.blogTodo = function(id) {
    // alert(urlBase+ '/' + id);
-   return $http.get(urlBase);
+   return $http.get(urlHome);
     
   };
 
