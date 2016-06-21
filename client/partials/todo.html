@@ -13,7 +13,7 @@
                 <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
             </div>
             <div class="col-md-8 col-sm-8 col-xs-8">
-                <span ng-show="!isEditable[$index]">{{todo.todo}}</span>
+               // <span ng-show="!isEditable[$index]">{{todo.todo}}</span>
                 <input ng-show="isEditable[$index]" type="text"  value="{{todo.todo}}" ng-keypress="edit($event,$index);" pu-elastic-input style="min-width: 200px; max-width: 500px;"/>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
