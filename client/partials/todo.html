@@ -5,6 +5,10 @@
         </div>   
     <div class="row col-md-12">
         <div>
+          
+        <span id="selected">Selected colour: <b style="color: {{colour.hex}}">{{colour.hex}}</b></span>
+        <dropdown placeholder="Colour..." list="colours" property="name" selected="colour"></dropdown>
+
             <textarea msd-elastic  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event)" ng-model="todoInput" style="min-width: 400px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>       
         </div>
     </div>
