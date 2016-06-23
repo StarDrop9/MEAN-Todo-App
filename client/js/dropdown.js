@@ -1,6 +1,6 @@
 var app = angular.module("demo", []);
 
-            app.controller("dropdownDemo", function($scope) {
+        app.controller("dropdownDemo", function($scope) {
         $scope.colours = [{
           name: "Red",
           hex: "#F21B1B"
