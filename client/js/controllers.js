@@ -86,8 +86,3 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
 
 
-homApp.controller('homeCtrl', function($rootScope, $scope) {
-
-message ="Hello World"
-
-}
