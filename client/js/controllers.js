@@ -10,15 +10,17 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
   // Save a Todo to the server
   $scope.save = function($event) {
-    if ($event.which == 13 && $scope.todoInput) {
+    if ($event.which == 13 && $scope.todoInput && $scope.todo.labelInput) {
 
       todosFactory.saveTodo({
         "todo": $scope.todoInput,
+        "todo.label": $scope.todo.labelInput,
         "isCompleted": false
       }).then(function(data) {
         $scope.todos.push(data.data);
       });
       $scope.todoInput = '';
+      $scope.todolabel.Input = '';
     }
   };
 
