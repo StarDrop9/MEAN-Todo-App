@@ -1,4 +1,4 @@
-todoApp = angular.module('todoApp', ['ngRoute','puElasticInput','monospaced.elastic','label-selection'])
+todoApp = angular.module('todoApp', ['ngRoute','puElasticInput','monospaced.elastic'])
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
@@ -14,7 +14,4 @@ todoApp = angular.module('todoApp', ['ngRoute','puElasticInput','monospaced.elas
       });
   });
 
-  var label = angular.module('label-selection',[]);
-  label.controller('label-controller', function($scope){
-    $scope.labels = ["Magnetism", "Electricity", "Coding", "AngularJS"];
-    });
+ 

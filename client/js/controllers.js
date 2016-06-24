@@ -1,7 +1,6 @@
 todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
   $scope.todos = [];
-  $scope.labels = [];
   $scope.isEditable = [];
 
   // get all Todos on Load would like to add label and priority focus for loads
@@ -11,18 +10,16 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
   // Save a Todo to the server
   $scope.save = function($event) {
-    if ($event.which == 13 && $scope.todoInput && $scope.labelInput) {
+    if ($event.which == 13 && $scope.todoInput) {
 
       todosFactory.saveTodo({
         "todo": $scope.todoInput,
-        "label": $scope.labelInput,
         "isCompleted": false
       }).then(function(data) {
         $scope.todos.push(data.data);
       });
       $scope.todoInput = '';
-      $scope.labelInput = '';
-    }
+      }
   };
 
   //update the status of the Todo
