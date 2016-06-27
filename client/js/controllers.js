@@ -86,8 +86,8 @@ $scope.image = "/pics/JackiesLionSm.png";
 
 
 $scope.templates =
-      [ { name: 'template1.html', url: 'partials/homep.html'},
-        { name: 'template2.html', url: 'partials/todo.html'} ];
+      [ { name: 'template1.html', url: '/partials/homep.html'},
+        { name: 'template2.html', url: '/partials/todo.html'} ];
     $scope.template = $scope.templates[0];
 
 });

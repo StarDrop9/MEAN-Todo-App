@@ -4,14 +4,14 @@ todoApp = angular.module('todoApp', ['ngRoute','puElasticInput','monospaced.elas
       .when('/', {
         templateUrl: '/partials/todo.html',
         controller: 'TodoCtrl'
-
-      }).when('/home', {
-        templateUrl: '/partials/homep.html',
-        controller: 'homeCtrl'
-
-      }).otherwise({
-        redirectTo: '/home'
-      });
+        })
+       .when("/home", { 
+        templateUrl: "partials/homep.html", 
+        controller: "homeCtrl"
+        }) 
+       .otherwise({
+        redirectTo: '/'
+        });
   });
 
  
