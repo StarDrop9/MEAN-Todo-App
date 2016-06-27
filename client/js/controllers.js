@@ -83,5 +83,9 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
 });
 
-
+ todoApp.controller('imagesController', function($scope) {
+  $scope.image = [{
+    src: 'client/pics/JackiesLionSm.png',
+  }];
+});
 

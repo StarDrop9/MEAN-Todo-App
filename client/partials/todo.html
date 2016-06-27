@@ -1,10 +1,12 @@
 <div class="container" ng-controller="TodoCtrl">
     <div class="row col-md-12">
         <div>
+
             <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
         </div>   
     <div class="row col-md-12">
         <div>
+            <img ng-src="{{image[0].src}}"/>
             <textarea msd-elastic  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event)" ng-model="todoInput" style="min-width: 300px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>
         </div>
     </div>
