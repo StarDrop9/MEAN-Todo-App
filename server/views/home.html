@@ -6,6 +6,9 @@
    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
+<!-- added 06/27/2016 -->
+  <link rel="stylesheet" type="text/css" href="/css/animations.css">
+
   <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
   <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
   <script type="text/javascript" src="/lib/jquery/dist/jquery.js"></script>
@@ -15,6 +18,10 @@
   <script type="text/javascript" src="/js/factory.js"></script>
   <script type="text/javascript" src="/js/controllers.js"></script>
 
+<!-- added 06/27/2016 -->
+<script type="text/javascript" src="/js/protractor.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+
 </head>
 
 <body>
@@ -22,8 +29,20 @@
   <div class="container">
          <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Home Sweet Home!</h1>
     <hr/>
-    <ng-view></ng-view>
+   </div>
+
+   <div>
+   <select ng-model="template" ng-options="t.name for t in templates">
+   <option value="">(blank)</option>
+  </select>
+  url of the template: <code>{{template.url}}</code>
+  <hr/>
+  <div class="slide-animate-container">
+    <div class="slide-animate" ng-include="template.url"></div>
   </div>
+  </div>
+
+
 
   <!-- Live reload script -->
   <!-- <script type="text/javascript" src="http://localhost:35729/livereload.js"></script> -->
