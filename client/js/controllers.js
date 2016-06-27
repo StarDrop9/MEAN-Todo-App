@@ -82,7 +82,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   };
 
 
-$scope.image = "https://www.google.com/images/srpr/logo11w.png";
+$scope.image = "/pics/JackiesLionSm.png";
 
 
 
