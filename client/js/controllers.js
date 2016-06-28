@@ -92,3 +92,8 @@ $scope.templates =
 
 });
 
+todoApp.controller('badCtrl', function($scope) {
+  var badFeelings = ["Disregarded", "Unimportant", "Rejected", "Powerless"];
+
+  $scope.bad = badFeelings[Math.floor((Math.random() * 4))];
+});
