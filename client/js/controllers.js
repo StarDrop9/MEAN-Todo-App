@@ -103,8 +103,4 @@ todoApp.controller('homeCtrl', function($scope) {
   $scope.message = Messages[Math.floor((Math.random() * 4))];
 });
 
-
-todoApp.controller('TodoFiltrCtrl', function($rootScope, $scope, todosFactory) {
-   todosFactory.getTodos().then(function(data) {
-    $scope.todos = data.data;
-  });
+  
