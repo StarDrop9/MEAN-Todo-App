@@ -99,5 +99,5 @@ todoApp.controller('homeCtrl', function($scope) {
 
   
 label.controller('label-controller', function($scope){
-    $scope.labels = ["Brief", "Postkarte", "Infopost", "Büchersendung", "Warensendung", "PZA" ,"Päckchen", "Blindensendung"];
+    $scope.labels = ["Brief", "Debrief", "Infopost", "Magnetism", "Electricity", "Todo" ,"Idea", "Tech Scouting"];
     });
