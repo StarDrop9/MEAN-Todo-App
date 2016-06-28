@@ -6,7 +6,7 @@ todoApp = angular.module('todoApp', ['ngRoute','puElasticInput','monospaced.elas
         controller: 'TodoCtrl'
         })
        .when("/home", { 
-        templateUrl: "partials/homep.html", 
+        templateUrl: "/partials/homep.html", 
         controller: "homeCtrl"
         }) 
        .otherwise({

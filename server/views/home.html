@@ -59,8 +59,16 @@
 <h4 ng-controller="homeCtrl">{{message}}</h4>
 
 
+<Div ng-controller="TodoFiltrCtrl">
 
-
+<!-- ng-repeat-start and ng-repeat-end allow us to use ng-repeat on 2 elements rather then on just one -->
+      <table>
+      <tr ng-repeat="todo in todos">
+        <td>
+          {{{{todo.todo}}}}
+        </td>
+      </table>
+</Div>
   <!-- <ng-view></ng-view>-->
 
   <!-- Live reload script -->
