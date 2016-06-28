@@ -26,15 +26,8 @@
 -->
 </head>
 <body>
-  <body ng-controller="TodoCtrl">
-
-  <div class="container">
-         <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Home Sweet Home!</h1>
-    <hr/>
-  </div>
- <div>
-  <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
-  </div> 
+  <body>
+  
  <!-- 
  <div>
    <select ng-model="template" ng-options="t.name for t in templates">
@@ -50,6 +43,11 @@
 -->
 
 <div class="container" ng-controller="TodoCtrl">
+   <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Home Sweet Home!</h1>
+    <hr/>
+  <div>
+  <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
+  </div> 
   <h4 ng-controller="homeCtrl">{{message}}</h4>
      <div class="row col-md-12 todos">
       <table>
