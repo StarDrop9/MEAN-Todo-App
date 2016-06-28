@@ -51,7 +51,8 @@
   <h4 ng-controller="homeCtrl">{{message}}</h4>
      <div class="row col-md-12 todos">
       <table>
-      <tr ng-repeat="todo in todos">
+      <tr ng-repeat="todo in todos" ng-class-even="'stripedblue'"
+      ng-class-odd="'stripedbeige'">
         <td>
           {{todo.todo}}
         </td>
