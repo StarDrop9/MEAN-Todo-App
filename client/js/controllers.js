@@ -84,18 +84,11 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
 $scope.image = "/pics/JackiesLionSm.png";
 
-
 $scope.templates =
       [ { name: 'template1.html', url: '/partials/homep.html'},
         { name: 'template2.html', url: '/partials/todo.html'} ];
     $scope.template = $scope.templates[0];
 
-});
-
-
-todoApp.controller('badCtrl', function($scope) {
-  var badFeelings = ["Disregarded", "Unimportant", "Rejected", "Powerless"];
-  $scope.bad = badFeelings[Math.floor((Math.random() * 4))];
 });
 
 todoApp.controller('homeCtrl', function($scope) {
