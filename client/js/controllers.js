@@ -20,6 +20,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
         $scope.todos.push(data.data);
       });
       $scope.todoInput = '';
+      $scope.choosenLabel = '';
       }
   };
 
