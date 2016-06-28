@@ -47,8 +47,7 @@
 </div>
 -->
 <h4 ng-controller="homeCtrl">{{message}}</h4>
-
-<!-- ng-repeat-start and ng-repeat-end allow us to use ng-repeat on 2 elements rather then on just one -->
+<div class="container" ng-controller="TodoCtrl">
      <div class="row col-md-12 todos">
       <table>
       <tr ng-repeat="todo in todos">
@@ -57,6 +56,7 @@
         </td>
       </table>
     </div>
+  </div>
   <!-- <ng-view></ng-view> try ng-include -->
 
   <!-- Live reload script -->
