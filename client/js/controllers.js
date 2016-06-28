@@ -15,7 +15,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
       todosFactory.saveTodo({
         "todo": $scope.todoInput,
         "isCompleted": false,
-        "label": true
+        "label": choosenLabel
       }).then(function(data) {
         $scope.todos.push(data.data);
       });
