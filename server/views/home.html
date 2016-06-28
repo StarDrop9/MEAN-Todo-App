@@ -5,11 +5,9 @@
   <title>Home Page</title>
    <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
-
 <!-- added 06/27/2016
   <link rel="stylesheet" type="text/css" href="/css/animations.css">
  -->
- 
   <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
   <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
   <script type="text/javascript" src="/lib/jquery/dist/jquery.js"></script>
@@ -26,9 +24,7 @@
 <script type="text/javascript" src="/js/protractor.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
 -->
-
 </head>
-
 <body>
   <body ng-controller="TodoCtrl">
 
@@ -36,7 +32,6 @@
          <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Home Sweet Home!</h1>
     <hr/>
   </div>
-
 
  <!-- 
  <div>
@@ -52,13 +47,16 @@
 </div>
 -->
 <h4 ng-controller="homeCtrl">{{message}}</h4>
+
 <!-- ng-repeat-start and ng-repeat-end allow us to use ng-repeat on 2 elements rather then on just one -->
+     <div class="row col-md-12 todos">
       <table>
       <tr ng-repeat="todo in todos">
         <td>
           {{todo.todo}}
         </td>
       </table>
+    </div>
   <!-- <ng-view></ng-view> try ng-include -->
 
   <!-- Live reload script -->
