@@ -97,3 +97,10 @@ todoApp.controller('badCtrl', function($scope) {
 
   $scope.bad = badFeelings[Math.floor((Math.random() * 4))];
 });
+
+
+
+todoApp.controller('homeCtrl', function($scope) {
+  var Messages = ["Welcome Home", "By, by baby good by","Now is the time for all good men","To come to the aid of the country"];
+  $scope.message = Messages[Math.floor((Math.random() * 4))];
+});
