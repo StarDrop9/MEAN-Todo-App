@@ -8,7 +8,7 @@
     <select ng-model="choosenLabel" ng-options="x for x in labels"></select>
      </div>
         <div>
-            <textarea msd-elastic  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event)" ng-model="todoInput" style="min-width: 300px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>
+            <textarea  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event)" ng-model="todoInput" style="min-width: 300px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>
         </div>
     </div>
     <div class="row col-md-12 todos">
@@ -21,7 +21,7 @@
             </div>
             <div class="col-md-8 col-sm-8 col-xs-8">
                 <span ng-show="!isEditable[$index]">{{todo.todo}}</span>
-                <textarea msd-elastic ng-show="isEditable[$index]" ng-keypress="edit($event,$index);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
+                <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
             <div class="col-md-3 col-sm-3 col-xs-3">
