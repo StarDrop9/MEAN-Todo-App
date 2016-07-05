@@ -1,4 +1,4 @@
-todoApp.controller('TodoCtrl','labelInput', function($rootScope, $scope, todosFactory) {
+todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
   $scope.todos = [];
   $scope.isEditable = [];
@@ -11,7 +11,7 @@ todoApp.controller('TodoCtrl','labelInput', function($rootScope, $scope, todosFa
   // Save a Todo to the server
   $scope.save = function($event) {
     if ($event.which == 13 && $scope.todoInput) {
-      todosFactory.saveTodo({
+      todosFactory.saveTodo('labelInput', {
         "todo": $scope.todoInput,
         "isCompleted": false,
         "label": true
