@@ -19,10 +19,10 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
         $scope.todos.push(data.data);
       });
       $scope.todoInput = '';
-      $scope.labelInput = '';
-      }
+            }
   };
 
+ 
   //update the status of the Todo
   $scope.updateStatus = function($event, _id, i) {
     var cbk = $event.target.checked;
