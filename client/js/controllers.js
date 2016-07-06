@@ -111,16 +111,6 @@ $scope.showDetail = function(event)
 };
 
 
-$scope.showLabel = function(event)
-{
-  console.log($(event).attr("id"));
-};
-
-
-
-
-
-
 
 $scope.image = "/pics/JackiesLionSm.png";
 
@@ -138,8 +128,8 @@ todoApp.controller('homeCtrl', function($scope) {
 
   
 label.controller('label-controller', function($scope){
-    $scope.labels = ["Brief", "Debrief", "Infopost", "Magnetism", "Electricity", "Todo" ,"Idea", "Tech Scouting"];
-    
+            $scope.labels = [{label:"Magnetism"}, {label:"Electricity"}, {label:"Todo"},{label:"Idea"},{label:"Tech Scouting"}];
+
        $scope.setLabel = function(label) {
        $scope.selected = label;
       }
