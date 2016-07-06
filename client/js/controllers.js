@@ -105,13 +105,6 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   };
 
 
-$scope.showDetail = function(event)
-{
-  console.log($(event.target).attr("data-id"));
-};
-
-
-
 $scope.image = "/pics/JackiesLionSm.png";
 
 $scope.templates =
@@ -121,14 +114,9 @@ $scope.templates =
 
 });
 
-todoApp.controller('homeCtrl', function($scope) {
-  var Messages = ["Welcome Home", "Bye, bye baby good bye","Now is the time for all good men","To come to the aid of the country"];
-  $scope.message = Messages[Math.floor((Math.random() * 4))];
-});
+ 
 
-  
-
- todoApp.controller('ExampleController', function ($scope) {
+ todoApp.controller('LabelController', function ($scope) {
         $scope.course = "Angular";
         $scope.courses = [{ course: "Angular" }, { course: "JQuery" }, { course: "Bootstrap" }];
         $scope.ngChangeCount = function () {

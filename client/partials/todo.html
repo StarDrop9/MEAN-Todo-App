@@ -5,13 +5,11 @@
         </div>   
     <div class="row col-md-12">
         <button data-id="101" ng-click="showDetail($event)">click Me</button>
-    
-    
-   
-     <div ng-controller="ExampleController">
+       
+     <div ng-controller="LabelController">
         <div class="container">
             <div class="col-md-3 well" ng-init="count=0">
-                Courses:  <select ng-change="ngChangeCount()" class="form-control" ng-model="course" ng-options="cr.course as cr.course for cr in courses"></select>
+                Labels:  <select ng-change="ngChangeCount()" class="form-control" ng-model="course" ng-options="cr.course as cr.course for cr in courses"></select>
                 <pre> ({{course}}) ng-Change {{count}} </pre>
             </div>
         </div>
