@@ -128,7 +128,7 @@ todoApp.controller('homeCtrl', function($scope) {
 
   
 
- todoapp.controller('label-controller', ['$scope', function ($scope) {
+ todoApp.controller('label-controller', ['$scope', function ($scope) {
         $scope.label = "Angular";
         $scope.labels = [{ course: "Angular" }, { course: "JQuery" }, { course: "Bootstrap" }];
         $scope.ngChangeCount = function () {
