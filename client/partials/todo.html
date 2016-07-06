@@ -4,9 +4,8 @@
             <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
         </div>   
     <div class="row col-md-12">
-    
-            <div class="container">
-            <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label='null'">
+                <div class="container">
+            <div >
                <select ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">"Select Label"</select>
               </div>
         </div>

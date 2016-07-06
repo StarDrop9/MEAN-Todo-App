@@ -19,11 +19,8 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
         $scope.todos.push(data.data);
       });
       $scope.todoInput = '';
-
-            }
+    }
   };
-
- 
 
  //update the Label of the Todo
   $scope.updateLabel = function($event, _id, i) {
@@ -41,9 +38,6 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
       }
     });
   };
-
-
-
 
 
   //update the status of the Todo
@@ -65,17 +59,17 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
   // Update the edited Todo
   $scope.edit = function($event, i, label) {
-    if ($event.which == 13 && $event.target.value.trim()) {
-      var _t = $scope.todos[i];
+   if ($event.which == 13 && $event.target.value.trim()) {
+     var _t = $scope.todos[i];
       todosFactory.updateTodo({
-        _id: _t._id,
-        todo: $event.target.value.trim(),
-        isCompleted: _t.isCompleted
+       _id: _t._id,
+     todo: $event.target.value.trim(),
+       isCompleted: _t.isCompleted
       }).then(function(data) {
-              console.log(data);
-        if (data.data.updatedExisting) {
-          _t.todo = $event.target.value.trim();
-          _t.label = label
+        console.log(data);
+       if (data.data.updatedExisting) {
+         _t.todo = $event.target.value.trim();
+        _t.label = label
           $scope.isEditable[i] = false;
         } else {
           alert('Oops something went wrong!');
