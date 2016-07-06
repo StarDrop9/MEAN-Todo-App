@@ -105,6 +105,11 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   };
 
 
+$scope.showDetail = function(event)
+{
+  console.log($(event.target).attr("data-id"));
+};
+
 $scope.image = "/pics/JackiesLionSm.png";
 
 $scope.templates =
@@ -124,7 +129,3 @@ label.controller('label-controller', function($scope){
     $scope.labels = ["Brief", "Debrief", "Infopost", "Magnetism", "Electricity", "Todo" ,"Idea", "Tech Scouting"];
     });
 
-$scope.showDetail = function(event)
-{
-  console.log($(event.target).attr("data-id"));
-}
