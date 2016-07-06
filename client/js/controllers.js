@@ -133,6 +133,18 @@ todoApp.controller('homeCtrl', function($scope) {
   
 label.controller('label-controller', function($scope){
     $scope.labels = ["Brief", "Debrief", "Infopost", "Magnetism", "Electricity", "Todo" ,"Idea", "Tech Scouting"];
+    
+       $scope.setLabel = function(data.singleSelect) {
+       $scope.selected = data.singleSelect;
+      }
+
+       $scope.isSelected = function(data.singleSelect) {
+        return $scope.selected === data.singleSelect ;
+      }
+
+      console.log($("data.singleSelect");
+};  
+
     });
 
 
