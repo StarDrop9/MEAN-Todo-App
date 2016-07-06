@@ -113,8 +113,14 @@ $scope.showDetail = function(event)
 
 $scope.showLabel = function(event)
 {
-  console.log($(event.target).attr("data.singleSelect"));
+  console.log($(event.target).attr("id"));
 };
+
+
+
+
+
+
 
 $scope.image = "/pics/JackiesLionSm.png";
 
