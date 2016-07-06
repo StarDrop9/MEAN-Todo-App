@@ -113,7 +113,7 @@ $scope.showDetail = function(event)
 
 $scope.showLabel = function(event)
 {
-  console.log($(event.target).attr("id"));
+  console.log($(event).attr("id"));
 };
 
 
