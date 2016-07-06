@@ -12,13 +12,14 @@
                 <pre> ({{label}}) </pre>
             </div>
         </div>
-    </div>
-
+   
 
         <div>
             <textarea  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event,label)" ng-model="todoInput" style="min-width: 300px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>
         </div>
     </div>
+    </div>
+ 
     <div class="row col-md-12 todos">
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
