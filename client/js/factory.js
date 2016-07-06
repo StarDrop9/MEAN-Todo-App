@@ -15,6 +15,12 @@ todoApp.factory('todosFactory', function($http) {
     return $http.put(urlBase, todo);
   };
 
+
+ _todoService.updateTodoLabel = function(todo) {
+    return $http.put(urlBase, todo);
+  };
+
+
   _todoService.deleteTodo = function(id) {
     return $http.delete(urlBase + '/' + id);
   };

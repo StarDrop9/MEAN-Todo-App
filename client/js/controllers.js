@@ -23,6 +23,28 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   };
 
  
+
+ //update the status of the Todo
+  $scope.updateLabel = function($event, _id, i) {
+    var lbl = $event.target.label;
+    var _t = $scope.todos[i];
+    todosFactory.updateTodoLabel({
+      _id: _id,
+      label: lbl,
+      todo: _t.todo
+    }).then(function(data) {
+      if (data.data.updatedExisting) {
+        _t.label = lbl;
+      } else {
+        alert('Oops something went wrong!');
+      }
+    });
+  };
+
+
+
+
+
   //update the status of the Todo
   $scope.updateStatus = function($event, _id, i) {
     var cbk = $event.target.checked;

@@ -5,8 +5,8 @@
         </div>   
     <div class="row col-md-12">
         <div ng-controller="label-controller" >
-    <select  ng-model="labelInput" ng-options="x for x in labels"></select>
-    <div ng-bind="labelInput"></div>
+    <select name="singleSelect" id="singleSelect" ng-model="data.singleSelect" ng-selected="todo.labelInput" ng-options="x for x in labels"></select>
+    <div ng-bind="data.singleSelect"></div>
      </div>
         <div>
             <textarea  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event)" ng-model="todoInput" style="min-width: 300px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>
