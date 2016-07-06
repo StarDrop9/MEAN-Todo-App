@@ -7,7 +7,7 @@
         <button data-id="101" ng-click="showDetail($event)">click Me</button>
     
     <div ng-controller="label-controller" >
-    <select name="singleSelect" id="singleSelect" ng-model="data.singleSelect" ng-selected="showLabel($event)" ng-options="x for x in labels"></select>
+    <select name="singleSelect" id="singleSelect" ng-model="data.singleSelect" ng-click="setLabel(singleSelect)" ng-selected="showLabel($event)" ng-options="x for x in labels"></select>
     <div ng-bind="data.singleSelect"></div>
      </div>
         <div>
