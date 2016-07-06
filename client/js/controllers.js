@@ -118,12 +118,3 @@ $scope.templates =
 
 });
 
- 
-
- todoApp.controller('LabelController', function ($scope) {
-        $scope.label = "Angular";
-        $scope.labels = [{ label: "Angular" }, { label: "JQuery" }, { label: "Bootstrap" }];
-        $scope.ngChangeLabel = function () {
-             var label = $scope.label;
-        }
-    });
