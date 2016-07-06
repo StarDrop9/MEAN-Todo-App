@@ -25,8 +25,8 @@
                 <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
             </div>
             <div class="col-md-8 col-sm-8 col-xs-8">
-                <span ng-show="!isEditable[$index]">{{todo.todo}}{{label}}</span>
-                <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}{{label}}</textarea>
+                <span ng-show="!isEditable[$index]">{{todo.todo}};{{label}}</span>
+                <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}};{{label}}</textarea>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
             <div class="col-md-3 col-sm-3 col-xs-3">
