@@ -117,8 +117,8 @@ $scope.templates =
  
 
  todoApp.controller('LabelController', function ($scope) {
-        $scope.course = "Angular";
-        $scope.courses = [{ course: "Angular" }, { course: "JQuery" }, { course: "Bootstrap" }];
+        $scope.label = "Angular";
+        $scope.labelss = [{ label: "Angular" }, { label: "JQuery" }, { label: "Bootstrap" }];
         $scope.ngChangeCount = function () {
             $scope.count = $scope.count + 1;
         }
