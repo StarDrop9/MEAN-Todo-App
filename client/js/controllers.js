@@ -110,6 +110,12 @@ $scope.showDetail = function(event)
   console.log($(event.target).attr("data-id"));
 };
 
+
+$scope.showLabel = function(event)
+{
+  console.log($(event.target).attr("data.singleSelect"));
+};
+
 $scope.image = "/pics/JackiesLionSm.png";
 
 $scope.templates =
