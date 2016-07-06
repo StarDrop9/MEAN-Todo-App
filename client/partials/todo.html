@@ -7,7 +7,7 @@
         
      <div ng-controller="LabelController">
         <div class="container">
-            <div class="col-md-3 well" ng-init="count=0">
+            <div class="col-md-3 well" ng-init="count=0,label=null">
                 Labels:  <select ng-change="ngChangeCount()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
                 <pre> ({{label}}) ng-Change {{count}} </pre>
             </div>
@@ -16,7 +16,7 @@
 
 
         <div>
-            <textarea  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event)" ng-model="todoInput" style="min-width: 300px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>
+            <textarea  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event,label)" ng-model="todoInput" style="min-width: 300px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>
         </div>
     </div>
     <div class="row col-md-12 todos">
