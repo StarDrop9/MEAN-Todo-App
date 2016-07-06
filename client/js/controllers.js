@@ -26,15 +26,15 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
  //update the status of the Todo
   $scope.updateLabel = function($event, _id, i) {
-    var lbl = $event.target.label;
+    var lbl = $event.target.singleSelect;
     var _t = $scope.todos[i];
     todosFactory.updateTodoLabel({
       _id: _id,
-      label: lbl,
+      singleSelect: null,
       todo: _t.todo
     }).then(function(data) {
       if (data.data.updatedExisting) {
-        _t.label = lbl;
+        _t.singleSelect = lbl;
       } else {
         alert('Oops something went wrong!');
       }
