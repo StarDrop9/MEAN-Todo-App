@@ -9,7 +9,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   });
 
   // Save a Todo to the server
-  $scope.save = function($event) {
+  $scope.save = function($event,label) {
     if ($event.which == 13 && $scope.todoInput) {
       todosFactory.saveTodo({
         "todo": $scope.todoInput,
@@ -119,7 +119,7 @@ $scope.templates =
  todoApp.controller('LabelController', function ($scope) {
         $scope.label = "Angular";
         $scope.labels = [{ label: "Angular" }, { label: "JQuery" }, { label: "Bootstrap" }];
-        $scope.ngChangeCount = function () {
-            $scope.count = $scope.count + 1;
+        $scope.ngChangeLabel = function () {
+             var label = $scope.label;
         }
     });

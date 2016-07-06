@@ -8,8 +8,8 @@
      <div ng-controller="LabelController">
         <div class="container">
             <div class="col-md-3 well" ng-init="count=0","label='null'">
-                Labels:  <select ng-change="ngChangeCount()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
-                <pre> ({{label}}) ng-Change {{count}} </pre>
+                Labels:  <select ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
+                <pre> ({{label}}) </pre>
             </div>
         </div>
     </div>
