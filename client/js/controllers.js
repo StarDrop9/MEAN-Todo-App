@@ -127,29 +127,11 @@ todoApp.controller('homeCtrl', function($scope) {
 });
 
   
-label.controller('label-controller', function($scope){
-            $scope.labels = [{label:"Magnetism"}, {label:"Electricity"}, {label:"Todo"},{label:"Idea"},{label:"Tech Scouting"}];
 
-       $scope.setLabel = function(label) {
-       $scope.selected = label;
-      }
-
-       $scope.isSelected = function(label) {
-        return $scope.selected === label ;
-      }
-
-      console.log($($scope.selected));
-    });
-
-
-//label.Controller('label-controller', function($scope){
-  //  $scope.labels = ["Brief", "Debrief", "Infopost", "Magnetism", "Electricity", "Todo" ,"Idea", "Tech Scouting"];
-
-    //$scope.setLabel = function(label) {
-     //   $scope.selected = label;
-    //}
-
-    //$scope.isSelected = function(label) {
-      //  return $scope.selected === label ;
-    //}
-//}
+ todoapp.controller('label-controller', ['$scope', function ($scope) {
+        $scope.label = "Angular";
+        $scope.labels = [{ course: "Angular" }, { course: "JQuery" }, { course: "Bootstrap" }];
+        $scope.ngChangeCount = function () {
+            $scope.count = $scope.count + 1;
+        }
+    }]);
