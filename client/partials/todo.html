@@ -6,10 +6,9 @@
     <div class="row col-md-12">
     
             <div class="container">
-            <div class="col-md-3 well" ng-init="count=0","label='null'">
-                Labels:  <select ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
-                <pre> ({{label}}) </pre>
-            </div>
+            <div class="col-md-3 well" ng-init="label='null'">
+                Label:<select ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
+              </div>
         </div>
         <div>
             <textarea  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event,label)" ng-model="todoInput" style="min-width: 300px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>
