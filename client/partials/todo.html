@@ -6,7 +6,7 @@
     <div class="row col-md-12">
                 <div class="container">
             <div class="col-md-2 col-sm-2 col-xs-3" ng-init="label='null'">
-               <select ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">"Select Label"</select>
+               <select ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
               </div>
         </div>
         <div>
@@ -23,11 +23,11 @@
                 <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
             </div>
             <div class="col-md-8 col-sm-8 col-xs-8">
-                <span ng-show="!isEditable[$index]">{{todo.todo}}</span> <span ng-show="!isEditable[$index]">{{todo.label}}</span> 
+              <span ng-show="!isEditable[$index]">{{todo.label}}</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
                 
                 <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
                  <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label='null'">
-                  <select ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
+                  <select ng-show="isEditable[$index]" ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
               </div>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
