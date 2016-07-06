@@ -5,7 +5,7 @@
         </div>   
     <div class="row col-md-12">
         <div ng-controller="label-controller" >
-    <select name="singleSelect" id="singleSelect" ng-model="data.singleSelect" ng-selected="todo.label" ng-options="x for x in labels"></select>
+    <select name="singleSelect" id="singleSelect" ng-model="data.singleSelect" ng-selected="updateTodoLabel($event, todo._id, $index)" ng-options="x for x in labels"></select>
     <div ng-bind="data.singleSelect"></div>
      </div>
         <div>

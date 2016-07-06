@@ -14,7 +14,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
       todosFactory.saveTodo({
         "todo": $scope.todoInput,
         "isCompleted": false,
-        "label": true
+        "label": null
       }).then(function(data) {
         $scope.todos.push(data.data);
       });
@@ -24,7 +24,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
  
 
- //update the status of the Todo
+ //update the Label of the Todo
   $scope.updateLabel = function($event, _id, i) {
     var lbl = $event.target.singleSelect;
     var _t = $scope.todos[i];
