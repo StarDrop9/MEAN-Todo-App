@@ -143,8 +143,6 @@ label.controller('label-controller', function($scope){
       }
 
       console.log($(label));
-};  
-
     });
 
 
