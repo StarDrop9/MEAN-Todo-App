@@ -11,11 +11,14 @@
     <div ng-bind="label"></div><p>{{count}}</p>
      </div>
    
-     <div class="col-md-3 well" ng-init="count=0">
-                Labels:  <select ng-change="ngChangeCount()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
-                <pre> ({{label}}) ng-Change {{count}} </pre>
+     <div ng-controller="ExampleController">
+        <div class="container">
+            <div class="col-md-3 well" ng-init="count=0">
+                Courses:  <select ng-change="ngChangeCount()" class="form-control" ng-model="course" ng-options="cr.course as cr.course for cr in courses"></select>
+                <pre> ({{course}}) ng-Change {{count}} </pre>
             </div>
-
+        </div>
+    </div>
 
 
         <div>
