@@ -148,7 +148,7 @@ label.controller('label-controller', function($scope){
         return $scope.selected === label ;
       }
 
-      console.log($(label));
+      console.log($($scope.selected));
     });
 
 
