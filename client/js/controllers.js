@@ -131,19 +131,19 @@ todoApp.controller('homeCtrl', function($scope) {
 });
 
   
-//label.controller('label-controller', function($scope){
-//    $scope.labels = ["Brief", "Debrief", "Infopost", "Magnetism", "Electricity", "Todo" ,"Idea", "Tech Scouting"];
-//    });
-
-
-label.Controller('label-controller', function($scope){
+label.controller('label-controller', function($scope){
     $scope.labels = ["Brief", "Debrief", "Infopost", "Magnetism", "Electricity", "Todo" ,"Idea", "Tech Scouting"];
+    });
 
-    $scope.setLabel = function(label) {
-        $scope.selected = label;
-    }
 
-    $scope.isSelected = function(label) {
-        return $scope.selected === label ;
-    }
-}
+//label.Controller('label-controller', function($scope){
+  //  $scope.labels = ["Brief", "Debrief", "Infopost", "Magnetism", "Electricity", "Todo" ,"Idea", "Tech Scouting"];
+
+    //$scope.setLabel = function(label) {
+     //   $scope.selected = label;
+    //}
+
+    //$scope.isSelected = function(label) {
+      //  return $scope.selected === label ;
+    //}
+//}
