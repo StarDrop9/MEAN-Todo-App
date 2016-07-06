@@ -19,6 +19,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
         $scope.todos.push(data.data);
       });
       $scope.todoInput = '';
+
             }
   };
 
@@ -63,7 +64,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   };
 
   // Update the edited Todo
-  $scope.edit = function($event, i) {
+  $scope.edit = function($event, i, label) {
     if ($event.which == 13 && $event.target.value.trim()) {
       var _t = $scope.todos[i];
       todosFactory.updateTodo({
@@ -74,6 +75,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
               console.log(data);
         if (data.data.updatedExisting) {
           _t.todo = $event.target.value.trim();
+          _t.label = label
           $scope.isEditable[i] = false;
         } else {
           alert('Oops something went wrong!');

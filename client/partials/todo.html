@@ -4,24 +4,18 @@
             <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
         </div>   
     <div class="row col-md-12">
-     <!--  
-     <div ng-controller="LabelController">
-     -->
-        <div class="container">
+    
+            <div class="container">
             <div class="col-md-3 well" ng-init="count=0","label='null'">
                 Labels:  <select ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
                 <pre> ({{label}}) </pre>
             </div>
         </div>
-   <!--
-    </div>
-    -->
         <div>
             <textarea  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event,label)" ng-model="todoInput" style="min-width: 300px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>
         </div>
     </div>
 
- 
     <div class="row col-md-12 todos">
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
@@ -32,7 +26,7 @@
             </div>
             <div class="col-md-8 col-sm-8 col-xs-8">
                 <span ng-show="!isEditable[$index]">{{todo.todo}}</span>
-                <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
+                <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
             <div class="col-md-3 col-sm-3 col-xs-3">
