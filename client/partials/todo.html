@@ -25,9 +25,9 @@
             <div class="col-md-8 col-sm-8 col-xs-8">
               <span ng-show="!isEditable[$index]">{{todo.label}}</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
                 
-                <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
-                 <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label=todo.label">
-                  <select ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
+                <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,updatedlabel);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
+                 <div class="col-md-3 col-sm-3 col-xs-3" ng-init="updatedlabel=todo.updatedlabel">
+                  <select ng-show="isEditable[$index]" ng-change="ngChangeupdatedLabel(updatedlabel)" class="form-control" ng-model="updatedlabel" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
               </div>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
