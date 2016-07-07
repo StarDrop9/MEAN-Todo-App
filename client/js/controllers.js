@@ -109,6 +109,7 @@ $scope.labels = [{ label: "Magnetism" }, { label: "Splitting Water" }, { label: 
 
 $scope.ngChangeLabel = function () {
   var label = $scope.label;
+  console.log(label); 
  }
 
 
