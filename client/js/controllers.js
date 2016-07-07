@@ -68,7 +68,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
        "isCompleted": _t.isCompleted,
        "label": updatedlabel
       }).then(function(data) {
-        console.log(label);
+        console.log(updatedlabel);
        if (data.data.updatedExisting) {
          _t.todo = $event.target.value.trim();
         _t.label = updatedlabel
