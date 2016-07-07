@@ -12,7 +12,7 @@ todoApp.factory('todosFactory', function($http) {
   };
 
   _todoService.updateTodo = function(todo) {
-     //  console.log(todo);
+       console.log(todo.label);
     return $http.put(urlBase, todo);
   };
 
