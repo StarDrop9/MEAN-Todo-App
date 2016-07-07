@@ -6,6 +6,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   // get all Todos on Load would like to add label and priority focus for loads
   todosFactory.getTodos().then(function(data) {
     $scope.todos = data.data;
+  
   });
 
   // Save a Todo to the server
@@ -66,7 +67,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
      todo: $event.target.value.trim(),
        isCompleted: _t.isCompleted
       }).then(function(data) {
-        console.log(data);
+        console.log(data.data);
        if (data.data.updatedExisting) {
          _t.todo = $event.target.value.trim();
         _t.label = label
