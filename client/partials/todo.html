@@ -6,7 +6,7 @@
     <div class="row col-md-12">
                 <div class="container">
             <div class="col-md-2 col-sm-2 col-xs-3" ng-init="label='null'">
-               <select ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
+               <select ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
               </div>
         </div>
         <div>
@@ -27,7 +27,7 @@
                 
                 <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
                  <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label=todo.label">
-                  <select ng-show="isEditable[$index]" ng-change="ngChangeLabel()" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
+                  <select ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
               </div>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
