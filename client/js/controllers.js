@@ -105,7 +105,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
 
 $scope.label = "Magnetism";
-$scope.labels = [{ label: "Magnetism" }, { label: "Splitting Water" }, { label: "Tech Scouting"}];
+$scope.labels = [{ label: "Magnetism" }, { label: "Splitting Water" }, { label: "Tech Scouting"}, { label: "Coding"}]
 
 $scope.ngChangeLabel = function () {
   var label = $scope.label;
