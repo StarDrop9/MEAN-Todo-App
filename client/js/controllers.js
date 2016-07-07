@@ -121,3 +121,11 @@ $scope.templates =
 
 });
 
+
+
+
+todoApp.controller ('homeCtrl', function($scope) {
+
+$scope.message =["Be Brave","Valor is Great"]
+
+})
