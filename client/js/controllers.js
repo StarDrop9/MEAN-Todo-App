@@ -64,14 +64,14 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
      var _t = $scope.todos[i];
       todosFactory.updateTodo({
        _id: _t._id,
-     todo: $event.target.value.trim(),
+      todo: $event.target.value.trim(),
        isCompleted: _t.isCompleted,
-       label : label
+       label: _t.label
       }).then(function(data) {
         console.log(label);
        if (data.data.updatedExisting) {
          _t.todo = $event.target.value.trim();
-        _t.label = label
+        //_t.label = label
           $scope.isEditable[i] = false;
         } else {
           alert('Oops something went wrong!');
