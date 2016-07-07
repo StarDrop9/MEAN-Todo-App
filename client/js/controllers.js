@@ -104,7 +104,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
 
 
-$scope.label = "Angular";
+$scope.label = "Magnetism";
 $scope.labels = [{ label: "Magnetism" }, { label: "Splitting Water" }, { label: "Tech Scouting"}];
 
 $scope.ngChangeLabel = function () {
@@ -126,6 +126,8 @@ $scope.templates =
 
 todoApp.controller ('homeCtrl', function($scope) {
 
-$scope.message =["Be Brave","Valor is Great"]
+$scope.message = "Be Brave and confront evil with Valor"
+
+
 
 })
