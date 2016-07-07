@@ -59,19 +59,19 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   };
 
   // Update the edited Todo
-  $scope.edit = function($event, i, updatedlabel) {
+  $scope.edit = function($event, i, label) {
    if ($event.which == 13 && $event.target.value.trim()) {
      var _t = $scope.todos[i];
       todosFactory.updateTodo({
        "_id": _t._id,
       "todo": $event.target.value.trim(),
        "isCompleted": _t.isCompleted,
-       "label": updatedlabel
+       "label": label
       }).then(function(data) {
-        console.log(updatedlabel);
+        console.log(label);
        if (data.data.updatedExisting) {
          _t.todo = $event.target.value.trim();
-        _t.updatedlabel = updatedlabel
+        _t.label = label
           $scope.isEditable[i] = false;
         } else {
           alert('Oops something went wrong!');
@@ -112,8 +112,8 @@ $scope.ngChangeLabel = function (label){
   console.log(label); 
  }
 
-$scope.ngChangeUpdatedLabel = function (updatedlabel){
-  var updatedlabel = updatedlabel;
+$scope.ngChangeUpdatedLabel = function (label){
+  var updatedlabel = label;
   console.log(updatedlabel); 
  }
 
