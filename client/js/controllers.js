@@ -59,19 +59,19 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   };
 
   // Update the edited Todo
-  $scope.edit = function($event, i, todo.label) {
+  $scope.edit = function($event, i, label) {
    if ($event.which == 13 && $event.target.value.trim()) {
      var _t = $scope.todos[i];
       todosFactory.updateTodo({
        "_id": _t._id,
       "todo": $event.target.value.trim(),
        "isCompleted": _t.isCompleted,
-       "label": todo.label
+       "label": label
       }).then(function(data) {
-        console.log(todo.label);
+        console.log(label);
        if (data.data.updatedExisting) {
          _t.todo = $event.target.value.trim();
-        _t.label = label
+        //_t.label = label
           $scope.isEditable[i] = false;
         } else {
           alert('Oops something went wrong!');
