@@ -71,7 +71,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
         console.log(label);
        if (data.data.updatedExisting) {
          _t.todo = $event.target.value.trim();
-        //_t.label = label
+        _t.label = label
           $scope.isEditable[i] = false;
         } else {
           alert('Oops something went wrong!');
