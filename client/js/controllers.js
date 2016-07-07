@@ -59,19 +59,19 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   };
 
   // Update the edited Todo
-  $scope.edit = function($event, i, label) {
+  $scope.edit = function($event, i, updatedlabel) {
    if ($event.which == 13 && $event.target.value.trim()) {
      var _t = $scope.todos[i];
       todosFactory.updateTodo({
-       _id: _t._id,
-      todo: $event.target.value.trim(),
-       isCompleted: _t.isCompleted,
-         label: label
+       "_id": _t._id,
+      "todo": $event.target.value.trim(),
+       "isCompleted": _t.isCompleted,
+       "label": updatedlabel
       }).then(function(data) {
         console.log(label);
        if (data.data.updatedExisting) {
          _t.todo = $event.target.value.trim();
-        _t.label = label
+        _t.label = updatedlabel
           $scope.isEditable[i] = false;
         } else {
           alert('Oops something went wrong!');
@@ -111,6 +111,12 @@ $scope.ngChangeLabel = function (label){
   var label = label;
   console.log(label); 
  }
+
+$scope.ngChangeUpdatedLabel = function (updatedlabel){
+  var updatedlabel = updatedlabel;
+  console.log(updatedlabel); 
+ }
+
 
 
 $scope.image = "/pics/JackiesLionSm.png";
