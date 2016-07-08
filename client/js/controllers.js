@@ -1,12 +1,9 @@
 todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
-
   $scope.todos = [];
   $scope.isEditable = [];
-
   // get all Todos on Load would like to add label and priority focus for loads
   todosFactory.getTodos().then(function(data) {
     $scope.todos = data.data;
-  
   });
 
   // Save a Todo to the server
@@ -23,6 +20,23 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
     }
   };
 
+ //update the Label of the Todo
+  $scope.updateLabel = function($event, _id, i) {
+    var label = $event.target.value.trim();
+    var _t = $scope.todos[i];
+   // console.log(label);
+    todosFactory.updateTodoLabel({
+      _id: _id,
+      label: null,
+      todo: _t.todo
+    }).then(function(data) {
+      if (data.data.updatedExisting) {
+        _t.label=label;
+      } else {
+        alert('Oops something went wrong!');
+      }
+    });
+  };
 
 
   //update the status of the Todo
