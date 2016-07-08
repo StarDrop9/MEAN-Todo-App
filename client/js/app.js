@@ -14,4 +14,3 @@ todoApp = angular.module('todoApp', ['ngRoute','puElasticInput','monospaced.elas
         });
   });
 
-//var label = angular.module('label-selection',[]);
