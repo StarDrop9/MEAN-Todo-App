@@ -18,6 +18,8 @@ todoApp.factory('todosFactory', function($http) {
 
 
  _todoService.updateTodoLabel = function(todo) {
+   console.log(todo);
+
     return $http.put(urlBase, todo);
   };
 

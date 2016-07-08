@@ -30,7 +30,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
      // "todo": _t.todo
     }).then(function(data) {
       if (data.data.updatedExisting) {
-        _t.label=label;
+       // _t.label=label;
       } else {
         alert('Oops something went wrong!');
       }
