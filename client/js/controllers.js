@@ -21,8 +21,8 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   };
 
  //update the Label of the Todo
- $scope.updateLabel = function($event, _id, i, id) {
-       var label = $event.target.id.value.trim()    
+ $scope.updateLabel = function($event, _id, i, label) {
+       //var label = $event.target.id.value.trim()    
        var _t = $scope.todos[i];
     //console.log(_t);
     todosFactory.updateTodoLabel({
