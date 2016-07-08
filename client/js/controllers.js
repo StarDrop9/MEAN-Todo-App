@@ -24,12 +24,16 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.updateLabel = function($event, _id, i,label) {
        var _t = $scope.todos[i];
     //console.log(_t);
-    todosFactory.updateTodoLabel({
-      _id: _id,
+  //  todosFactory.updateTodoLabel(
+
+      data = {_id: _id,
       "todo": _t.todo,
       "isCompleted": false,
       "label": label    
-    }).then(function(data) {
+       }
+  //)
+console.log(data);
+    $http.put("/api/todos", data).then(function(data) {
       if (data.data.updatedExisting) {
        // _t.label=label;
       } else {
@@ -37,6 +41,10 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
       }
     });
   };
+
+
+$http.put("/users/current", data ||{})
+
 
 
   //update the status of the Todo
