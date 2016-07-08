@@ -27,7 +27,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
     todosFactory.updateTodoLabel({
       _id: _id,
       "label": label,
-      "todo": _t.todo
+     // "todo": _t.todo
     }).then(function(data) {
       if (data.data.updatedExisting) {
         _t.label=label;
