@@ -19,9 +19,8 @@ todoApp.factory('todosFactory', function($http) {
 
 
  _todoService.updateTodoLabel = function(todo) {
-   todo = JSON.stringify(todo);
+   //todo = JSON.stringify(todo);
    console.log(todo);
-
     return $http.put(urlBase, todo);
   };
 

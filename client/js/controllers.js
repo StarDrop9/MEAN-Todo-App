@@ -23,10 +23,11 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
  //update the Label of the Todo
   $scope.updateLabel = function($event, _id, i,label) {
        var _t = $scope.todos[i];
-    console.log(_t);
+    //console.log(_t);
     todosFactory.updateTodoLabel({
       _id: _id,
       "todo": _t.todo,
+      "isCompleted": false,
       "label": label    
     }).then(function(data) {
       if (data.data.updatedExisting) {
@@ -105,10 +106,9 @@ $scope.label = "Magnetism";
 $scope.labels = [{ label: "Magnetism" }, { label: "Splitting Water" }, { label: "Tech Scouting"}, { label: "Coding"}]
 
 $scope.ngChangeLabel = function ($event, _id, i,label){
+ console.log(label);
   var label = label;
-  console.log(label);
- 
- }
+   }
 
 $scope.ngChangeUpdatedLabel = function (label){
   var updatedlabel = label;
