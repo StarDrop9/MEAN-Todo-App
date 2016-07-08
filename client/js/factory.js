@@ -8,6 +8,7 @@ todoApp.factory('todosFactory', function($http) {
   };
 
   _todoService.saveTodo = function(todo) {
+   console.log(todo);
     return $http.post(urlBase, todo);
   };
 
