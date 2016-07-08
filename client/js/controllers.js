@@ -43,10 +43,6 @@ console.log(data);
   };
 
 
-$http.put("/users/current", data ||{})
-
-
-
   //update the status of the Todo
   $scope.updateStatus = function($event, _id, i) {
     var cbk = $event.target.checked;
