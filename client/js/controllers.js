@@ -107,7 +107,7 @@ $scope.labels = [{ label: "Magnetism" }, { label: "Splitting Water" }, { label: 
 $scope.ngChangeLabel = function ($event, _id, i,label){
   var label = label;
   console.log(label);
-  updateLabel($event, _id, i) 
+ 
  }
 
 $scope.ngChangeUpdatedLabel = function (label){
