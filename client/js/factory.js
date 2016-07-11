@@ -17,12 +17,14 @@ todoApp.factory('todosFactory', function($http) {
                 // this function
 
       console.log(todo);
+      todo = angular.toJson(todo)
     return $http.put(urlBase, todo);
   };
 
 
  _todoService.updateTodoLabel = function(todo) {
    //todo = JSON.stringify(todo);
+   todo = angular.toJson(todo)
   // console.log(todo);
     return $http.put(urlBase, todo);
   };
