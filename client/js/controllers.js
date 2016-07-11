@@ -15,6 +15,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
         "label": label
       }).then(function(data) {
         $scope.todos.push(data.data);
+       label: null
       });
       $scope.todoInput = '';
     }
@@ -27,9 +28,9 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
     //console.log(_t);
     todosFactory.updateTodoLabel({
       _id: _id,
-      "todo": _t.todo,
-      "isCompleted": false,
-      "label": label    
+      todo: _t.todo,
+      isCompleted: false,
+      label: label    
     }).then(function(data) {
       if (data.data.updatedExisting) {
        // _t.label=label;
