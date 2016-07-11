@@ -14,11 +14,11 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
         "isCompleted": false,
         "label": label
       }).then(function(data) {
-        $scope.todos.push(data.data);
-       label: null
-      });
+       $scope.todos.push(data.data);
+             });
       $scope.todoInput = '';
-    }
+     $scope.todo.Label = '';
+      }
   };
 
  //update the Label of the Todo
