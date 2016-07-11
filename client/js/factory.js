@@ -15,9 +15,9 @@ todoApp.factory('todosFactory', function($http) {
   _todoService.updateTodo = function(todo) {
     debugger; // Set the debugger inside 
                 // this function
-
-      console.log(todo);
+    
       todo = angular.toJson(todo)
+       console.log(todo);
     return $http.put(urlBase, todo);
   };
 
