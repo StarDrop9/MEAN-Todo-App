@@ -9,7 +9,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   // Save a Todo to the server
   $scope.save = function($event,label) {
     if ($event.which == 13 && $scope.todoInput) {
-      todosFactory.saveTodo({
+      todosFactory.saveTodoTest({
         "todo": $scope.todoInput,
         "isCompleted": false,
         "label": label

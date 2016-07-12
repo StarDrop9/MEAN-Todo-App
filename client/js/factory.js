@@ -4,16 +4,32 @@ todoApp.factory('todosFactory', function($http) {
   var urlHome = '/home'; 
 
   _todoService.getTodos = function() {
-  debugger; // Set the debugger inside 
+  //debugger; // Set the debugger inside 
                 // this function
       return $http.get(urlBase);
   };
 
   _todoService.saveTodo = function(todo) {
-    debugger; // Set the debugger inside 
+    //debugger; // Set the debugger inside 
                 // this function
    console.log(todo);
     return $http.post(urlBase, todo);
+  };
+
+  
+  _todoService.saveTodoTest = function(todo) {
+    debugger; // Set the debugger inside 
+                // this function
+   console.log(todo);
+    return $http.post('api/todos')
+    .success(function(todo, status, headers, config) {
+     // Do something successful
+     alert("successful putting")
+     }).error(function(data, 
+      status, headers, config) {
+     // Handle error
+     alert("error putting")
+     });
   };
 
   _todoService.updateTodoTest = function(todo) {
@@ -33,7 +49,7 @@ todoApp.factory('todosFactory', function($http) {
     //{"_id":"56fef2921c91130b00ab4391","todo":"Add Login Piece to this application","isCompleted":false,"label":"Splitting Water"}
      // todo = angular.toJson(todo)
     //  console.log(todo);
-    return  $http.put('api/todos')
+    return $http.put('api/todos')
     .success(function(todo, status, headers, config) {
      // Do something successful
      alert("successful putting")
