@@ -4,10 +4,9 @@ todoApp.factory('todosFactory', function($http) {
   var urlHome = '/home'; 
 
   _todoService.getTodos = function() {
-  
-
-
-    return $http.get(urlBase);
+  debugger; // Set the debugger inside 
+                // this function
+      return $http.get(urlBase);
   };
 
   _todoService.saveTodo = function(todo) {
