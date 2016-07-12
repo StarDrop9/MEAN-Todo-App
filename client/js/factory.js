@@ -35,8 +35,8 @@ todoApp.factory('todosFactory', function($http) {
   _todoService.updateTodoTest = function(todo) {
     debugger; // Set the debugger inside 
                 // this function
-    //{"_id":"56fef2921c91130b00ab4391","todo":"Add Login Piece to this application","isCompleted":false,"label":"Splitting Water"}
-      todo = angular.toJson(todo)
+    todo= "_id"="56fef2921c91130b00ab4391"&"todo"="Add Login Piece to this application"&"isCompleted"=false&"label"="Splitting Water"
+      //todo = angular.toJson(todo)
        console.log(todo);
     return $http.put(urlBase, todo, {
         headers: { 'Content-Type': 'application/json' }
