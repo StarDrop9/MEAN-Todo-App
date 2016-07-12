@@ -4,6 +4,9 @@ todoApp.factory('todosFactory', function($http) {
   var urlHome = '/home'; 
 
   _todoService.getTodos = function() {
+  
+
+
     return $http.get(urlBase);
   };
 
@@ -48,6 +51,10 @@ todoApp.factory('todosFactory', function($http) {
 
 
  _todoService.updateTodoLabel = function(todo) {
+   
+debugger; // Set the debugger inside 
+                // this function
+
    //todo = JSON.stringify(todo);
    todo = angular.toJson(todo)
   // console.log(todo);

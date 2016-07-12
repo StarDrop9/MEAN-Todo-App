@@ -26,7 +26,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
        //var label = $event.target.id.value.trim()    
        var _t = $scope.todos[i];
     //console.log(_t);
-    todosFactory.updateTodoLabelTest({
+    todosFactory.updateTodoLabel({
       _id: _id,
       todo: _t.todo,
       isCompleted: false,
@@ -61,7 +61,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.edit = function($event, i, label) {
    if ($event.which == 13 && $event.target.value.trim()) {
      var _t = $scope.todos[i];
-      todosFactory.updateTodo({
+      todosFactory.updateTodoTest({
        "_id": _t._id,
       "todo": $event.target.value.trim(),
        "isCompleted": _t.isCompleted,
