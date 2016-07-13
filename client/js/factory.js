@@ -49,7 +49,7 @@ todoApp.factory('todosFactory', function($http) {
     //{"_id":"56fef2921c91130b00ab4391","todo":"Add Login Piece to this application","isCompleted":false,"label":"Splitting Water"}
      // todo = angular.toJson(todo)
     //  console.log(todo);
-    return $http.put('api/todos')
+    return $http.put('api/todos'+todo._id,todo)
     .success(function(todo, status, headers, config) {
      // Do something successful
      alert("successful putting")
