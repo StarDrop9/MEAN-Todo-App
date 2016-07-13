@@ -21,7 +21,7 @@ todoApp.factory('todosFactory', function($http) {
     debugger; // Set the debugger inside 
                 // this function
    console.log(todo);
-    return $http.post('api/todos')
+    return $http.post('api/todos',todo)
     .success(function(todo, status, headers, config) {
      // Do something successful
      alert("successful putting")
