@@ -21,7 +21,7 @@ todoApp.factory('todosFactory', function($http) {
     debugger; // Set the debugger inside 
                 // this function
    console.log(todo);
-    return $http.post('api/todos',todo)
+    return $http.post(urlBase,todo)
     .success(function(todo, status, headers, config) {
      // Do something successful
      alert("successful putting")
@@ -38,7 +38,7 @@ todoApp.factory('todosFactory', function($http) {
     //var todo = $httpParamSerializer({"_id":"56fef2921c91130b00ab4391","todo":"Add Login Piece to this application","isCompleted":false,"label":"Splitting Water"})
       //todo = angular.toJson(todo)
        console.log(todo.label);
-    return $http.put('api/todos/:'+todo._id,todo, 
+    return $http.put(urlBase,todo, 
     {headers: { 'Content-Type': 'application/json' } });
   
     };
@@ -49,7 +49,7 @@ todoApp.factory('todosFactory', function($http) {
     //{"_id":"56fef2921c91130b00ab4391","todo":"Add Login Piece to this application","isCompleted":false,"label":"Splitting Water"}
      // todo = angular.toJson(todo)
     //  console.log(todo);
-    return $http.put('api/todos/:'+todo._id,todo)
+    return $http.put(urlBase,todo)
     .success(function(todo, status, headers, config) {
      // Do something successful
      alert("successful putting")
@@ -70,7 +70,7 @@ debugger; // Set the debugger inside
    //todo = JSON.stringify(todo);
    todo = angular.toJson(todo)
    console.log(todo.label);
-    return $http.put('api/todos/:'+todo._id, todo, {headers: { 'Content-Type': 'application/json' } });
+    return $http.put(urlBase, todo, {headers: { 'Content-Type': 'application/json' } });
   };
 
 
