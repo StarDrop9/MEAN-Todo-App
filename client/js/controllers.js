@@ -132,7 +132,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
 
 $scope.label = "Magnetism";
-$scope.labels = [{ label: "Magnetism" }, { label: "Splitting Water" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Design"},{ label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
+$scope.labels = [{ label: "Magnetism" },{ label: "Drones" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Design"},{ label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
 
 
 $scope.ngChangeLabel = function (label){
