@@ -39,7 +39,8 @@ router.get('/home', function(req, res) {
       _id: mongojs.ObjectId(req.body._id)
     }, {
       isCompleted: req.body.isCompleted,
-      todo: req.body.todo
+      todo: req.body.todo,
+      label: req.body.label
     }, {}, function(err, data) {
       res.json(data);
     });
