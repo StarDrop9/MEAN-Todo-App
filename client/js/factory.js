@@ -38,7 +38,7 @@ todoApp.factory('todosFactory', function($http) {
     //var todo = $httpParamSerializer({"_id":"56fef2921c91130b00ab4391","todo":"Add Login Piece to this application","isCompleted":false,"label":"Splitting Water"})
       //todo = angular.toJson(todo)
        console.log(todo);
-    return $http.put(urlBase, todo, 
+    return $http.put(urlBase+todo._id, todo, 
     {headers: { 'Content-Type': 'application/json' } });
   
     };
