@@ -70,7 +70,7 @@ debugger; // Set the debugger inside
    //todo = JSON.stringify(todo);
    todo = angular.toJson(todo)
    console.log(todo.label);
-    return $http.put(urlBase, todo, {headers: { 'Content-Type': 'application/javascript' } });
+    return $http.put(urlBase, todo, {headers: { 'Content-Type': 'application/json' } });
   };
 
 
