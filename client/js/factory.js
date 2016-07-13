@@ -18,22 +18,22 @@ todoApp.factory('todosFactory', function($http) {
 
   
   _todoService.saveTodoTest = function(todo) {
-    debugger; // Set the debugger inside 
+    //debugger; // Set the debugger inside 
                 // this function
    console.log(todo);
     return $http.post(urlBase,todo)
     .success(function(todo, status, headers, config) {
      // Do something successful
-     alert("successful putting")
+     //alert("successful putting")
      }).error(function(data, 
       status, headers, config) {
      // Handle error
-     alert("error putting")
+     //alert("error putting")
      });
   };
 
   _todoService.updateTodoTest = function(todo) {
-    debugger; // Set the debugger inside 
+    //debugger; // Set the debugger inside 
                 // this function
     //var todo = $httpParamSerializer({"_id":"56fef2921c91130b00ab4391","todo":"Add Login Piece to this application","isCompleted":false,"label":"Splitting Water"})
       //todo = angular.toJson(todo)
@@ -44,7 +44,7 @@ todoApp.factory('todosFactory', function($http) {
     };
 
    _todoService.updateTodo = function(todo) {
-    debugger; // Set the debugger inside 
+    //debugger; // Set the debugger inside 
                 // this function
     //{"_id":"56fef2921c91130b00ab4391","todo":"Add Login Piece to this application","isCompleted":false,"label":"Splitting Water"}
      // todo = angular.toJson(todo)
@@ -52,21 +52,19 @@ todoApp.factory('todosFactory', function($http) {
     return $http.put(urlBase,todo)
     .success(function(todo, status, headers, config) {
      // Do something successful
-     alert("successful putting")
+     //alert("successful putting")
      }).error(function(data, 
       status, headers, config) {
      // Handle error
-     alert("error putting")
+     //alert("error putting")
      });
  
   };
 
 
  _todoService.updateTodoLabel = function(todo) {
-   
-debugger; // Set the debugger inside 
+  //debugger; // Set the debugger inside 
                 // this function
-
    //todo = JSON.stringify(todo);
    todo = angular.toJson(todo)
    console.log(todo.label);

@@ -21,12 +21,40 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
       }
   };
 
- //update the Label of the Todo
+ //update the Label of the Todo try to work around the factory service with Jquery pput or replace 
+ //since the factory appears to be failing at this time start with a new updateLabelTest control
+$scope.updateLabelTest = function($event, _id, i, label) {
+       //var label = $event.target.id.value.trim()    
+       var _t = $scope.todos[i];
+    //console.log(_t);
+   
+
+
+
+     todosFactory.updateTodoLabel({
+      _id: _id,
+      todo: _t.todo,
+      isCompleted: false,
+      label: label    
+    }).then(function(data) {
+      if (data.data.updatedExisting) {
+       // _t.label=label;
+      } else {
+        alert('Oops something went wrong!');
+      }
+    });
+  };
+
+
+
+
+
+
  $scope.updateLabel = function($event, _id, i, label) {
        //var label = $event.target.id.value.trim()    
        var _t = $scope.todos[i];
     //console.log(_t);
-    todosFactory.updateTodoLabel({
+     todosFactory.updateTodoLabel({
       _id: _id,
       todo: _t.todo,
       isCompleted: false,
