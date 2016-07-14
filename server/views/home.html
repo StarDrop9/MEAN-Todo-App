@@ -38,7 +38,12 @@
 
  </div>
 
-  <ng-view></ng-view>  
+  //<ng-view></ng-view>  
+
+
+
+<input type="text" ng-model="search.label">
+<div ng-repeat="todo in todos | filter:search"> 
 
  <!-- 
  <div>
