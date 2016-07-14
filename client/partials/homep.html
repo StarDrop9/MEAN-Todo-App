@@ -22,15 +22,26 @@
                <select ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
               </div>
         </div>
-        <div>
-            <textarea  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event,label)" ng-model="todoInput" style="min-width: 300px; max-width: 800px;">Add ToDo/Idea/R&D</textarea>
-        </div>
-    </div>
+           </div>
 
     <div class="row col-md-12 todos">
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
         </div>
+         <table>  
+         <thead>
+          <tr>
+            <th>Label</th> 
+            <th>isCompleted</th> 
+            <th>Todo/Idea</th>
+          </tr>
+          <tr ng-repeat= todo in todos class="todo col-md-12 col-sm-12 col-xs-12" >  
+          <td>{{todo.label}}</td><td>{{todo.isCompleted}}</td><td>{{todo.todo}}</td>
+          </tr>
+          </thead>
+         </table> 
+       </div>
+<!--
         <div ng-repeat="todo in todos" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
             <div class="col-md-1 col-sm-1 col-xs-1">
                 <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
@@ -55,6 +66,6 @@
   </div>
 </div>
 </div>
-
+-->
   
  
