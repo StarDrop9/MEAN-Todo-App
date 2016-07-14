@@ -36,7 +36,7 @@
             <th>Todo/Idea</th>
           </tr>
           <tr ng-repeat="todo in todos">  
-          <td>{{todo.label}}</td><td>{{todo.isCompleted}}</td><td>{{todo.todo}}</td>
+          <td>{{todo.label |uppercase }}</td><td>{{todo.isCompleted}}</td><td>{{todo.todo}}</td>
           </tr>
           </thead>
          </table> 
