@@ -1,6 +1,8 @@
 todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.todos = [];
   $scope.isEditable = [];
+  $scope.row.limit =10 ;
+
   // get all Todos on Load would like to add label and priority focus for loads
   todosFactory.getTodos().then(function(data) {
     $scope.todos = data.data;
@@ -23,6 +25,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
  //update the Label of the Todo try to work around the factory service with Jquery pput or replace 
  //since the factory appears to be failing at this time start with a new updateLabelTest control
+
 $scope.updateLabelTest = function($event, _id, i, label) {
        //var label = $event.target.id.value.trim()    
        var _t = $scope.todos[i];
@@ -44,10 +47,6 @@ $scope.updateLabelTest = function($event, _id, i, label) {
       }
     });
   };
-
-
-
-
 
 
  $scope.updateLabel = function($event, _id, i, label) {
