@@ -8,9 +8,9 @@ var val1 = 'Magnetism'
   _todoService.getTodos = function() {
   //debugger; // Set the debugger inside 
                 // this function
-//    return $http.get(urlBase);
-      return $http.get(urlBase, {params:{"label": "Magnetism"}})
-    .then(function (response) { /* */    });
+    return $http.get(urlBase);
+//      return $http.get(urlBase, {params:{"label": "Magnetism"}})
+  //  .then(function (response) { /* */    });
 
 
  };
