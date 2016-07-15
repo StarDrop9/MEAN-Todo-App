@@ -38,12 +38,12 @@
          <table>  
          <thead>
           <tr>
-            <th>Label</th> 
             <th>isCompleted</th> 
+            <th>Label</th> 
             <th>Todo/Idea</th>
           </tr>
           <tr ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit"  >  
-          <td>{{todo.label |uppercase }}</td><td>{{todo.isCompleted}}</td><td>{{todo.todo}}</td>
+          <td>{{todo.isCompleted}}</td><td><span ng-show="!isEditable[$index]">{{todo.label}}</span></td><td>{{todo.todo}}</td>
           </tr>
           </thead>
          </table> 
