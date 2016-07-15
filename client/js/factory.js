@@ -13,7 +13,7 @@ todoApp.factory('todosFactory', function($http) {
 _todoService.getTodos = function() {
   //debugger; // Set the debugger inside 
                 // this function
-      return $http.get(urlBase,todo,{params : { lable: 'Magnetism' } }); 
+      return $http.get(urlBase {params : { lable: 'Magnetism' } }); 
   };
   
   
