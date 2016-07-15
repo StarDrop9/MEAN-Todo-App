@@ -20,7 +20,7 @@ router.get('/home', function(req, res) {
   });
   
 
-  router.get('/api/todos', function(req, res) {
+  router.get('/api/todos/:label', function(req, res) {
     db.todos.find(function(err, data) {
       res.json(data);
     });
