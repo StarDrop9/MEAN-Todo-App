@@ -38,7 +38,7 @@
             <th>isCompleted</th> 
             <th>Todo/Idea</th>
           </tr>
-          <tr ng-repeat="todo in todos | label:label  | orderBy:'+label'| limitTo:rowLimit" >  
+          <tr ng-repeat="todo in todos | orderBy:'+label'| limitTo:rowLimit" >  
           <td>{{todo.label |uppercase }}</td><td>{{todo.isCompleted}}</td><td>{{todo.todo}}</td>
           </tr>
           </thead>
