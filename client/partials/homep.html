@@ -19,7 +19,11 @@
     <div class="row col-md-12">
                 <div class="container">
             <div class="col-md-2 col-sm-2 col-xs-3" ng-init="label='Null'">
-               <select ng-change="ngChangeLabel(label)" class="form-control" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels"></select>
+       
+            <!--   <select ng-change="ngChangeLabel(label)" class="form-control" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels"></select> -->
+      
+       Search: <input ng-model="$ctrl.query">
+
               </div>
         </div>
            </div>
@@ -38,7 +42,7 @@
             <th>isCompleted</th> 
             <th>Todo/Idea</th>
           </tr>
-          <tr ng-repeat="todo in todos | orderBy:'+label'| limitTo:rowLimit" |filter:$ctrl.query >  
+          <tr ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit"  >  
           <td>{{todo.label |uppercase }}</td><td>{{todo.isCompleted}}</td><td>{{todo.todo}}</td>
           </tr>
           </thead>
