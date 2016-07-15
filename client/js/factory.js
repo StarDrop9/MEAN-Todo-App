@@ -10,7 +10,7 @@ var val1 = 'Magnetism'
                 // this function
 //    return $http.get(urlBase);
       return $http.get(urlBase, {params:{"label": "Magnetism"}})
-    .then(function (response) { (   ) })
+    .then(function (response) { /* */    });
 
 
  };
