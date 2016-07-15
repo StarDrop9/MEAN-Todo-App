@@ -3,11 +3,20 @@ todoApp.factory('todosFactory', function($http) {
   var _todoService = {};
   var urlHome = '/home'; 
 
-  _todoService.getTodos = function() {
+//  _todoService.getTodos = function() {
   //debugger; // Set the debugger inside 
                 // this function
-      return $http.get(urlBase);
+//      return $http.get(urlBase);
+//  };
+
+
+_todoService.getTodos = function() {
+  //debugger; // Set the debugger inside 
+                // this function
+      return $http.get(urlBase,todo,{parameter : { lable: 'Magnetism' } }); 
   };
+  
+  
 
   _todoService.saveTodo = function(todo) {
     //debugger; // Set the debugger inside 
