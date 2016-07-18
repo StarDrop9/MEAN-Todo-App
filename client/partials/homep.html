@@ -1,52 +1,45 @@
-<div class="container" ng-controller="homeCtrl">
-    <div class="row col-md-12">
-        <h2> Home Page</h2>
-         {{message}}
-         <!--
-         <script type = "text/ng-template" id = "/partials/homep.html">
-             {{message}}
-         </script>
-         -->
-
-
-    </div>
- </div>
-
- 
-  <div class="container" ng-controller="TodoCtrl">
-    
+<div class="container" ng-controller="TodoCtrl">
     <div class="row col-md-12">
         <div>
             <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
         </div>   
-     </div
-    
-    <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label='MAGNETISM'">
-                 <select ng-change="ngChangeLabel(label)" class="form-control" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels"></select>
-             </div>
-           </div>
-     </div>
+    <div class="row col-md-12">
+                <div class="container">
+            <div class="col-md-2 col-sm-2 col-xs-3" ng-init="label='Null'">
+               <select ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
+              </div>
+        </div>
+        <div>
+            <textarea  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event,label)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;">Add ToDo/Idea/R&D</textarea>
+        </div>
+    </div>
 
-    <div class="row col-md-8 todos">
+    <div class="row col-md-12 todos">
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
         </div>
-      </Div>   
-        
-        <div class="col-md-12" ng-init="label= todo.label">
-          Rows to display :<input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
-          
-          <span ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit" ></span>  
-          <span ng-show="!isEditable[$index]">{{todo.label}}</span><select id="SA" ng-init="label= todo.label" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
-         <span ng-show="!isEditable[$index]">{{todo.todo}}</span><textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
-         </div>
+        <div ng-repeat="todo in todos" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
+            <div class="col-md-1 col-sm-1 col-xs-1">
+                <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
+            </div>
+            <div class="col-md-8 col-sm-8 col-xs-8">
+              <span ng-show="!isEditable[$index]">{{todo.label}}</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
+                
+                <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 200px; max-width: 400px;">{{todo.todo}}</textarea>
+                 <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label= todo.label">
+                 <select id="SA" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
+              </div>
+                <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
+            </div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+                <input type="button" class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />
+                <input type="button" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
+                <input type="button" class="btn btn-success" class="pull-right" value="Blog-It" ng-click="blogTodo($index)" />
+            </div>
 
+        </div>
+    </div>
+  </div>
+</div>
+</div>
 
-          <div class="col-md-3 col-sm-3 col-xs-3">
-          <input type="button" class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />
-          <input type="button" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
-          </div>
-
-
-       </div>
- 
