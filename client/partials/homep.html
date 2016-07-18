@@ -1,24 +1,21 @@
 <div class="container" ng-controller="TodoCtrl">
     <div class="row col-md-12">
-        <div>
-            <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
-        </div>   
+        
     <div class="row col-md-12">
                 <div class="container">
             <div class="col-md-2 col-sm-2 col-xs-3" ng-init="label='Null'">
-               <select ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
+               <select ng-change="ngChangeLabel(label)" class="form-control" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels"></select>
+              <hr />
+              Rows to display :<input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
               </div>
         </div>
-        <div>
-            <textarea  class="form-control input-lg" placeholder="Enter a Todo" ng-keypress="save($event,label)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;">Add ToDo/Idea/R&D</textarea>
-        </div>
-    </div>
+            </div>
 
     <div class="row col-md-12 todos">
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
         </div>
-        <div ng-repeat="todo in todos" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
+        <div ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit"  class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''"  >
             <div class="col-md-1 col-sm-1 col-xs-1">
                 <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
             </div>
