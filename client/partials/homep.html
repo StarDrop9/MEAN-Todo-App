@@ -39,7 +39,14 @@
           <br /><br />
 
           <span ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit" >  
-          <span ng-show="!isEditable[$index]">{{todo.label}}</span><select id="SA" ng-init="label= todo.label" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select><span ng-show="!isEditable[$index]">{{todo.todo}}</span><textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
+          <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label= todo.label">
+          <span ng-show="!isEditable[$index]">{{todo.label}}</span><select id="SA" ng-init="label= todo.label" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
+        </div>
+
+
+          <div class="col-md-8 col-sm-8 col-xs-8">
+          <span ng-show="!isEditable[$index]">{{todo.todo}}</span><textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
+        </div>
           <div class="col-md-3 col-sm-3 col-xs-3">
           <input type="button" class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />
           </div>
