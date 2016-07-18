@@ -15,14 +15,13 @@
  
   <div class="container" ng-controller="TodoCtrl">
     
-    <div class="row col-md-8">
+    <div class="row col-md-12">
         <div>
             <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
         </div>   
      </div
-    <div class="row col-md-12">
-           <div class="container">
-            <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label='MAGNETISM'">
+    
+    <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label='MAGNETISM'">
                  <select ng-change="ngChangeLabel(label)" class="form-control" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels"></select>
              </div>
            </div>
@@ -34,15 +33,11 @@
         </div>
       </Div>   
         
-        <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label= todo.label">
+        <div class="col-md-12" ng-init="label= todo.label">
           Rows to display :<input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
-          <br />
+          
           <span ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit" ></span>  
           <span ng-show="!isEditable[$index]">{{todo.label}}</span><select id="SA" ng-init="label= todo.label" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
-        </div>
-
-
-          <div class="col-md-8 col-sm-8 col-xs-8">
          <span ng-show="!isEditable[$index]">{{todo.todo}}</span><textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea>
          </div>
 
