@@ -37,9 +37,18 @@
          
           Rows to display :<input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
           <br /><br />
-
-          <span ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit"  >  
-          <span ng-show="!isEditable[$index]">{{todo.label}}</span><select id="SA" ng-init="label= todo.label" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select><span ng-show="!isEditable[$index]">{{todo.todo}}</span><textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea><input type="button" class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />
-          
+         <table>  
+         <thead>
+          <tr>
+            <th>isCompleted</th> 
+            <th>Label</th> 
+            <th>Todo/Idea</th>
+            <th>Edit</th>
+          </tr>
+          <tr ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit"  >  
+          <td>{{todo.isCompleted}}</td><td "style= width:40px" ><span ng-show="!isEditable[$index]">{{todo.label}}</span><select id="SA" ng-init="label= todo.label" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select></td><td><span ng-show="!isEditable[$index]">{{todo.todo}}</span><textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 400px; max-width: 800px;">{{todo.todo}}</textarea></td><td><input type="button" class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" /></td>
+          </tr>
+          </thead>
+         </table> 
        </div>
  
