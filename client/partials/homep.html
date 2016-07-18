@@ -14,10 +14,13 @@
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
         </div>
-        <div ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit"  class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''"  >
-            <div class="col-md-1 col-sm-1 col-xs-1">
-                <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
+
+         <div class="col-md-1 col-sm-1 col-xs-1">
+                <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)" class="pull-left">
             </div>
+
+        <div ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit"  class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''"  >
+            
             <div class="col-md-8 col-sm-8 col-xs-8">
               <span ng-show="!isEditable[$index]">{{todo.label}}</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
                 
