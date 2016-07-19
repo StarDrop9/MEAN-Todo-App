@@ -4,9 +4,21 @@
             
              Disp : <input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
              
-             <input class="selectwidthauto" id="searchtext" type="text" list="labels" ng-model="$ctrl.query" />
-             <select id="labels" class="selectwidthauto" ng-change="ngChangeLabel(label)" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels"></select>
-             
+             <input list="labels" class="selectwidthauto" ng-model="$ctrl.query" />
+           <!--  <select id="labels" class="selectwidthauto" ng-change="ngChangeLabel(label)" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels"></select> -->
+             <datalist id="labels">
+                  <option value="Antigravity" />
+                  <option value="Drones" />
+                  <option value="Coding" />
+                  <option value="Tech Scouting" />
+                  <option value="Design" />
+                  <option value="Flying" />
+                  <option value="Anti-Hacking" />
+                  <option value="Magnetism" />
+             </datalist>
+
+
+
           </div>
     </div>  
   <div class="row col-md-12 todos">
