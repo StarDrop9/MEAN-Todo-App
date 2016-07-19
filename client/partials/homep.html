@@ -17,7 +17,7 @@
 
          
 
-        <div ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit" ng-class="todo.isCompleted ? 'strike' : ''" class="todo col-md-12 col-sm-12 col-xs-12" >
+        <div ng-repeat="todo in todos |filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit" ng-if="todo.isCompleted ? 'strike' : ''" class="todo col-md-12 col-sm-12 col-xs-12" >
             <div class="col-md-1 col-sm-1 col-xs-1">
                 <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
             </div>
