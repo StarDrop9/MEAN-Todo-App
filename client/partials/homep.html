@@ -5,13 +5,8 @@
              Rows Disp:<input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
              
              <input class="selectwidthauto" id="searchtext" type="text" list="labels" ng-model="$ctrl.query" />
-<datalist id="labels">
-  <option value="Magnetism">
-  <option value="Firefox">
-  <option value="Chrome">
-  <option value="Opera">
-  <option value="Safari">
-</datalist> 
+<datalist id="labels" ng-options="cr.label as cr.label for cr in labels" >
+  </datalist> 
              
           </div>
     </div>  
