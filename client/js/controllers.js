@@ -118,15 +118,15 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
 
 // Blog a Todo kps 04/06/16
- $scope.blogTodo = function(i) {
-   alert(i);
-  todosFactory.blogTodo($scope.todos[i]._id).then(function(data) {
+// $scope.blogTodo = function(i) {
+//   alert(i);
+//  todosFactory.blogTodo($scope.todos[i]._id).then(function(data) {
       //alert(i);
-      if (data.data) {
-        $scope.todos[i];
-      }
-    });
-  };
+//      if (data.data) {
+//        $scope.todos[i];
+//      }
+//    });
+//  };
 
 
 
@@ -145,7 +145,6 @@ $scope.ngChangeUpdatedLabel = function (label){
  }
 
 
-
 $scope.image = "/pics/JackiesLionSm.png";
 
 $scope.templates =
@@ -155,13 +154,7 @@ $scope.templates =
 
 });
 
-
-
-
 todoApp.controller ('homeCtrl', function($scope) {
 
 $scope.message = "Be Brave and confront evil with Valor"
-
-
-
 })
