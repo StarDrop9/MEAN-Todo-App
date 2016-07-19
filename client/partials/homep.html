@@ -14,9 +14,6 @@
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
         </div>
-
-              
-
   <div class="row col-md-12 todos">
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
@@ -33,10 +30,9 @@
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
             <div class="col-md-3 col-sm-3 col-xs-3">
-                <input type="button" class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />
-                <input type="button" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
-                <input type="button" class="btn btn-success" class="pull-right" value="Blog-It" ng-click="blogTodo($index)" />
-            </div>
+                <input type="button" class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Ed" ng-click="isEditable[$index] = true" />
+                <input type="button" class="btn btn-danger" class="pull-right" value="Del" ng-click="delete($index)" />
+             </div>
 
         </div>
     </div>
