@@ -1,7 +1,7 @@
 <div class="container" ng-controller="TodoCtrl">
     <div class="row col-md-12">
           <div class="col-md-8 col-sm-8 col-xs-8" ng-init="label='Magnetism'">
-            <select class="selectwidthauto" ng-change="ngChangeLabel(label)" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels" ng-init="label:'Magnetism'"></select>
+            <select class="selectwidthauto" ng-change="ngChangeLabel(label)" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels" ng-init="label='labels[0]'"></select>
              Rows Disp:<input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
           </div>
     </div>  
