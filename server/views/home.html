@@ -52,6 +52,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                <h1>Home!</h1>
                 <img ng-src="{{image}}"/>
                 <a class="navbar-brand" href="#"></a>
             </div>
@@ -59,11 +60,14 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li><a href="/home">Home</a></li>
-                    <li><a href="/api/Todos">Data</a></li>
+                    <li><a href="/add">Add Todo</a></li>
                     <li><a href="/">Todos</a></li>
+                    <li><a href="/Reports">Report Todos</a></li>
+                    <li><a href="https://keep.google.com/">G-Keep</a></li>
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages <b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                            <li><a href="/api/todos">Data</a></li>
                             <li><a href="#">Inbox</a></li>
                             <li><a href="#">Drafts</a></li>
                             <li><a href="#">Sent Items</a></li>
@@ -87,21 +91,20 @@
         </div>
     </nav>
 </div>
+ <div ng-include="'/partials/homep.html'"></div>
 </div>
 
-
-
-  
-<div class="container" ng-controller="TodoCtrl">
+<!--
+  <div class="container" ng-controller="TodoCtrl">
    <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Home Sweet Home!</h1>
     <hr/>
   <div>
-  <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
+   <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
   </div>
   <div ng-include="'/partials/homep.html'"></div>
 
  </div>
-
+-->
 
  <!-- Add Bootstrap Menu Replace current link options--->
 
