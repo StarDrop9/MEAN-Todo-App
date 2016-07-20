@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+  <title>Start Page</title>
+
+<!-- removed since added below  <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+
+<!-- added 06/27/2016
+  <link rel="stylesheet" type="text/css" href="/css/animations.css">
+ -->
+  <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
+<!--  <script type="text/javascript" src="/lib/jquery/dist/jquery.js"></script> -->
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js/factory.js"></script>
+  <script type="text/javascript" src="/js/controllers.js"></script>
+
+ <script type="text/javascript" src="/lib/angular-elastic-input/src/angular-elastic-input.js"></script>
+ <script type="text/javascript" src="/lib/angular-elastic/elastic.js"></script>
+
+
+<!-- Added for Menu -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<style type="text/css">
+  .bs-example{
+      margin: 20px;
+    }
+</style>
+
+<!-- added 06/27/2016 
+<script type="text/javascript" src="/js/protractor.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
+-->
+</head>
+
+
+<body ng-controller="TodoCtrl">
+  
+<div class="row col-md-12">
+
+<div ng-include="'/partials/navbar.html'"></div>
+
+
+
+  <hr/>
+    <ng-view></ng-view>
+</div>
+
+
+<!--
+  <div class="container">
+     
+    <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Todo App</h1>
+   
+  </div>
+-->
+  <!-- Live reload script -->
+  <!-- <script type="text/javascript" src="http://localhost:35729/livereload.js"></script> -->
+
+
+</body>
