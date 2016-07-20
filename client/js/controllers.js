@@ -145,7 +145,7 @@ $scope.ngChangeUpdatedLabel = function (label){
  }
 
 
-$scope.image = "/pics/JackiesLionSm.png";
+$scope.image = "/pics/JackiesLionSmller.png";
 
 $scope.templates =
       [ { name: 'template1.html', url: '/partials/homep.html'},
