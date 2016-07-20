@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html ng-app="todoApp" >
-<head>
+<head ng-controller="TodoCtrl">
 <link rel="stylesheet" type="text/css" href="/css/styles.css">
 <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
 <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
 
 <div ng-include="'/partials/head.html'"></div>
 </head>
-<body ng-controller="TodoCtrl">
+<body>
 <div class="row col-md-12">
 <div ng-include="'/partials/navbar.html'"></div>
   <hr/>
