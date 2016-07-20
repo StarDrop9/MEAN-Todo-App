@@ -60,9 +60,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="/home"><h1>Home!</h1></a></li>
+                    <li><a href="/home">Home!</a></li>
                     <li><a href="/add">Add Todo</a></li>
-                    <li><a href="/">Todos</a></li>
+                    <li><a href="/"><h2>Todos</h2></a></li>
                     <li><a href="/Reports">Report Todos</a></li>
                     <li><a href="https://keep.google.com/">G-Keep</a></li>
                     <li class="dropdown">
@@ -92,7 +92,8 @@
         </div>
     </nav>
 </div>
- <div ng-include="'/partials/homep.html'"></div>
+  <hr/>
+    <ng-view></ng-view>
 </div>
 
 
@@ -100,8 +101,7 @@
   <div class="container">
      
     <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Todo App</h1>
-    <hr/>
-    <ng-view></ng-view>
+   
   </div>
 -->
   <!-- Live reload script -->
