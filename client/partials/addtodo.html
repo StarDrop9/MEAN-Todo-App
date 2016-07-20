@@ -1,0 +1,11 @@
+<<div class="container" ng-controller="TodoCtrl">
+        <div class="row col-md-12">
+                <div class="container">
+            <div class="col-md-2 col-sm-2 col-xs-3" ng-init="label='Null'">
+               <select class="selectwidthauto" ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
+              </div>
+        </div>
+        <div>
+            <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;"></textarea>
+        </div>
+    </div>
