@@ -3,7 +3,7 @@ todoApp.factory('todosFactory', function($http) {
   var _todoService = {};
   var urlHome = '/home'; 
 
-var val1 = 'Magnetism'
+//var val1 = 'Magnetism'
 
   _todoService.getTodos = function() {
   //debugger; // Set the debugger inside 
