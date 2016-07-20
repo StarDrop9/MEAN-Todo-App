@@ -31,7 +31,7 @@
                  <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label= todo.label">
                  <select id="SA" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
               </div>
-                <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
+        <!--        <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />  -->
          </div>
          
 <!--
