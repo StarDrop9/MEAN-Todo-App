@@ -20,6 +20,11 @@ router.get('/home', function(req, res) {
   });
   
 
+router.get('/add', function(req, res) {
+    res.render('add');
+  });
+  
+
   router.get('/api/todos', function(req, res) {
     db.todos.find(function(err, data) {
       res.json(data);
