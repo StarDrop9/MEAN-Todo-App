@@ -23,7 +23,10 @@ router.get('/home', function(req, res) {
 router.get('/add', function(req, res) {
     res.render('add');
   });
-  
+
+router.get('/iframe', function(req, res) {
+    res.render('iframetest');
+  });  
 
   router.get('/api/todos', function(req, res) {
     db.todos.find(function(err, data) {
