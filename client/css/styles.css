@@ -43,10 +43,10 @@
 }
 
 @media (max-width: 450px) {
-    .todo .col-xs-8 {
+    .todo .col-xm-8 {
         width: 85%;
     }
-    .todo .col-xs-3 {
+    .todo .col-xm-3 {
         width: 100%;
         text-align: center;
         border-top: 1px dashed #aaa;
@@ -56,10 +56,10 @@
 }
 
 @media (max-width: 450px) {
-    .todo .col-xs-8 {
+    .todo .col-xm-8 {
         width: 85%;
     }
-    .todo .col-xs-3 {
+    .todo .col-xm-3 {
         width: 100%;
         text-align: center;
         border-top: 1px dashed #aaa;
