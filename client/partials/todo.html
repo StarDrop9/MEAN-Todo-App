@@ -1,7 +1,7 @@
 <div class="container" ng-controller="TodoCtrl">
         <div class="row col-md-12">
                 <div class="container">
-            <div class="col-md-2 col-sm-2 col-xs-3" ng-init="label='Null'">
+            <div class="col-md-2 col-sm-2 col-xm-3" ng-init="label='Null'">
                <select class="selectwidthauto" ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels"></select>
               </div>
         </div>
@@ -14,20 +14,20 @@
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
         </div>
-        <div ng-repeat="todo in todos" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
-            <div class="col-md-1 col-sm-1 col-xs-1">
+        <div ng-repeat="todo in todos" class="todo col-md-12 col-sm-12 col-xm-12" ng-class="todo.isCompleted ? 'strike' : ''">
+            <div class="col-md-1 col-sm-1 col-xm-1">
                 <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
             </div>
-            <div class="col-md-8 col-sm-8 col-xs-8">
+            <div class="col-md-8 col-sm-8 col-xm-8">
               <span ng-show="!isEditable[$index]">{{todo.label}}</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
                 
                 <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 200px; max-width: 400px;">{{todo.todo}}</textarea>
-                 <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label= todo.label">
+                 <div class="col-md-3 col-sm-3 col-xm-3" ng-init="label= todo.label">
                  <select id="SA" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
               </div>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="col-md-3 col-sm-3 col-xm-3">
                 <input type="button" class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />
                 <input type="button" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
             </div>
