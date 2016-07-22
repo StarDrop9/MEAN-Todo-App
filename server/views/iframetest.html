@@ -15,13 +15,20 @@
   <title>Loading page with X-Frame-Options in an iframe using YQL</title>
   
 </head>
-<body>
+<body ng-controller="TodoCtrl">
 
 <!--  <iframe src="https://news.ycombinator.com/" width="500" height="300"></iframe> -->
   
 
-  <iframe src="http://www.yahoo.com" width="500" height="300"></iframe>
+ <input list="urls" class="selectwidthauto" ng-model="urls" />
+             <datalist id="labels">
+                  <option value="http://www.yahoo.com" />
+                  <option value="https://news.ycombinator.com/" />
+                  <option value="http://www.yahoo.com" />
+                  <option value="https://keep.google.com/" />
+               </datalist>
 
+  <iframe src= "{{urls}}" width="500" height="300"></iframe>
   
 
 <script type='text/javascript'>//<![CDATA[
