@@ -19,7 +19,7 @@
 
 <!--  <iframe src="https://news.ycombinator.com/" width="500" height="300"></iframe> -->
   
-<div ng-init="urls='http://www.yahoo.com'" >
+<div ng-init="urls='http://www.yahoo.com'" ng-model="urls" >
 
  
  <input list="urls" class="selectwidthauto" ng-model="urls" />
@@ -30,6 +30,7 @@
                   <option value="https://keep.google.com/" />
                </datalist>
 </div>
+
   <iframe src= "{{urls}}" width="500" height="300"></iframe>
   
 
