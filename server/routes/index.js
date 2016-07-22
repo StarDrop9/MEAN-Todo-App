@@ -28,6 +28,11 @@ router.get('/iframe', function(req, res) {
     res.render('iframetest');
   });  
 
+router.get('/pics', function(req, res) {
+    res.render('Upload');
+  }); 
+
+
   router.get('/api/todos', function(req, res) {
     db.todos.find(function(err, data) {
       res.json(data);
