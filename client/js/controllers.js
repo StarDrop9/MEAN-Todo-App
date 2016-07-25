@@ -10,10 +10,8 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
   // Save a Todo to the server
   $scope.save = function($event,label, priority) {
-  
- debugger; // Set the debugger inside 
-                // this function
-   console.log(todo);
+   debugger; // Set the debugger inside 
+      console.log(todo);
 
     if ($event.which == 13 && $scope.todoInput) {
       todosFactory.saveTodoTest({
