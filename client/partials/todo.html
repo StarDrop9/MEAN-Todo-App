@@ -5,8 +5,8 @@
             <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;"></textarea>
         </div>
         <div class="col-md-6 col-sm-6 col-xm-6" ng-init="label='Label'">
-         <select class="selectwidthauto" ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">AAA</select>&#xA0;&#xA0;
-      <input type="number" step="1" min="0" max="10" class="col-md-1 col-sm-1 col-xm-1" ng-model="priority" />&#xA0;&#xA0;
+         <span><select class="selectwidthauto" ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">AAA</select>&#xA0;&#xA0;
+      <input type="number" step="1" min="0" max="10" class="col-md-1 col-sm-1 col-xm-1" ng-model="priority" /></span>
         </div>
     </div>
 
