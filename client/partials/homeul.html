@@ -22,14 +22,16 @@
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
         </div>
+       
+
+
+
         <div ng-repeat="todo in todos|filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
             <div class="col-md-8 col-sm-8 col-xs-8">
-           
-              <span ng-show="!isEditable[$index]">{{todo.label}}</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
+       
+             <span ng-show="!isEditable[$index]">{{todo.label}}</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
              
-                <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 200px; max-width: 400px;">{{todo.todo}}</textarea>
-                 <div class="col-md-3 col-sm-3 col-xs-3" ng-init="label= todo.label">
-                 <select id="SA" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
+              
               </div>
         <!--        <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />  -->
          </div>
