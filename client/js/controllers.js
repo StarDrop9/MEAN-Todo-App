@@ -31,15 +31,13 @@ $scope.updateLabelTest = function($event, _id, i, label) {
        //var label = $event.target.id.value.trim()    
        var _t = $scope.todos[i];
     //console.log(_t);
-   
-
-
 
      todosFactory.updateTodoLabel({
       _id: _id,
       todo: _t.todo,
       isCompleted: false,
-      label: label    
+      label: label,
+      priority : priority    
     }).then(function(data) {
       if (data.data.updatedExisting) {
        // _t.label=label;
@@ -58,7 +56,8 @@ $scope.updateLabelTest = function($event, _id, i, label) {
       _id: _id,
       todo: _t.todo,
       isCompleted: false,
-      label: label    
+      label: label,
+      priority: priority    
     }).then(function(data) {
       if (data.data.updatedExisting) {
        // _t.label=label;
