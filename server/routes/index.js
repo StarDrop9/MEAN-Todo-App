@@ -53,7 +53,8 @@ router.get('/pics', function(req, res) {
     }, {
       isCompleted: req.body.isCompleted,
       todo: req.body.todo,
-      label: req.body.label
+      label: req.body.label,
+      priority : req.body.priority
     }, {}, function(err, data) {
       res.json(data);
     });
