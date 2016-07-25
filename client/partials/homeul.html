@@ -1,0 +1,41 @@
+<div class="container" ng-controller="TodoCtrl">
+    <div class="row col-md-12">
+        <!-- <div class="col-md-8 col-sm-8 col-xs-8" ng-init="label='Magnetism'"> -->
+           Disp : <input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
+           <input list="labels" class="selectwidthauto" ng-model="$ctrl.query" />
+             <datalist id="labels">
+                  <option value="A.I." />
+                  <option value="Antigravity" />
+                  <option value="Augmented Reality" />
+                  <option value="Drones" />
+                  <option value="Coding" />
+                  <option value="Tech Scouting" />
+                  <option value="Design" />
+                  <option value="Flying" />
+                  <option value="Anti-Hacking" />
+                  <option value="Magnetism" />
+             </datalist>
+      <!--  <select id="labels" class="selectwidthauto" ng-change="ngChangeLabel(label)" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels"></select> -->
+         <!-- </div> -->
+    </div>  
+  <div class="row col-md-12 todos">
+        <div class="alert alert-info text-center" ng-hide="todos.length > 0">
+            <h3>Loading Todos!</h3>
+        </div>
+
+         <ul>
+          <li ng-repeat= {{ todo.label in todos}}>  
+            <ul>
+       <li ng-repeat="todo in todos|filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
+            <div class="col-md-8 col-sm-8 col-xs-8">
+        </li>   
+      </ul>          
+      </li>
+    </ul>
+</div>
+
+
+
+<!--
+         <div class="col-md-3 col-sm-3 col-xs-3">
+                <input type="button" class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Ed" ng-click="is
