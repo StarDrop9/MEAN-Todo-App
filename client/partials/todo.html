@@ -4,7 +4,7 @@
         <div>
             <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;"></textarea>
         </div>
-        <div class="col-md-2 col-sm-2 col-xm-3" ng-init="label='Label'">
+        <div class="col-md-4 col-sm-4 col-xm-4" ng-init="label='Label'">
          <select class="selectwidthauto" ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">AAA</select>&#xA0;&#xA0;
       <input type="number" step="1" min="0" max="10" class="col-md-1 col-sm-1 col-xm-1" ng-model="priority" />
         </div>
