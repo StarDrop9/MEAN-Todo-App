@@ -22,7 +22,7 @@
              </div>
              <div class="col-md-8 col-sm-8 col-xm-8">
                <span ng-show="!isEditable[$index]">{{todo.label}}</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
-                 <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 200px; max-width: 400px;">{{todo.todo}}</textarea>
+                 <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label,priority);" style="min-width: 200px; max-width: 400px;">{{todo.todo}}</textarea>
                  <div class="col-md-3 col-sm-3 col-xm-3" ng-init="label= todo.label">
                  <select id="SA" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
               </div>
