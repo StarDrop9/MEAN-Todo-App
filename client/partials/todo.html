@@ -24,7 +24,10 @@
                 
                 <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label);" style="min-width: 200px; max-width: 400px;">{{todo.todo}}</textarea>
                  <div class="col-md-3 col-sm-3 col-xm-3" ng-init="label= todo.label">
-                 <select id="SA" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels">{{todo.label}}</select>
+                 <Input list="label" id="SA" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" /> 
+                 <datalist id="label">
+                    <option ng-repeat="x1 in labels" value="{{x1.label}}">
+                </datalist>     
               </div>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
             </div>
