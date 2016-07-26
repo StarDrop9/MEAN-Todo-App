@@ -2,7 +2,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.todos = [];
   $scope.isEditable = [];
   $scope.rowLimit =10 ;
-  $scope.priority = 0;
+  $scope.priorities= [{priority:"Action" },{priority:"High"},{priority:"Medium"},{priority:"Low"}];
   $scope.label = "Label Idea!";
   $scope.labels = [{ label: "Inspiration" },{ label: "Design" },{ label: "Magnetism" },{ label: "Drones" },{ label: "Anti-Hacking" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
   $scope.image = "/pics/JackiesLionSmller.png";
@@ -151,40 +151,28 @@ $scope.ngChangeUpdatedLabel = function (label){
  }
 
 
-$scope.priorityFilter = function (todos) {
- 
-
-    for (var i = todos.length - 1; i >= 0; i--) {
-     var todo = todos[i]
-      debugger; 
-      var priority = parseFloat(todo.priority);
-    
-    if (!priorityFilter) {
-      return false;
-    }
-     if(priority = priority) {
-      return true;
-    }
-     return false;
-  };
-
-
-  };
-
-
-
+//$scope.priorityFilter = function (todos) {
+ //    for (var i = todos.length - 1; i >= 0; i--) {
+   //  var todo = todos[i]
+     // debugger; 
+   //   var priority = parseFloat(todo.priority);
+   // if (!priorityFilter) {
+   //   return false;
+   // }
+   //  if(priority = priority) {
+   //   return true;
+  //  }
+ //    return false;
+//  };
+//  };
 
 $scope.templates =
       [ { name: 'template1.html', url: '/partials/homep.html'},
         { name: 'template2.html', url: '/partials/todo.html'} ];
     $scope.template = $scope.templates[0];
-
 });
 
 
-
-
 todoApp.controller ('homeCtrl', function($scope) {
-
 $scope.message = "Be Brave and confront evil with Valor"
 })
