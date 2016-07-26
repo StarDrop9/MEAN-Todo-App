@@ -12,7 +12,7 @@
             <h3>Loading Todos!</h3>
         </div>
         
-        <div ng-repeat="todo in todos|filter:label|orderBy:'+priority'|limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
+        <div ng-repeat="todo in todos |filter:priority|filter:label|orderBy:'+priority'|limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
             <div class="col-md-10 col-sm-10 col-xm-10">
                       <span ng-show="!isEditable[$index]">{{todo.label}}</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.priority}}</span>
          </div>
