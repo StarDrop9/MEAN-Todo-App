@@ -23,7 +23,7 @@
             </div>
             <div class="col-md-12 col-sm-12 col-xm-12">
               <span ng-show="!isEditable[$index]" Style="color:blue"><stong>{{todo.priority}}</strong></span>&#xA0;&#xA0;
-              <span ng-show="!isEditable[$index]" Style="color:cyan"><strong></strong>{{todo.label}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
+              <span ng-show="!isEditable[$index]" Style="color:darkblue"><strong></strong>{{todo.label}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
               <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label,priority);" style="min-width: 200px; max-width: 400px;">{{todo.todo}}</textarea>
                  <div class="col-md-3 col-sm-3 col-xm-3">
                  <Input list="label" id="SA" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" ng-click="clearlabel()" class="form-control" ng-model="label" /> 
