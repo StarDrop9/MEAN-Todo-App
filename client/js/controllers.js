@@ -151,9 +151,14 @@ $scope.ngChangeUpdatedLabel = function (label){
  }
 
 
-$scope.priorityFilter = function (todo) {
- debugger; 
-    var priority = parseFloat(todo.priority);
+$scope.priorityFilter = function (todos) {
+ 
+
+    for (var i = todos.length - 1; i >= 0; i--) {
+     var todo = todos[i]
+      debugger; 
+      var priority = parseFloat(todo.priority);
+    
     if (!priorityFilter) {
       return false;
     }
@@ -161,6 +166,9 @@ $scope.priorityFilter = function (todo) {
       return true;
     }
      return false;
+  };
+
+
   };
 
 
