@@ -92,19 +92,21 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   };
 
   // Update the edited Todo
-  $scope.edit = function($event, i, label) {
+  $scope.edit = function($event, i, label,priority) {
    if ($event.which == 13 && $event.target.value.trim()) {
      var _t = $scope.todos[i];
       todosFactory.updateTodoTest({
        "_id": _t._id,
       "todo": $event.target.value.trim(),
        "isCompleted": _t.isCompleted,
-       "label": label
+       "label": label,
+       "priority":priority
       }).then(function(data) {
         console.log(label);
        if (data.data.updatedExisting) {
          _t.todo = $event.target.value.trim();
         _t.label = label;
+        _t.priority = priority;
           $scope.isEditable[i] = false;
         } else {
           alert('Oops something went wrong!');
