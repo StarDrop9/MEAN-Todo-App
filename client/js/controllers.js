@@ -140,6 +140,13 @@ $scope.clearlabel = function (){
 $scope.label = "";
    }
 
+
+$scope.clearpriority = function (){
+$scope.priority = "";
+   }
+
+
+
 $scope.ngChangeLabel = function (label){
  console.log(label);
   var label = label;
