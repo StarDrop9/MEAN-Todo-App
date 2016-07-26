@@ -2,7 +2,12 @@
     <div class="row col-md-12">
         <!-- <div class="col-md-8 col-sm-8 col-xs-8" ng-init="label='Magnetism'"> -->
            Disp : <input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
-           <input list="labels" class="selectwidthauto" ng-model="$ctrl.query" />
+           <input list="labels" class="selectwidthauto" ng-click="clearlabel()" ng-model="$ctrl.query" />
+             <datalist id="labels">
+        <option ng-repeat="x1 in labels" value="{{x1.label}}">
+    </datalist>
+
+<!--
              <datalist id="labels">
                   <option value="A.I." />
                   <option value="Antigravity" />
@@ -15,6 +20,7 @@
                   <option value="Anti-Hacking" />
                   <option value="Magnetism" />
              </datalist>
+     -->        
       <!--  <select id="labels" class="selectwidthauto" ng-change="ngChangeLabel(label)" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels"></select> -->
          <!-- </div> -->
     </div>  
