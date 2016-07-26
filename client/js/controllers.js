@@ -2,6 +2,9 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.todos = [];
   $scope.isEditable = [];
   $scope.rowLimit =10 ;
+  $scope.priority = "ZZZ";
+  $scope.label = "Label Idea!";
+  $scope.labels = [{ label: "Inspiration" },{ label: "Design" },{ label: "Magnetism" },{ label: "Drones" },{ label: "Anti-Hacking" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
 
   // get all Todos on Load would like to add label and priority focus for loads
   todosFactory.getTodos().then(function(data) {
@@ -131,12 +134,6 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 //    });
 //  };
 
-
-
-
-$scope.priority = "!";
-$scope.label = "Label Idea!";
-$scope.labels = [{ label: "Inspiration" },{ label: "Design" },{ label: "Magnetism" },{ label: "Drones" },{ label: "Anti-Hacking" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
 
 
 $scope.ngChangeLabel = function (label){
