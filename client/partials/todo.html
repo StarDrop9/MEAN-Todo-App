@@ -6,7 +6,9 @@
         </div>
         <div class="col-md-6 col-sm-6 col-xm-6">
 
-         <input type="number" step="1" min="0" max="10" placeholder="priority" class="col-md-2 col-sm-2 col-xm-2" ng-model="priority" />&#xA0;&#xA0;&#xA0;&#xA0;<Input type=text class="selectwidthauto" placeholder="Label!" ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels" />
+         <input type="number" step="1" min="0" max="10" placeholder="priority" class="col-md-2 col-sm-2 col-xm-2" ng-model="priority" />&#xA0;&#xA0;&#xA0;&#xA0;<Input list="label" class="selectwidthauto" placeholder="Label Idea!" ng-change="ngChangeLabel(label)" class="form-control" ng-model="label" ng-options="cr.label as cr.label for cr in labels" /><datalist id="label">
+        <option ng-repeat="cr.label as cr.label for cr in labels" value="{{cr.label}}">
+    </datalist>
         </div>
      </div>
       <div class="row col-md-12 todos">
