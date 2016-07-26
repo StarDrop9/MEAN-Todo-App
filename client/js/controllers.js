@@ -134,6 +134,13 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 //    });
 //  };
 
+$scope.clearlabel = function (){
+ 
+$scope.label = "";
+
+   }
+
+
 
 
 $scope.ngChangeLabel = function (label){
