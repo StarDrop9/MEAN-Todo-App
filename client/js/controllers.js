@@ -151,7 +151,7 @@ $scope.ngChangeUpdatedLabel = function (label){
  }
 
 
-$scope.priorityFilter = function (priority) {
+$scope.priorityFilter = function (todo) {
  debugger; 
     var priority = parseFloat(todo.priority);
     if (!priorityFilter) {
