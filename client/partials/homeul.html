@@ -1,22 +1,13 @@
 <div class="container" ng-controller="TodoCtrl">
     <div class="row col-md-12">
         <!-- <div class="col-md-8 col-sm-8 col-xs-8" ng-init="label='Magnetism'"> -->
+         
+
            Disp : <input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
-           <input list="labels" class="selectwidthauto" ng-model="$ctrl.query" />
-             <datalist id="labels">
-                  <option value="A.I." />
-                  <option value="Antigravity" />
-                  <option value="Augmented Reality" />
-                  <option value="Drones" />
-                  <option value="Coding" />
-                  <option value="Tech Scouting" />
-                  <option value="Design" />
-                  <option value="Flying" />
-                  <option value="Anti-Hacking" />
-                  <option value="Magnetism" />
-             </datalist>
-      <!--  <select id="labels" class="selectwidthauto" ng-change="ngChangeLabel(label)" ng-model="$ctrl.query" ng-options="cr.label as cr.label for cr in labels"></select> -->
-         <!-- </div> -->
+         
+             <Input list="label" class="selectwidthauto" placeholder="Category Search" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="$ctrl.query" /><datalist id="label">
+        <option ng-repeat="x1 in labels" value="{{x1.label}}">
+    </datalist>
     </div>  
    <div class="row col-md-12 todos">
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
@@ -26,7 +17,7 @@
 
 
 
-        <div ng-repeat="todo in todos|filter:$ctrl.query | orderBy:'+label'| limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
+        <div ng-repeat="todo in todos|filter:$ctrl.query:true | orderBy:'+label'| limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
             <div class="col-md-8 col-sm-8 col-xm-8">
             <ul>  
              <li ng-show="!isEditable[$index]">{{todo.todo}}</li>
