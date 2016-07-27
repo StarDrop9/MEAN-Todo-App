@@ -14,7 +14,7 @@
             <h3>Loading Todos!</h3>
         </div>
         
-        <div ng-repeat="todo in todos |filter:priority:true|limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
+        <div ng-repeat="todo in todos filter:label:true||filter:priority:true|limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
             <div class="col-md-12 col-sm-12 col-xm-12">
                       <span ng-show="!isEditable[$index]"Style="Color:blue"><strong>{{todo.priority}}</strong></span>
                       <span ng-show="!isEditable[$index]"><strong>{{todo.label}}</strong></span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>&#xA0;&#xA0;&#xA0;&#xA0;

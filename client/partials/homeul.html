@@ -3,7 +3,7 @@
         <Input list="label" class="selectwidthauto" placeholder="Category Search" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /><datalist id="label">
         <option ng-repeat="x1 in labels" value="{{x1.label}}">
     </datalist>&#xA0;&#xA0;&#xA0;
-    <input type="number" step="1" min="0" max="200" ng-model="rowLimit" value="Display Rows" />
+    <input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
     </div>  
    <div class="row col-md-12 todos">
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
