@@ -88,8 +88,8 @@
 
 .navbar .brand {
     margin-left: 1px;
-    position: absolute;
-    width: 30px;
+    position: relative;
+    width: 40px;
     left: 0px;
     top:-10px;
     padding: 1px;
