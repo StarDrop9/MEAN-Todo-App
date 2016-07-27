@@ -12,12 +12,12 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
     $scope.todos = data.data;
   });
 
-  // Save a Todo to the server removed 07/27PM $event.which == 13 &&
+  // Save a Todo to the server kps tried 07/27PM || $scope.addInput 
   $scope.save = function($event,label, priority) {
    debugger; // Set the debugger inside 
       console.log(priority);
 
-    if ( $event.which == 13 && $scope.todoInput || $scope.addInput ) {
+    if ( $event.which == 13 && $scope.todoInput ) {
       todosFactory.saveTodoTest({
         "todo": $scope.todoInput,
         "isCompleted": false,
