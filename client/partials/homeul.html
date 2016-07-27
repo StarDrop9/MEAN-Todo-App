@@ -1,4 +1,4 @@
-<div class="container" ng-controller="TodoCtrl" data-ng-include="label">
+<div class="container" ng-controller="TodoCtrl" >
     <div class="row col-md-12">
         <Input list="label" class="selectwidthauto" placeholder="Category Search" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /><datalist id="label">
         <option ng-repeat="x1 in labels" value="{{x1.label}}">
