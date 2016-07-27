@@ -95,8 +95,9 @@
 }
 .brand .inner {
     margin-left: 10px;
-    position: absolute;
+    position: relative;
     width: 30px;
     left: 0px;
     padding: 1px;
+    top:25px;
 }
