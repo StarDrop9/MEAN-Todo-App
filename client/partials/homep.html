@@ -1,7 +1,7 @@
 <div class="container" ng-controller="TodoCtrl">
     <div class="row col-md-12">
         <!-- <div class="col-md-8 col-sm-8 col-xs-8" ng-init="label='Magnetism'"> -->
-           <Input list="label" class="selectwidthauto" placeholder="Category Search" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /><datalist id="$ctrl.query">
+           <Input list="label" class="selectwidthauto" placeholder="Category Search" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="$ctrl.query" /><datalist id="label">
         <option ng-repeat="x1 in labels" value="{{x1.label}}">
     </datalist>
     <Input list="priority" class="selectwidthauto" placeholder="Priority Search" ng-change="" ng-click="clearpriority()" class="form-control" ng-model="priority" /><datalist id="priority">
