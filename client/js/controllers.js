@@ -5,7 +5,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.priorities= [{priority:"Action" },{priority:"High"},{priority:"Medium"},{priority:"Low"},{priority:"Completed"}];
   $scope.label = "Label Todo | Idea!";
   $scope.labels = [{ label: "Inspiration" },{ label: "Design" },{ label: "Magnetism" },{ label: "Drones" },{ label: "Anti-Hacking" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
-  $scope.image = "/pics/JackiesLionSmller.png";
+  $scope.image = "/pics/JackiesLionSmllerTapper.png";
 
   // get all Todos on Load would like to add label and priority focus for loads
   todosFactory.getTodos().then(function(data) {
