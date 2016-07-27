@@ -14,7 +14,7 @@
             <h3>Loading Todos!</h3>
         </div>
 
-        <div ng-repeat="todo in todos|filter:label:true | orderBy:'+label'| limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
+        <div ng-repeat="todo in todos|filter:label:true | orderBy:'+priority'| limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
             <div class="col-md-8 col-sm-8 col-xm-8">
           
 
