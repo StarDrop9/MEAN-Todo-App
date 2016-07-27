@@ -11,7 +11,7 @@
     </datalist>&#xA0;&#xA0;&#xA0;&#xA0;<Input list="label" class="selectwidthauto" placeholder="Label Todo | Idea!" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /><datalist id="label">
         <option ng-repeat="x1 in labels" value="{{x1.label}}">
     </datalist>
-     <input type="button" class="btn btn-info" class="pull-center" value="Add" ng-click="save($event,label,priority)"  ng-model="todoInput" />
+     <input type="button" class="btn btn-info" class="pull-center" value="Add" ng-click="save($event,label,priority)"  ng-model="addInput" />
         </div>
      </div>
       <div class="row col-md-12 todos">
