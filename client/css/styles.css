@@ -85,3 +85,12 @@
 .navbar{
       margin: 10px;
     }
+
+.navbar .brand {
+    margin-left: 1px;
+    position: absolute;
+    width: 10px;
+    left: 0px;
+    top: 0px;
+    padding: 1px;
+}
