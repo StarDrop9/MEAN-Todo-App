@@ -17,7 +17,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
    debugger; // Set the debugger inside 
       console.log(priority);
 
-    if ( $event.which == 13 && $scope.todoInput) {
+    if ( $event.which == 13 | $scope.todoInput) {
       todosFactory.saveTodoTest({
         "todo": $scope.todoInput,
         "isCompleted": false,
