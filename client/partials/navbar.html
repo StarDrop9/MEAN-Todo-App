@@ -1,7 +1,7 @@
 <div class="navbar">
     <nav id="myNavbar" class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="container" ng-controller="TodoCtrl">
+        <div class="container">
             <div class="navbar-header">
            <a class="brand" href="/"><img style="height:50px;width:140px" ng-src="{{image}}" /></a>
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -14,10 +14,8 @@
                        <!-- Collect the nav links, forms, and other content for toggling -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                    <ul class="nav navbar-nav">
-                    <li><a href="/home">Home</a></li>
-                    <li><a href="/add"><Input list="label" class="selectwidthauto" placeholder="Category Search" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /><datalist id="label">
-        <option ng-repeat="x1 in labels" value="{{x1.label}}">
-    </datalist>&#xA0;&#xA0;&#xA0;</a></li>
+                    <li><a href="/home">ByPriority</a></li>
+                    <li><a href="/add">ByCategory</a></li>
                     <li><a href="/">Todos</a></li>
                     <li><a href="/Reports">Report Todos</a></li>
                     <li><a href="https://keep.google.com/">G-Keep</a></li>
