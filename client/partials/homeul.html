@@ -1,6 +1,6 @@
 <div class="container" ng-controller="TodoCtrl" >
     <div class="row col-md-12">
-        <Input list="label" class="selectwidthauto" placeholder="Category Search" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /><datalist id="label">
+        <Input list="label" class="selectwidthauto" placeholder="Category Search" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" value={{label}} /><datalist id="label">
         <option ng-repeat="x1 in labels" value="{{x1.label}}">
     </datalist>&#xA0;&#xA0;&#xA0;
     <input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
