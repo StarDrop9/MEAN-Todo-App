@@ -13,9 +13,6 @@
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
             <h3>Loading Todos!</h3>
         </div>
-       
-
-
 
         <div ng-repeat="todo in todos|filter:$ctrl.query:true | orderBy:'+label'| limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
             <div class="col-md-8 col-sm-8 col-xm-8">
@@ -23,7 +20,7 @@
 
 
             <ul>  
-            <li ng-show="!isEditable[$index]"><strong>{{todo.priority}}&#xA0;&#xA0;&#xA0;{{todo.label}}</strong></li>
+            <li ng-show="!isEditable[$index]"><strong><span style="color:blue">{{todo.priority}}</span>&#xA0;&#xA0;&#xA0;{{todo.label}}</strong></li>
 
              <li ng-show="!isEditable[$index]">{{todo.todo}}</li>
              </ul>
