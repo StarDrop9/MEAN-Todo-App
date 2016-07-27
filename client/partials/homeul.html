@@ -5,7 +5,7 @@
 
            Disp : <input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
          
-             <Input list="label" class="selectwidthauto" placeholder="Category Search" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="$ctrl.query" /><datalist id="label">
+             <Input list="label" class="selectwidthauto" placeholder="Category Search" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /><datalist id="label">
         <option ng-repeat="x1 in labels" value="{{x1.label}}">
     </datalist>
     </div>  
@@ -14,7 +14,7 @@
             <h3>Loading Todos!</h3>
         </div>
 
-        <div ng-repeat="todo in todos|filter:$ctrl.query:true | orderBy:'+label'| limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
+        <div ng-repeat="todo in todos|filter:label:true | orderBy:'+label'| limitTo:rowLimit" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
             <div class="col-md-8 col-sm-8 col-xm-8">
           
 
