@@ -26,7 +26,9 @@ router.get('/archive', function(req, res) {
 router.get('/search', function(req, res) {
     res.render('search');
   });
-
+router.get('/today', function(req, res) {
+    res.render('today');
+  });
 
 router.get('/add', function(req, res) {
     res.render('add');
