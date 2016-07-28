@@ -3,8 +3,8 @@
         <!-- <div class="col-md-8 col-sm-8 col-xs-8" ng-init="label='Magnetism'"> -->
         <Input list="priority" class="selectwidthauto" placeholder="Priority Search" ng-change="" ng-click="clearpriority()" class="form-control" ng-model="priority" /><datalist id="priority">
         <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
-    </datalist>
- Display:<input type="number" step="1" min="0" max="200" ng-model="rowLimit" />
+    </datalist>&#xA0;&#xA0;&#xA0;
+ <input type="number" step="1" min="0" max="200" ng-model="rowLimit"  class="selectwidthauto" />
     </div>  
   <div class="row col-md-12 todos">
         <div class="alert alert-info text-center" ng-hide="todos.length > 0">
