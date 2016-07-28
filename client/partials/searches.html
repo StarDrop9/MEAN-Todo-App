@@ -1,12 +1,17 @@
 <div class="container" ng-controller="TodoCtrl">
   <div class="row col-md-12">
     <label>Todo filter:</label>
-    <input ng-model="zzzzz">
-        
-    <div ng-repeat="todo in todos | filter:isInteresting"> 
+    <input ng-model="AAA">
+    <label>Label filter:</label>
+    <input ng-model="BBB">
+     <label>Priority filter:</label>
+    <input ng-model="CCC">
+
+    <div ng-repeat="todo in todos | filter:isInteresting | filter:isLabel | filter: isPriority   "> 
          <pre>{{todo}}</pre>
          <span>{{todo.priority}}</span>
          <span>{{todo.label}}</span>
-         <span>{{todo.todo}}</span>  
+         <span>{{todo.todo}}</span>
+         <span>{{todo.isCompleted}}</span>  
     </div>
 </div>

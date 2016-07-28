@@ -136,16 +136,36 @@ $scope.isComplete = function(todo) {
     };
 
  $scope.isInteresting = function (todo) {
-        debugger;
-
-        if ($scope.zzzzz == undefined) {
-         console.log($scope.zzzzz); 
+//        debugger;
+        if ($scope.AAA == undefined) {
+  //       console.log($scope.AAA); 
             return true;
         }
-        
-        console.log($scope.zzzzz);
-        return todo.todo.indexOf($scope.zzzzz) !== -1;
+    //    console.log($scope.AAA);
+        return todo.todo.indexOf($scope.AAA) !== -1;
     };
+
+ $scope.isLabel = function (todo) {
+//        debugger;
+        if ($scope.BBB == undefined) {
+  //       console.log($scope.BBB); 
+            return true;
+        }
+    //    console.log($scope.AAA);
+        return todo.todo.indexOf($scope.BBB) !== -1;
+    };
+
+ $scope.isPriority = function (todo) {
+//        debugger;
+        if ($scope.CCC == undefined) {
+  //       console.log($scope.BBB); 
+            return true;
+        }
+    //    console.log($scope.AAA);
+        return todo.todo.indexOf($scope.CCC) !== -1;
+    };
+
+
 
 
 // Blog a Todo kps 04/06/16
