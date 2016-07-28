@@ -152,7 +152,7 @@ $scope.isComplete = function(todo) {
             return true;
         }
     //    console.log($scope.AAA);
-        return todo.todo.indexOf($scope.BBB) !== -1;
+        return todo.label.indexOf($scope.BBB) !== -1;
     };
 
  $scope.isPriority = function (todo) {
@@ -162,7 +162,7 @@ $scope.isComplete = function(todo) {
             return true;
         }
     //    console.log($scope.AAA);
-        return todo.todo.indexOf($scope.CCC) !== -1;
+        return todo.priority.indexOf($scope.CCC) !== -1;
     };
 
 
