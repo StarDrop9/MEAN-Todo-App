@@ -1,0 +1,9 @@
+<div class="container" ng-controller="TodoCtrl">
+  <div class="row col-md-12">
+    <label>Todo substring filter:</label>
+    <input ng-model="zzzzz">
+        
+    <div ng-repeat="todo in todos | filter:isInteresting"> 
+        <pre>{{todo | json}}</pre>
+    </div>
+</div>

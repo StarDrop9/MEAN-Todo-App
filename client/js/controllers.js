@@ -135,7 +135,13 @@ $scope.isComplete = function(todo) {
         return todo.isCompleted === true;
     };
 
-
+ $scope.isInteresting = function (todo) {
+        if ($scope.zzzzz == undefined) {
+            return true;
+        }
+        
+        return todo._id.indexOf($scope.zzzzz) !== -1;
+    };
 
 
 // Blog a Todo kps 04/06/16

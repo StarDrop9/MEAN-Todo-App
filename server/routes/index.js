@@ -23,6 +23,11 @@ router.get('/archive', function(req, res) {
     res.render('archive');
   });
 
+router.get('/search', function(req, res) {
+    res.render('search');
+  });
+
+
 router.get('/add', function(req, res) {
     res.render('add');
   });
