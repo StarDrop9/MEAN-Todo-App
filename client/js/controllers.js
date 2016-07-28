@@ -127,7 +127,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
 
 $scope.isActive = function(todo) {
-        return todo.isCompleted === true;
+        return todo.isCompleted === false;
     };
     
 
