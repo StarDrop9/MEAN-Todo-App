@@ -125,6 +125,10 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     });
   };
 
+ $scope.ChooseLabelString = function(label) {
+      $scope.filters = label;
+    };
+
 
 $scope.isActive = function(todo) {
         return todo.isCompleted === false;
