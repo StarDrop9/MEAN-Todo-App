@@ -126,6 +126,18 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   };
 
 
+$scope.isActive = function(todo) {
+        return todo.isCompleted === false;
+    };
+    
+
+$scope.isComplete = function(todo) {
+        return todo.isCompleted === true;
+    };
+
+
+
+
 // Blog a Todo kps 04/06/16
 // $scope.blogTodo = function(i) {
 //   alert(i);
