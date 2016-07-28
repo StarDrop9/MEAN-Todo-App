@@ -146,12 +146,12 @@ $scope.isComplete = function(todo) {
     };
 
  $scope.isLabel = function (todo) {
-//        debugger;
+        debugger;
         if ($scope.BBB == undefined) {
-  //       console.log($scope.BBB); 
+         console.log($scope.BBB); 
             return true;
         }
-    //    console.log($scope.AAA);
+        console.log($scope.BBB);
         return todo.label.indexOf($scope.BBB) !== -1;
     };
 

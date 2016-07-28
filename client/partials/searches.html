@@ -3,7 +3,7 @@
     <label>Todo filter:</label>
     <input ng-model="BBB">
 
-    <div ng-repeat="todo in todos | filter:isLabel:true "> 
+    <div ng-repeat="todo in todos |filter:isLabel"> 
         <!-- <pre>{{todo}}</pre> -->
          <span>{{todo.priority}}</span>
          <span>{{todo.label}}</span>
