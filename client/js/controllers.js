@@ -144,7 +144,7 @@ $scope.isComplete = function(todo) {
         }
         
         console.log($scope.zzzzz);
-        return todo.indexOf($scope.zzzzz) !== -1;
+        return todo.todo.indexOf($scope.zzzzz) !== -1;
     };
 
 
