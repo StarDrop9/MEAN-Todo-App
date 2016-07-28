@@ -19,7 +19,7 @@
             <h3>Loading Todos!</h3>
         </div>
         
-        <div ng-repeat="todo in todos | filter:"todo.label.indexof()='Today'"  " class="todo col-md-12 col-sm-12 col-xm-12" ng-class="todo.isCompleted ? 'strike' : ''">
+        <div ng-repeat="todo in todos | "filter:label='Today'"  " class="todo col-md-12 col-sm-12 col-xm-12" ng-class="todo.isCompleted ? 'strike' : ''">
             <div class="col-md-1 col-sm-1 col-xm-1">
                 <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
             </div>
