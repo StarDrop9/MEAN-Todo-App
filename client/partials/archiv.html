@@ -1,0 +1,50 @@
+<div class="container" ng-controller="TodoCtrl">
+  <div class="row col-md-12">
+    <div class="container">
+        <div>
+            <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;"></textarea>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xm-6">
+
+         <Input list="priority" class="selectwidthauto" placeholder="*** Priority!" ng-change="" ng-click="clearpriority()" class="form-control" ng-model="priority" /><datalist id="priority">
+        <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
+    </datalist>&#xA0;&#xA0;&#xA0;&#xA0;<Input list="label" class="selectwidthauto" placeholder="Label Todo | Idea!" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /><datalist id="label">
+        <option ng-repeat="x1 in labels" value="{{x1.label}}">
+    </datalist>
+     <input type="button" class="btn btn-info" class="pull-center" value="Add" ng-click="save($event,label,priority)"  ng-model="todoInput" />
+        </div>
+     </div>
+      <div class="row col-md-12 todos">
+        <div class="alert alert-info text-center" ng-hide="todos.length > 0">
+            <h3>Loading Todos!</h3>
+        </div>
+        <div ng-repeat="todo in todos | filter:isActive " class="todo col-md-12 col-sm-12 col-xm-12" ng-class="todo.isCompleted ? 'strike' : ''">
+            <div class="col-md-1 col-sm-1 col-xm-1">
+                <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
+            </div>
+            <div class="col-md-12 col-sm-12 col-xm-12">
+              <span ng-show="!isEditable[$index]" Style="color:blue"><strong>{{todo.priority}}</strong></span>&#xA0;&#xA0;
+              <span ng-show="!isEditable[$index]"><strong>{{todo.label}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
+              <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label,priority);" style="min-width: 200px; max-width: 400px;">{{todo.todo}}</textarea>
+                 <div class="col-md-3 col-sm-3 col-xm-3">
+                 <Input list="label" id="SA" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" ng-click="clearlabel()" class="form-control" ng-model="label" /> 
+                 <datalist id="label">
+                    <option ng-repeat="x1 in labels" value="{{x1.label}}">
+                </datalist>
+                <Input list="priority" id="priority" ng-show="isEditable[$index]" ng-click="clearpriority()" class="form-control" ng-model="priority" /> 
+                 <datalist id="priority">
+                    <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
+                </datalist>     
+              </div>
+                <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
+            </div>
+            <div class="col-md-3 col-sm-3 col-xm-3">
+                <input type="button" class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />
+                <input type="button" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+

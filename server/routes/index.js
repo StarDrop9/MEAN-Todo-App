@@ -19,6 +19,9 @@ router.get('/home', function(req, res) {
     res.render('home');
   });
   
+router.get('/archive', function(req, res) {
+    res.render('archive');
+  });
 
 router.get('/add', function(req, res) {
     res.render('add');
