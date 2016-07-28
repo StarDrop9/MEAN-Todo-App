@@ -143,7 +143,7 @@ $scope.isComplete = function(todo) {
             return true;
         }
         
-        console.log($scope.zzzzz);
+        //console.log($scope.zzzzz);
         return todo.indexOf($scope.zzzzz) !== -1;
     };
 
