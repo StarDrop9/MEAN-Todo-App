@@ -1,9 +1,9 @@
 <div class="container" ng-controller="TodoCtrl">
   <div class="row col-md-12">
     <label>Todo filter:</label>
-    <input ng-model="AAA">
+    <input ng-model="BBB">
 
-    <div ng-repeat="todo in todos | filter:isInteresting "> 
+    <div ng-repeat="todo in todos | filter:isLabel:true "> 
         <!-- <pre>{{todo}}</pre> -->
          <span>{{todo.priority}}</span>
          <span>{{todo.label}}</span>
