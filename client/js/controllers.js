@@ -136,11 +136,15 @@ $scope.isComplete = function(todo) {
     };
 
  $scope.isInteresting = function (todo) {
+        debugger;
+
         if ($scope.zzzzz == undefined) {
+         console.log($scope.zzzzz); 
             return true;
         }
         
-        return todo._id.indexOf($scope.zzzzz) !== -1;
+        console.log($scope.zzzzz);
+        return todo.indexOf($scope.zzzzz) !== -1;
     };
 
 
