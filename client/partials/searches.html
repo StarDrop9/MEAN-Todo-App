@@ -14,4 +14,13 @@
          <span>{{todo.todo}}</span>
          <span>{{todo.isCompleted}}</span>  
     </div>
+
+<div ng-repeat="todo in todos | filter:isLabel "> 
+         <pre>{{todo}}</pre>
+         <span>{{todo.priority}}</span>
+         <span>{{todo.label}}</span>
+         <span>{{todo.todo}}</span>
+         <span>{{todo.isCompleted}}</span>  
+    </div>
+
 </div>
