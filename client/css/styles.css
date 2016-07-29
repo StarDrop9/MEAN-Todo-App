@@ -1,4 +1,4 @@
-* {
+ {
     -webkit-border-radius: 0 !important;
     -moz-border-radius: 0 !important;
     border-radius: 0 !important;
@@ -8,15 +8,12 @@
     text-decoration: line-through;
     color: #ccc;
 }
-
-
 .todos {
     padding: 20px;
 }
-
 .todo {
     padding: 10px;
-    font-size: 16px;
+    font-size: 21px;
     border-bottom: 1px solid;
 }
 .todo .btn {
@@ -31,7 +28,7 @@
         margin-bottom: 10px;
     }
     .todo input[type=checkbox] {
-        width: 10px;
+        width: 25px;
         height: 25px;
     }
 }
@@ -43,10 +40,10 @@
 }
 
 @media (max-width: 450px) {
-    .todo .col-xm-8 {
+    .todo .col-xs-8 {
         width: 85%;
     }
-    .todo .col-xm-3 {
+    .todo .col-xs-3 {
         width: 100%;
         text-align: center;
         border-top: 1px dashed #aaa;
@@ -56,10 +53,10 @@
 }
 
 @media (max-width: 450px) {
-    .todo .col-xm-8 {
+    .todo .col-xs-8 {
         width: 85%;
     }
-    .todo .col-xm-3 {
+    .todo .col-xs-3 {
         width: 100%;
         text-align: center;
         border-top: 1px dashed #aaa;
