@@ -1,7 +1,7 @@
 !DOCTYPE html>
 <html lang="en">
 
-<head>
+<head ng-app="todoApp>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,7 +9,10 @@
     <title>Material Design Bootstrap Template</title>
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/"> -->
+      <link href="font-awesome.min.css" rel="stylesheet">
+      
+
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -17,12 +20,23 @@
     <!-- Material Design Bootstrap -->
     <link href="css/mdb.min.css" rel="stylesheet">
 
+  <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js/factory.js"></script>
+  <script type="text/javascript" src="/js/controllers.js"></script>
+
+  <script type="text/javascript" src="/lib/angular-elastic-input/src/angular-elastic-input.js"></script>
+  <script type="text/javascript" src="/lib/angular-elastic/elastic.js"></script>
+
+
+
+
     <style>
         
-        body {
-            background: url("http://mdbootstrap.com/images/regular/nature/img%20(54).jpg") no-repeat center center fixed;
-            background-size: cover;
-        }
+       body {
+            background: url("http://mdbootstrap.com/images/regular/nature/img%20(54).jpg") no-repeat center center fixed;        background-size: cover; -->
+        }         
         
         .button-collapse {
             font-size: 2rem;
@@ -41,7 +55,7 @@
 
 </head>
 
-<body>
+<body >
    
     <!-- Sidebar navigation -->
     <ul id="slide-out" class="side-nav fixed default-side-nav stylish-side-nav">
