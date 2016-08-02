@@ -14,6 +14,7 @@
 .todo {
     padding: 10px;
     font-size: 21px;
+    color:#BCC6CC;
     border-bottom: 1px solid;
 }
 .todo .btn {
