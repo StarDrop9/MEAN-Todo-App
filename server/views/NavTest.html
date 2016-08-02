@@ -157,7 +157,10 @@
     </script>
 
 
-  <div ng-include="'/partials/todo.html'"></div>
+  <div class="row col-md-12" ng-controller="TodoCtrl">
+  <hr/>
+    <ng-view></ng-view>
+</div>
 
 
 </body>
