@@ -83,8 +83,12 @@
      width:auto !important;
 }
 
+
+
+
+
 .navbar{
-      margin: 10px;
+      margin: 0px;
     }
 
 .navbar .brand {
@@ -96,7 +100,7 @@
 
 
 .side-nav {
-width:120px ;
+width:140px ;
 
 }
 
