@@ -117,6 +117,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
   // Delete a Todo
   $scope.delete = function(i) {
+  debugger;
     todosFactory.deleteTodo($scope.todos[i]._id).then(function(data) {
       alert(data);
       if (data.data) {
