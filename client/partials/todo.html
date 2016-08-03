@@ -3,7 +3,7 @@
           <div>
             <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;background-color:white;"></textarea>
         </div>
-
+   <br>
         <Div>
           <Input list="priority" class="selectwidthauto" placeholder="     Priority" ng-change="" ng-click="clearpriority()" class="form-control" ng-model="priority" /><datalist id="priority">
           <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
