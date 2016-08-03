@@ -6,9 +6,10 @@
              </div>
         
             <div ng-repeat="todo in todos |filter:{priority:'Today'}"  " class="todo col-md-12 col-sm-12 col-xm-12" ng-class="todo.isCompleted ? 'strike' : ''" >
-             <div class="col-md-12 col-sm-12 col-xm-12" style="align:left">
+             <div class="col-md-12 col-sm-12 col-xm-12">
+              <span style="align:left">
               <span ng-show="!isEditable[$index]" Style="color:blue"><strong>{{todo.priority}}</strong></span>&#xA0;&#xA0;
-              <span ng-show="!isEditable[$index]"><strong>{{todo.label}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
+              <span ng-show="!isEditable[$index]"><strong>{{todo.label}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span></span>
               <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label,priority);" style="min-width: 200px; max-width: 400px;">{{todo.todo}}</textarea>
                  <div class="col-md-3 col-sm-3 col-xm-3">
                  <Input list="label" id="SA" ng-show="isEditable[$index]" ng-change="updateLabel($event, todo._id, $index, label)" ng-click="clearlabel()" class="form-control" ng-model="label" /> 
