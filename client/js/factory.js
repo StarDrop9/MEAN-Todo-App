@@ -80,7 +80,7 @@ todoApp.factory('todosFactory', function($http) {
   _todoService.deleteTodo = function(id) {
 
   debugger; 
-  alert (id);
+  //alert (id);
     return $http.delete(urlBase + '/' + id);
   };
 
