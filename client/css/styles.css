@@ -84,8 +84,7 @@
 }
 
 
-
-
+/* Conflict with Navtest.html custom style sheet from MDB */
 
 .navbar{
       margin: 0px;
@@ -104,11 +103,3 @@ width:140px ;
 
 }
 
-.logo-wrapper {
-}
-
-.textarea {
--webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px;
-}
