@@ -8,7 +8,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.image = "/pics/JackiesLionSmllerTapper.png";
 
  $scope.heroImage = {
-        background:'url(pics/NatureImg.jpg)' 
+        background:'url("https://meantodo1.herokuapp.com/pics/NatureImg.png")' 
     };
 
   // get all Todos on Load would like to add label and priority focus for loads
