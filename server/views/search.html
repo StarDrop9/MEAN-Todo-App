@@ -50,64 +50,13 @@
 </head>
 <body ng-controller="TodoCtrl">
 
+
+
+
 <div class="row col-md-12">
 <div ng-include="'/partials/navbar.html'"></div>
  <div ng-include="'/partials/searches.html'"></div>
 </div>
-
-<!--
-  <div class="container" ng-controller="TodoCtrl">
-   <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Home Sweet Home!</h1>
-    <hr/>
-  <div>
-   <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
-  </div>
-  <div ng-include="'/partials/homep.html'"></div>
-
- </div>
--->
-
- <!-- Add Bootstrap Menu Replace current link options--->
-
-
-
-
- <!-- 
- <div>
-   <select ng-model="template" ng-options="t.name for t in templates">
-   <option value="">(blank)</option>
-  </select>
-  url of the template: <code>{{template.url}}</code>
-  <hr/>
-  
-  <div class="slide-animate-container">
-      <div class="slide-animate" ng-include="template.url"></div>
-  </div>
-</div>
--->
- <!-- <div class="container" ng-controller="TodoCtrl">
-   <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Home Sweet Home!</h1>
-    <hr/>
-  <div>
-  <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
-  </div> 
-  <h4 ng-controller="homeCtrl">{{message}}</h4>
-     <div class="row col-md-12 todos">
-      <table>
-      <tr ng-repeat="todo in todos" ng-class-even="'stripedblue'"
-      ng-class-odd="'stripedbeige'">
-        <td>
-          {{todo.todo}}
-        </td>
-      </table>
-    </div>
-  </div>
-
-  -->
-  <!-- <ng-view></ng-view> try ng-include -->
-
-  <!-- Live reload script -->
-  <!-- <script type="text/javascript" src="http://localhost:35729/livereload.js"></script> -->
 
 
 </body>
