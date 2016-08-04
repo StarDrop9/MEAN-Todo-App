@@ -9,12 +9,11 @@
     font-family: calibri;
 }
 
-
- body {
+/* kps added 08/04  body {
             background: url("https://meantodo1.herokuapp.com/pics/NatureImg.jpg") no-repeat center center fixed;
             background-size: cover;
         }
-
+*/
 
 .strike span {
     text-decoration: line-through;
@@ -63,6 +62,9 @@
   background: url("https://meantodo1.herokuapp.com/pics/MobileNatureImg.png") no-repeat center center fixed;
 }
 
+@media (min-width : 690px) {
+  background: url("https://meantodo1.herokuapp.com/pics/NatureImg.jpg") no-repeat center center fixed;
+}
 
 
 @media (max-width: 450px) {
