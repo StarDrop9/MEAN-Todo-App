@@ -15,26 +15,6 @@
         }
 */
 
-a:link {
-    color:#3399ff ;
-}
-
-/* visited link */
-a:visited {
-    color: green;
-}
-
-/* mouse over link */
-a:hover {
-    color: hotpink;
-}
-
-/* selected link */
-a:active {
-    color: blue;
-}
-
-
 .strike span {
     text-decoration: line-through;
     color: #ccc;
@@ -153,6 +133,28 @@ a:active {
 .navbar-dark .navbar-toggle .icon-bar {
     background-color: #3399ff;
 }
+
+a:link {
+    color:#3399ff ;
+}
+
+/* visited link */
+a:visited {
+    color: #3399ff;
+}
+
+/* mouse over link */
+a:hover {
+    color: red;
+}
+
+/* selected link */
+a:active {
+    color: blue;
+}
+
+
+
 
 /* for Navtest.html custom style sheet from MDB */
 
