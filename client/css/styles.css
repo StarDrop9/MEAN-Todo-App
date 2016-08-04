@@ -44,9 +44,11 @@
         margin-bottom: 10px;
     }
     .todo input[type=checkbox] {
-        width: 1px;
-        height: 1px;
+        width: 15px;
+        height: 15px;
     }
+background: url("https://meantodo1.herokuapp.com/pics/MobileNatureImg.png") no-repeat center center fixed;
+
 }
 @media (max-width: 991px) {
     .todo .btn-warning {
