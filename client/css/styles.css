@@ -130,6 +130,11 @@
     padding: 1px;
 }
 
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: green;
+}
+
 /* for Navtest.html custom style sheet from MDB */
 
 .side-nav {
