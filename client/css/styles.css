@@ -9,15 +9,11 @@
     font-family: calibri;
 }
 
-body .desktop {
-            background: url("https://meantodo1.herokuapp.com/pics/NatureImg.jpg") no-repeat center center fixed;
-            background-size: cover;
+body {
+       background: url("https://meantodo1.herokuapp.com/pics/NatureImg.jpg") no-repeat center center fixed;
+       background-size: cover;
         }
 
-body .mobile {
-            background: url("https://meantodo1.herokuapp.com/pics/MobileNatureImg.png") no-repeat center center fixed;
-            background-size: cover;
-        }
 
 
 
@@ -63,7 +59,7 @@ body .mobile {
 }
 
 
-/* kps added 08/04 */
+/* kps added 08/04 
 
 .desktop {
     display:block;
@@ -78,7 +74,7 @@ body .mobile {
    .desktop {display:none}
     .mobile {display:block}
 }
-
+*/
 
 
 @media (max-width: 450px) {
