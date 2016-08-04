@@ -1,26 +1,42 @@
-  <!--- NAVIGATION -->
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> 
-      </button>
-      <a class="navbar-brand" href="index.html"><img src="images/merimen-logo.png" class="img-responsive logo"></a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav nav-justified">
-        <li class="phocl text-center"> <a title="WATCH NOW" href="#portfolio">WATCH NOW</a></li>
-        <li class="phocl1"><a title="INSPIRATION NATION" href="#services">INSPIRATION NATION</li>
-        <li class="phocl2"><a title="NEWS" href="#news">NEWS</li>
-        <li class="phocl3"><a id="addBookmark" title="BOOKMARK" href="#team">BOOKMARK</li>
-        <li><a href="#">
-            <div class="send_button" data-toggle="modal" data-target="#largeModal" class="text-center" style="background-color:#50d07d;padding-bottom: 14px; padding-top: 30px;">SIGN IN</div>
-            </a> 
-        </li>
-    </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-<!--- NAVIGATION -->
+  <div class="navbar">
+    <nav id="myNavbar" class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header navbar-toggle Navbar-brand">
+           <a class="brand" href="/"><img style="height:50px;width:140px" ng-src="{{image}}" /></a>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+               </div>
+                       <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                   <ul class="nav navbar-nav">
+                    <li><a href="/">Todos</a></li>
+                    <li><a href="/today">Todays</a></li>
+                    <li><a href="/home">ByPriority</a></li>
+                    <li><a href="/add">ByCategory</a></li>
+                    <li><a href="/search">Search</a></li>
+                    <li><a href="/archive">Archive</a></li>
+                    <li><a href="/navtest">NavTest</a></li>
+                    <li><a href="https://keep.google.com/">G-Keep</a></li>
+                    <li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Messages<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/api/todos">Data</a></li>
+                            <li><a href="#">In Process</a></li>
+                            <li><a href="#">In Process</a></li>
+                            <li><a href="#">In Process</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">In Process</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </nav>
+</div>
+
+
