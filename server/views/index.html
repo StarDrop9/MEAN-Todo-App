@@ -41,10 +41,10 @@
 -->
 </head>
 
-<body ng-style="heroImage">
+<body ng-controller="TodoCtrl" ng-style="heroImage">
 
 
-<div class="row col-md-12" ng-controller="TodoCtrl">
+<div class="row col-md-12" >
 <div ng-include="'/partials/navbar.html'"></div>
   <hr/>
     <ng-view></ng-view>
