@@ -34,8 +34,8 @@
         margin-bottom: 10px;
     }
     .todo input[type=checkbox] {
-        width: 25px;
-        height: 25px;
+        width: 1px;
+        height: 1px;
     }
 }
 @media (max-width: 991px) {
@@ -99,6 +99,7 @@
     padding: 1px;
 }
 
+/* for Navtest.html custom style sheet from MDB */
 
 .side-nav {
 width:140px ;
