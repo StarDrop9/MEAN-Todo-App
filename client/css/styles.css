@@ -134,6 +134,15 @@
     background-color: #3399ff;
 }
 
+ .dropdown-menu li>a{color:#3399ff; }
+   .dropdown-menu>li{padding:2px; border-bottom:0px solid white;border-left:0px 
+              solid white;border-right:0px solid white }
+   .dropdown-menu li>a:hover{background:red; }
+
+
+
+
+
 a:link {
     color:#3399ff ;
 }
