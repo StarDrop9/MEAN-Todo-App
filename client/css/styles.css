@@ -124,15 +124,15 @@
   background-color: transparent;
 }
 .navbar-default .navbar-text {
-  color: #777;
+  color:#3399ff;
 }
 .navbar-default .navbar-nav > li > a {
-  color: #777;
+  color:#3399ff; /*#777;*/
 }
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
   color: #333;
-  background-color: transparent;
+  background-color:#000000; /* transparent; */
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
