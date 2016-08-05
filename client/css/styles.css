@@ -154,8 +154,6 @@
   background-color: transparent;
 }
 
-
-
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #3399ff;                      /* #888;*/
 }
@@ -171,12 +169,9 @@
 }
 
 
-
-
 .navbar-dark .navbar-toggle .icon-bar {
     background-color: #3399ff;
 }
-
 
 .navbar-inverse {
   background-color:#000000; /*#222;*/
@@ -279,33 +274,6 @@ fieldset[disabled] .navbar-inverse .btn-link:hover,
 .navbar-inverse .btn-link[disabled]:focus,
 fieldset[disabled] .navbar-inverse .btn-link:focus {
   color: #444;
-}
-
-
-
- .dropdown-menu li>a{color:#3399ff; }
- .dropdown-menu>li{padding:2px; border-bottom:0px solid white;border-left:0px 
-              solid white;border-right:0px solid white }
- .dropdown-menu li>a:hover{background:red; }
-
-
-a:link {
-    color:#3399ff ;
-}
-
-/* visited link */
-a:visited {
-    color: #3399ff;
-}
-
-/* mouse over link */
-a:hover {
-    color: red;
-}
-
-/* selected link */
-a:active {
-    color: blue;
 }
 
 
