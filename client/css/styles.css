@@ -103,7 +103,18 @@ footer {
 
 
 
+.navbar-brand {
+    margin-left:0px;
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    padding: 0px;
+}
 
+
+
+
+/*Try latter suing -custom 
 
 .navbar-brand
 {
@@ -113,17 +124,6 @@ footer {
     left: 0;
     text-align: center;
     margin:0 auto;
-}
-
-
-/*Try latter suing -custom 
-
-.navbar-brand {
-    margin-left:0px;
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    padding: 0px;
 }
 
 .navbar-custom a {
