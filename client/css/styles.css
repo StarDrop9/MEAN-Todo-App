@@ -45,14 +45,7 @@
     left:10px;   
 }
 
-.navbar-brand {
-    margin-left:20px;
-    position: absolute;
-    width:150px;
-    left: 10px;
-    top: 0px;
-    padding: 0px;
-}
+
 
 
 @media (max-width: 991px) {
@@ -121,7 +114,14 @@ footer {
    z-index:2000; 
 }
 
-
+.navbar-brand {
+    margin-left:10px;
+    position: absolute;
+    width:130px;
+    left: 5px;
+    top: 0px;
+    padding: 0px;
+}
 
 
 
