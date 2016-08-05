@@ -104,20 +104,19 @@ footer {
 
 
 
-/* Conflict with Navtest.html custom style sheet from MDB 
-
-.navbar{
-      margin: 0px;
-    }
-
 .navbar .brand {
     margin-left: 20px;
     position: absolute;
     left: 0px;
     padding: 1px;
 }
-*/
+
+
+
 /*Try latter suing -custom 
+
+
+
 .navbar-custom a {
     color: #3399ff;
 }
