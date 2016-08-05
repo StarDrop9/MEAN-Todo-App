@@ -64,7 +64,15 @@
         margin-left: 0px
     }
 }
+@media (max-width: 991px) {
+   #myNavbar {
+    margin-left:10px;
+    position: relative;
+    left:5px;   
+}
 
+}
+  
 
 @media (max-width: 450px) {
     .todo .col-xs-8 {
@@ -85,7 +93,6 @@
     position: relative;
     left:5px;   
 }
-
 }
   
 
