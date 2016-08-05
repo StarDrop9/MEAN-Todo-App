@@ -105,11 +105,11 @@
     padding: 1px;
 }
 */
-/*Try latter suing -custom */
+/*Try latter suing -custom 
 .navbar-custom a {
     color: #3399ff;
 }
-
+*/
 
 .navbar-default {
   background-color:#000000;                /* #f8f8f8; */
@@ -179,7 +179,7 @@
 
 
 .navbar-inverse {
-  background-color: #222;
+  background-color:#000000; /*#222;*/
   border-color: #080808;
 }
 .navbar-inverse .navbar-brand {
