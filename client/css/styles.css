@@ -121,7 +121,7 @@
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
   color: #5e5e5e;
-  background-color: transparent;
+  background-color:#000000 ;/*transparent;*/
 }
 .navbar-default .navbar-text {
   color:#3399ff;
@@ -151,7 +151,7 @@
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #000000;
+  background-color: transparent;
 }
 
 
@@ -170,9 +170,13 @@
   background-color: #e7e7e7;
 }
 
+
+
+
 .navbar-dark .navbar-toggle .icon-bar {
     background-color: #3399ff;
 }
+
 
 .navbar-inverse {
   background-color: #222;
