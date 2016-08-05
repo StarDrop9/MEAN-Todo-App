@@ -101,27 +101,20 @@ footer {
    z-index:2000; 
 }
 
-.navbar-brand
-{
+.navbar-brand {
+    margin-left:0px;
     position: absolute;
+    width:150px;
+    left: 10px;
     top: 0px;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin:0 auto;
+    padding: 0px;
 }
+
 
 
 
 
 /*Try latter suing -custom 
-.navbar-brand {
-    margin-left:0px;
-    position: absolute;
-    left: 10px;
-    top: 0px;
-    padding: 0px;
-}
 
 
 .navbar-brand
