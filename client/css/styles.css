@@ -153,8 +153,11 @@
 .navbar-default .navbar-toggle:focus {
   background-color: #ddd;
 }
+
+
+
 .navbar-default .navbar-toggle .icon-bar {
-  background-color: #888;
+  background-color: #3399ff;                      /* #888;*/
 }
 .navbar-default .navbar-collapse,
 .navbar-default .navbar-form {
