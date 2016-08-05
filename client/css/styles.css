@@ -105,11 +105,11 @@ footer {
 
 
 .navbar-brand {
-    margin-left: 20px;
+    margin-left: 30px;
     position: absolute;
     left: 0px;
-    top: -5px;
-    padding: 20px;
+    top: 0px;
+    padding: 0px;
 }
 
 
