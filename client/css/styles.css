@@ -39,6 +39,16 @@
 }
 
 
+.navbar-brand {
+    margin-left:100px;
+    position: absolute;
+    width:140px;
+    left: 75px;
+    top: 0px;
+    padding: 0px;
+}
+
+
 #myNavbar {
     margin-left:200px;
     position: relative;
@@ -66,6 +76,17 @@
     }
 }
 @media (max-width: 991px) {
+  .navbar-brand {
+    margin-left:10px;
+    position: absolute;
+    width:140px;
+    left: 15px;
+    top: 0px;
+    padding: 0px;
+}
+
+
+
    #myNavbar {
     margin-left:10px;
     position: relative;
@@ -89,6 +110,15 @@
 }
 
 @media (max-width: 450px) {
+.navbar-brand {
+    margin-left:10px;
+    position: absolute;
+    width:140px;
+    left: 15px;
+    top: 0px;
+    padding: 0px;
+}
+
    #myNavbar {
     margin-left:10px;
     position: relative;
@@ -114,14 +144,7 @@ footer {
    z-index:2000; 
 }
 
-.navbar-brand {
-    margin-left:100px;
-    position: absolute;
-    width:140px;
-    left: 75px;
-    top: 0px;
-    padding: 0px;
-}
+
 
 
 
