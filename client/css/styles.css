@@ -105,6 +105,21 @@
     padding: 1px;
 }
 
+/*Try latter suing -custom */
+.navbar-custom a {
+    color: #3399ff;
+}
+
+
+.navbar-default{
+    background-color:red;
+    border-color: green;
+}
+
+.navbar-default a {
+    color: #3399ff;
+
+}
 
 .navbar-dark .navbar-toggle .icon-bar {
     background-color: #3399ff;
