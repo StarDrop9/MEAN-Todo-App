@@ -115,10 +115,10 @@ footer {
 }
 
 .navbar-brand {
-    margin-left:10px;
+    margin-left:100px;
     position: absolute;
-    width:130px;
-    left: 5px;
+    width:140px;
+    left: 75px;
     top: 0px;
     padding: 0px;
 }
