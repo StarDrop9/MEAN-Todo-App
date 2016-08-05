@@ -110,12 +110,17 @@ footer {
     padding: 0px;
 }
 
-#myNavbar {
+#myleftNavbar {
     margin-left:200px;
     position: relative;
-    left: px;   
+    left:10px;   
 }
 
+#myrightNavbar {
+    margin-right:200px;
+    position: relative;
+    right:10px;   
+}
 
 
 /*Try latter suing -custom 
