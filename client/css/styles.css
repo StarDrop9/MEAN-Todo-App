@@ -101,7 +101,15 @@ footer {
    z-index:2000; 
 }
 
-
+.navbar-brand
+{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    margin:0 auto;
+}
 
 
 
