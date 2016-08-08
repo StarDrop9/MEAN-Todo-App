@@ -169,7 +169,8 @@ footer {
 
 .navbar {
   background: transparent !important; 
-   border-color:transparent;
+  border-color:transparent;
+  z-index:999;  
 }
 
 
