@@ -21,7 +21,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
       console.log(priority);
 
     if ( $event.which == 13 && $scope.todoInput ) {
-      todosFactory.saveTodoTest({
+      todosFactory.saveTodo({
         "todo": $scope.todoInput,
         "isCompleted": false,
         "label": label,
@@ -33,6 +33,33 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
     // $scope.todo.Label = '';
       }
   };
+
+
+$scope.add = function($event,label, priority) {
+   debugger; // Set the debugger inside 
+      console.log(priority);
+
+    if ( $event.which == 1 && $scope.todoInput ) {
+      todosFactory.saveTodo({
+        "todo": $scope.todoInput,
+        "isCompleted": false,
+        "label": label,
+        "priority" : priority
+      }).then(function(data) {
+       $scope.todos.push(data.data);
+             });
+      $scope.todoInput = '';
+    // $scope.todo.Label = '';
+      }
+  };
+
+
+
+
+
+
+
+
 
  //update the Label of the Todo try to work around the factory service with Jquery pput or replace 
  //since the factory appears to be failing at this time start with a new updateLabelTest control
