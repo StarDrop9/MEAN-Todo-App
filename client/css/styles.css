@@ -1,5 +1,5 @@
 html { 
-  
+  background: url("https://meantodo1.herokuapp.com/pics/NatureImg2.png") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -10,13 +10,26 @@ html {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://meantodo1.herokuapp.com/pics/NatureImg2.png', sizingMethod='scale')";
 }
 
- {
+ 
+
+ @media all and (-ms-high-contrast:none)
+     {
+     .foo { color: green } /* IE10 */
+     *::-ms-backdrop, .foo { color: red } /* IE11 */
+     }
+
+
+
+
+
+
+ 
+{
    -webkit-border-radius: 0 !important;
    -moz-border-radius: 0 !important;
    border-radius: 0 !important;
    font-family: calibri;
 }
-
 /*body {
        background: url("https://meantodo1.herokuapp.com/pics/NatureImg.png") no-repeat center center fixed;
        background-size: cover;
