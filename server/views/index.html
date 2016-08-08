@@ -51,7 +51,7 @@
 <!-- ng-style="{backgroundImage:imagePath,'backgroundRepeat':'no-repeat','background-size':'cover'}" -->
 
 <body ng-controller="TodoCtrl" >
-<div class="foo">Hi There!!!</div>
+<!--<div class="foo">Hi There!!!</div> -->
 
 <div class="row col-md-12" >
 <div ng-include="'/partials/navbar.html'"></div>
@@ -66,7 +66,9 @@
 -->
 <div ng-include="'/partials/footer.html'"></div>
 
-
+<svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66">
+  <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+</svg>
 
 </body>
 </html>
