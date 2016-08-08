@@ -161,9 +161,10 @@ footer {
    bottom:0px;
    height:10px;
    width:100%;
-   background:#000000;
+   background: transparent !important;
    border-color:#000000;
    z-index:2000; 
+   background: transparent !important;
 }
 
 
