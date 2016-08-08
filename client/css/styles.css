@@ -164,11 +164,13 @@ footer {
    background: transparent !important;
    border-color:#000000;
    z-index:2000; 
-   background: transparent !important;
+ }
+
+
+.navbar {
+  background: transparent !important; 
+   border-color:transparent;
 }
-
-
-
 
 
 
