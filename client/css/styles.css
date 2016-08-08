@@ -1,10 +1,5 @@
 html { 
-  background: url("https://meantodo1.herokuapp.com/pics/NatureImg2.png") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
+ 
   /* IE fallback support */
   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://meantodo1.herokuapp.com/pics/NatureImg2.png', sizingMethod='scale');
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://meantodo1.herokuapp.com/pics/NatureImg2.png', sizingMethod='scale')";
