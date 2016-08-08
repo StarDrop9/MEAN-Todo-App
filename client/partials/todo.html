@@ -1,7 +1,7 @@
 <div class="container" ng-controller="TodoCtrl">
      <div class="row col-md-12">
           <div>
-            <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="add($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;background-color:white;"></textarea>
+            <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;background-color:white;"></textarea>
         </div>
    <br>
         <Div>
@@ -10,7 +10,7 @@
           </datalist>&#xA0;&#xA0;&#xA0;&#xA0;<Input list="label" class="selectwidthauto" placeholder="Category" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /><datalist id="label">
           <option ng-repeat="x1 in labels" value="{{x1.label}}">
           </datalist>
-          <input type="button" class="btn btn-info" class="pull-center" value="Add" ng-click="save($event,label,priority)"  ng-model="todoInput" />
+          <input type="button" class="btn btn-info" class="pull-center" value="Add" ng-click="add($event,label,priority)"  ng-model="todoInput" />
         </div>
      </div>
       
