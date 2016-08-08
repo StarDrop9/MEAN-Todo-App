@@ -1,29 +1,22 @@
-  /*html { 
-  background: url("https://meantodo1.herokuapp.com/pics/NatureImg2.png") no-repeat center center fixed; 
--webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  
-  /* IE fallback support 
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://meantodo1.herokuapp.com/pics/NatureImg2.png', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://meantodo1.herokuapp.com/pics/NatureImg2.png', sizingMethod='scale')";
-  }
- */
+ 
+ body {
+    background-color: black;
+}
+
 
  @media all and (-ms-high-contrast:none)
      {
      .foo { color: green } /* IE10 */
      *::-ms-backdrop, .foo { color: red } /* IE11 */
    
-background: url("https://meantodo1.herokuapp.com/pics/NatureImg2.png") no-repeat center center fixed; 
+background: url("") no-repeat center center fixed; 
 -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://meantodo1.herokuapp.com/pics/NatureImg2.png', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='https://meantodo1.herokuapp.com/pics/NatureImg2.png', sizingMethod='scale')";
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod='scale')";
 
      }
 
