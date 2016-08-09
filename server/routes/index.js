@@ -24,7 +24,7 @@ router.get('/UIRouter', function(req, res) {
   });
 
 router.get('/ad', function(req, res) {
-    res.render('ad');
+    res.render('addtodo');
   });
   
 router.get('/archive', function(req, res) {
