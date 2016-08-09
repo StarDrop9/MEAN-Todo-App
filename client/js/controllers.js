@@ -9,7 +9,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
  $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/NatureImg2.png")'; 
      $scope.added = function(){
-            alert("Updated");
+        appState ="added");
         }
 
   // get all Todos on Load would like to add label and priority focus for loads
@@ -54,6 +54,7 @@ $scope.add = function($event,label, priority) {
       $scope.todoInput = '';
     // $scope.todo.Label = '';
     $scope.added();
+    appState ="";
       }
   };
 
