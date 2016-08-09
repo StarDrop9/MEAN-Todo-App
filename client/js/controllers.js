@@ -54,7 +54,7 @@ $scope.add = function($event,label, priority) {
       $scope.todoInput = '';
     // $scope.todo.Label = '';
     $scope.added();
-    appState ="added";
+    
       }
   };
 
