@@ -3,6 +3,9 @@
     background-color: black;
 }
 
+.msg {
+  color:white;
+}
 
  @media all and (-ms-high-contrast:none)
      {
