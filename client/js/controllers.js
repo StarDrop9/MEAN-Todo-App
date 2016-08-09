@@ -33,6 +33,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
              });
       $scope.todoInput = '';
     // $scope.todo.Label = '';
+    $scope.added();
       }
   };
 
