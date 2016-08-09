@@ -18,6 +18,14 @@
 router.get('/home', function(req, res) {
     res.render('home');
   });
+
+router.get('/UIRouter', function(req, res) {
+    res.render('UIRouter');
+  });
+
+router.get('/ad', function(req, res) {
+    res.render('ad');
+  });
   
 router.get('/archive', function(req, res) {
     res.render('archive');
