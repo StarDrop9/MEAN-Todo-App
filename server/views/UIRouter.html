@@ -14,7 +14,7 @@
       <a class="brand" ui-sref="index">Quick Start</a>
       <ul class="nav">
         <li><a ui-sref="index">Home</a></li>
-        <li><a ui-sref="route1">Route 1</a></li>
+        <li><a ui-sref="home">Route 1</a></li>
         <li><a ui-sref="route2">Route 2</a></li>
       </ul>
     </div>
@@ -40,10 +40,10 @@
     myapp.config(function($stateProvider){
     $stateProvider
         .state('index', {
-            url: "",
+            url: "/",
             views: {
                 "viewA": {
-                    template: "index.viewA"
+                    template: "index"
                 },
                 "viewB": {
                     template: "index.viewB"
@@ -51,10 +51,10 @@
             }
         })
         .state('route1', {
-            url: "/route1",
+            url: "/home",
             views: {
                 "viewA": {
-                    template: "route1.viewA"
+                    template: "home"
                 },
                 "viewB": {
                     template: "route1.viewB"
