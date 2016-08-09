@@ -8,7 +8,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.image = "/pics/JackiesLionSmllerTapper.png";
 
  $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/NatureImg2.png")'; 
-     
+    
 
   // get all Todos on Load would like to add label and priority focus for loads
   todosFactory.getTodos().then(function(data) {
@@ -17,8 +17,8 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
   // Save a Todo to the server kps tried 07/27PM || $scope.addInput 
   $scope.save = function($event,label, priority) {
-  // debugger; // Set the debugger inside 
-     // console.log(priority);
+   debugger; // Set the debugger inside 
+      console.log(priority);
 
     if ( $event.which == 13 && $scope.todoInput ) {
       todosFactory.saveTodo({
@@ -36,8 +36,8 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
 
 
 $scope.add = function($event,label, priority) {
-   //debugger; // Set the debugger inside 
-      //console.log(priority);
+   debugger; // Set the debugger inside 
+      console.log(priority);
 
     if ( $event.which == 1 && $scope.todoInput ) {
       todosFactory.saveTodo({
@@ -49,7 +49,8 @@ $scope.add = function($event,label, priority) {
        $scope.todos.push(data.data);
              });
       $scope.todoInput = '';
-           }
+    // $scope.todo.Label = '';
+      }
   };
 
  //update the Label of the Todo try to work around the factory service with Jquery pput or replace 
