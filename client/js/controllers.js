@@ -14,9 +14,10 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
        debugger
         $scope.appState ="added";
         $timeout(function () {
-        $scope.appState = "removed";
+       var appState = $scope.appState = "removed";
+        console.log = appState;
     }, 2000);
-         console.log = appState;
+         
         }
 
   // get all Todos on Load would like to add label and priority focus for loads
