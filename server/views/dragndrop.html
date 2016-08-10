@@ -46,6 +46,8 @@
 <script type="text/javascript" src="//code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
  <!-- <link rel="stylesheet" type="text/css" href="/css/result-light.css"> -->
   <style type="text/css">
+  
+td {color:white;}
   </style>
 
   <title></title>
@@ -74,7 +76,7 @@ $("#sort tbody").sortable({
         <tr><th>Category</th><th>Priority</th><th>ToDo - Idea</th></tr>
     </thead>
     <tbody ng-repeat="todo in todos">
-      <tr><td>{{todo.lable}}</td><td>{{todo.priority}}</td><td>{{todo.todo}}</td></tr>
+      <tr><td>{{todo.label}}</td><td>{{todo.priority}}</td><td>{{todo.todo}}</td></tr>
     <!--    <tr><td>1952</td><td>Player Piano</td><td>B</td></tr>
         <tr><td>1963</td><td>Cat's Cradle</td><td>A+</td></tr>
         <tr><td>1973</td><td>Breakfast of Champions</td><td>C</td></tr>
