@@ -13,6 +13,9 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
      $scope.added = function(){
       // debugger
         $scope.appState ="added";
+        $timeout(function () {
+        $scope.appState = "";
+    }, 2000);
         // console.log = appState;
         }
 
