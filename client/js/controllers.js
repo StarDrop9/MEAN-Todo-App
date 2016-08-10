@@ -1,4 +1,4 @@
-todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
+todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeout) {
   $scope.todos = [];
   $scope.isEditable = [];
   $scope.rowLimit = 3 ;
