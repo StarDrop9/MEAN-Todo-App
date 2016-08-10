@@ -31,6 +31,9 @@ router.get('/drag', function(req, res) {
     res.render('dragndrop');
   });
 
+router.get('/modal', function(req, res) {
+    res.render('modal');
+  });
 
 router.get('/archive', function(req, res) {
     res.render('archive');

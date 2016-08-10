@@ -8,6 +8,8 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory) {
   $scope.image = "/pics/JackiesLionSmllerTapper.png";
 
  $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/NatureImg2.png")'; 
+
+
      $scope.added = function(){
       // debugger
         $scope.appState ="added";
@@ -147,6 +149,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   };
 
   // Delete a Todo
+
   $scope.delete = function(i) {
   //debugger;
     todosFactory.deleteTodo($scope.todos[i]._id).then(function(data) {
@@ -156,6 +159,10 @@ $scope.updateLabelTest = function($event, _id, i, label) {
       }
     });
   };
+
+
+
+
 
  $scope.ChooseLabelString = function(label) {
       $scope.filters = label;
@@ -253,6 +260,8 @@ $scope.ngChangeUpdatedLabel = function (label){
 //  };
 //  };
 
+
+
 $scope.templates =
       [ { name: 'template1.html', url: '/partials/homep.html'},
         { name: 'template2.html', url: '/partials/todo.html'} ];
@@ -262,4 +271,56 @@ $scope.templates =
 
 todoApp.controller ('homeCtrl', function($scope) {
 $scope.message = "Be Brave and confront evil with Valor"
+}) ;
+
+
+
+//Added kps 08/10 
+
+todoApp.controller('ModalCtrl', function($scope,  $modal) {
+      
+      $scope.name = 'theNameHasBeenPassed';
+      
+      $scope.showModal = function() {
+        
+        $scope.opts = {
+        backdrop: true,
+        backdropClick: true,
+        dialogFade: false,
+        keyboard: true,
+        templateUrl : 'modalContent.html',
+        controller : ModalInstanceCtrl,
+        resolve: {} // empty storage
+          };
+          
+        
+        $scope.opts.resolve.item = function() {
+            return angular.copy({name:$scope.name}); // pass name to Dialog
+        }
+        
+          var modalInstance = $modal.open($scope.opts);
+          
+          modalInstance.result.then(function(){
+            //on ok button press 
+          },function(){
+            //on cancel button press
+            console.log("Modal Closed");
+          });
+      };                   
 })
+
+var ModalInstanceCtrl = function($scope, $modalInstance, $modal, item) {
+    
+     $scope.item = item;
+    
+      $scope.ok = function () {
+        $modalInstance.close();
+      };
+      
+      $scope.cancel = function () {
+        $modalInstance.dismiss('cancel');
+      };
+}
+
+
+
