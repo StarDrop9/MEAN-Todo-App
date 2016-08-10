@@ -288,7 +288,7 @@ todoApp.controller('ModalCtrl', function($scope,  $modal) {
         backdropClick: true,
         dialogFade: false,
         keyboard: true,
-        templateUrl : 'modalContent.html',
+        templateUrl : 'partials/modalcontent.html',
         controller : ModalInstanceCtrl,
         resolve: {} // empty storage
           };
