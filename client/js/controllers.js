@@ -278,7 +278,7 @@ $scope.message = "Be Brave and confront evil with Valor"
 //Added kps 08/10 
 
 todoApp.controller('ModalCtrl', function($scope,  $modal) {
-      
+    debugger  
       $scope.name = 'theNameHasBeenPassed';
       
       $scope.showModal = function() {
