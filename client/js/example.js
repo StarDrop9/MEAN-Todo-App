@@ -1,5 +1,5 @@
 
-var app = angular.module('plunker', ['ngRoute', 'ui.bootstrap']);
+var app = angular.module('todoApp', ['ngRoute', 'ui.bootstrap']);
 app.controller('Nav', function($scope) {
   });
 
