@@ -15,7 +15,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
         $scope.appState ="added";
         $timeout(function () {
        var appState = $scope.appState = "removed";
-        console.log = appState;
+        console.log(appState);
     }, 2000);
          
         }
