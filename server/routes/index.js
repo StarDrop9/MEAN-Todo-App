@@ -26,7 +26,12 @@ router.get('/UIRouter', function(req, res) {
 router.get('/ad', function(req, res) {
     res.render('addtodo');
   });
-  
+ 
+router.get('/drag', function(req, res) {
+    res.render('dragndrop');
+  });
+
+
 router.get('/archive', function(req, res) {
     res.render('archive');
   });
