@@ -112,15 +112,16 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   };
 
 
-
-
   $scope.adder = function() {
          debugger
           var _length = $scope.todos.push({
             name: 'Ms. Migilicutty',
             highlight: false
           });
-          
+         
+console.log(_length);
+
+
           $timeout(function() {
             $scope.todos[_length - 1].highlight = true;
           }, 100);
