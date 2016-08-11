@@ -23,6 +23,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
   // get all Todos on Load would like to add label and priority focus for loads
   todosFactory.getTodos().then(function(data) {
     $scope.todos = data.data;
+    $scope.data = data.data;
   });
 
   // Save a Todo to the server kps tried 07/27PM || $scope.addInput 
@@ -117,7 +118,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     
     
      $scope.loadMore = function () {
-       var data =  $scope.todos
+      
       $scope.totalDisplayed = 3;          
       $scope.totalDisplayed += 1;
       console.log($scope.totalDisplayed );   
