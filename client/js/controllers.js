@@ -115,6 +115,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
 
   $scope.adder = function() {
+         debugger
           var _length = $scope.todos.push({
             name: 'Ms. Migilicutty',
             highlight: false
@@ -124,14 +125,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
             $scope.todos[_length - 1].highlight = true;
           }, 100);
         };
-     
-
-
-
-
-
-
-
+    
 
   //update the status of the Todo
   $scope.updateStatus = function($event, _id, i) {
