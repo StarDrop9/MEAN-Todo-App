@@ -114,7 +114,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
   $scope.adder = function() {
          debugger
-    count = 2000;
+    count = 30;
   
     var data = $scope.todos;  
   
