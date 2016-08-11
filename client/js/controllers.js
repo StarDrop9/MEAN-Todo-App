@@ -113,18 +113,19 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
   
     
-    var data = $scope.todos;  
+      
     
-    $scope.totalDisplayed = 3;
-    $scope.loadMore = function () {
-   debugger
-   var data = $scope.todos;  
+    
+     $scope.loadMore = function () {
+       var data = getTodos()
+      $scope.totalDisplayed = 3;          
       $scope.totalDisplayed += 1;
       console.log($scope.totalDisplayed );   
-      console.log($scope.data);    
+     $scope.data = data;
+ console.log($scope.data);    
     };
     
-    $scope.data = data;
+    
     
     
 
