@@ -112,16 +112,19 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   };
 
   
+    
     var data = $scope.todos;  
+    
     $scope.totalDisplayed = 3;
-   
-      $scope.loadMore = function () {
+    $scope.loadMore = function () {
    debugger
       $scope.totalDisplayed += 1;
-      console.log($scope.totalDisplayed )   
+      console.log($scope.totalDisplayed );   
+      console.log($scope.data);    
     };
+    
     $scope.data = data;
-  
+    
     
 
   //update the status of the Todo
