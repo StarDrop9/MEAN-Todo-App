@@ -111,42 +111,14 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     });
   };
 
-
-  $scope.adder = function() {
-         debugger
-    count = 30;
   
     var data = $scope.todos;  
-  
-   console.log(data);
-
-   // while(count) {
-   //   data[count] = count--;
-    //} 
-  
-  
     $scope.totalDisplayed = 3;
-  
-    $scope.loadMore = function () {
+      $scope.loadMore = function () {
       $scope.totalDisplayed += 1;  
     };
-  
     $scope.data = data;
   
-/*          var _length = $scope.todos.push({
-            name: 'Ms. Migilicutty',
-            highlight: false
-          });
-         
-console.log(_length);
-
-
-          $timeout(function() {
-            $scope.todos[_length - 1].highlight = true;
-          }, 100);
-  */
-
-        };
     
 
   //update the status of the Todo
