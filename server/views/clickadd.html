@@ -1,0 +1,65 @@
+<html ng-app="todoApp">
+
+  <head>
+    <style>
+      a {
+        font-size: 300%;
+        -webkit-transition: 1s;
+        transition: 1s;
+        background: #fff;
+      }
+    
+      a.highlight {
+        background: #f08;
+      }
+    </style>
+    
+    <script data-require="angular.js@1.0.7" data-semver="1.0.7" src="http://code.angularjs.org/1.0.7/angular.min.js"></script>
+  
+
+    <script>
+
+  /*        angular.module('todoApp', [
+      ]).controller('TodoCtrl', function(
+        $scope,
+        $timeout
+      ){
+        $scope.items = [{
+          name: 'Squidward',
+          highlight: false
+        }, {
+          name: 'Plankton',
+          highlight: false
+        }];
+        
+        $scope.add = function() {
+          var _length = $scope.items.push({
+            name: 'Patrick',
+            highlight: false
+          });
+          
+          $timeout(function() {
+            $scope.items[_length - 1].highlight = true;
+          }, 100);
+        };
+      });   */
+    
+
+    </script>
+  
+  </head>
+
+  <body ng-controller="TodoCtrl">
+    <div>
+      <button ng-click="adder()">Add More Ms Migilicutty</button>
+      <ul>
+        <li ng-repeat="todo in todos">
+          <a ng-class="{
+            highlight: todo.highlight
+          }">{{todo.todo}}</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+
+</html>
