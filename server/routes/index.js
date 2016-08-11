@@ -27,6 +27,12 @@ router.get('/ad', function(req, res) {
     res.render('addtodo');
   });
  
+
+router.get('/adder', function(req, res) {
+    res.render('clickadd');
+  });
+
+
 router.get('/drag', function(req, res) {
     res.render('dragndrop');
   });
