@@ -114,11 +114,23 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
   $scope.adder = function() {
          debugger
-     $scope.totalDisplayed = 2;
+    count = 2000;
+  
+    var data = $scope.todos;  
+  
+    while(count) {
+      data[count] = count--;
+    } 
+  
+  
+    $scope.totalDisplayed = 1;
   
     $scope.loadMore = function () {
       $scope.totalDisplayed += 1;  
     };
+  
+    $scope.data = data;
+  
 /*          var _length = $scope.todos.push({
             name: 'Ms. Migilicutty',
             highlight: false
