@@ -123,7 +123,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     } 
   
   
-    $scope.totalDisplayed = 1;
+    $scope.totalDisplayed = 3;
   
     $scope.loadMore = function () {
       $scope.totalDisplayed += 1;  
