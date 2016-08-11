@@ -124,7 +124,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
             $scope.todos[_length - 1].highlight = true;
           }, 100);
         };
-      });
+     
 
 
 
