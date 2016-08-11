@@ -118,6 +118,8 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   
     var data = $scope.todos;  
   
+   console.log(data);
+
     while(count) {
       data[count] = count--;
     } 
