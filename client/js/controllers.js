@@ -120,9 +120,9 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   
    console.log(data);
 
-    while(count) {
-      data[count] = count--;
-    } 
+   // while(count) {
+   //   data[count] = count--;
+    //} 
   
   
     $scope.totalDisplayed = 3;
