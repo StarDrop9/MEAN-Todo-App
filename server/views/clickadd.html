@@ -55,19 +55,16 @@
   </head>
 
  
-  <body ng-controller="TodoCtrl">
+<body ng-controller="TodoCtrl">
   
 <btn class="btn" ng-click="loadMore()">Load more</btn>
 
 <table class="table">
-    <tr ng-repeat="d in data | limitTo:totalDisplayed"><td>{{d}}</td></tr>
-  </table>
-  
+     <tr ng-repeat="todo in todos | limitTo:totalDisplayed"><td>{{todo.todo}}</td></tr>
+</table>
 
-
-
-      </ul>
-    </div>
   </body>
+
+
 
 </html>
