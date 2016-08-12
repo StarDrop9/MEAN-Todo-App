@@ -57,10 +57,10 @@
  
 <body ng-controller="TodoCtrl">
   
-<btn class="btn" ng-click="loadMore(7)">Load more</btn>
+<btn class="btn" ng-click="loadMore()">Load more</btn>
 
 <table class="table">
-     <tr ng-repeat="todo in todos | limitTo:totalDisplayed"><td>{{todo.todo}}</td></tr>
+     <tr ng-repeat="todo in todos | limitTo:totalDisplayed"><td>{{$scope.totalDisplayed}} &#xA0;&#xA0;  {{todo.todo}}</td></tr>
 </table>
 
   </body>
