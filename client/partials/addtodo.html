@@ -14,13 +14,15 @@
           <input type="button" class="btn btn-info" class="pull-center" value="Add" ng-click="add($event,label,priority)"  ng-model="todoInput" />
         </div>
      </div>
-      
+ 
+
+
+     <div> 
       <div class="msg"  ng-show="appState == 'added'">This Todo - Idea has been added !</div> 
 
-
-<btn class="btn" ng-click="loadMore()">Load more</btn>
- <input type="button" class="btn btn-info" class="pull-center" value="Examine ToDos" ng-click="loadMore()" />
- <table class="table">
-     <tr ng-repeat="todo in todos | limitTo:totalDisplayed"><td>{{$index + 1}}</td> &#xA0;&#xA0;<td>{{todo.todo}}</td></tr>
-</table>
+     <input type="button" class="btn btn-info" class="pull-left" value="Examine ToDos" ng-click="loadMore()" />
+     <table class="table1">
+      <tr ng-repeat="todo in todos | limitTo:totalDisplayed"><td>{{$index + 1}}</td> &#xA0;&#xA0;<td>{{todo.todo}}</td></tr>
+      </table>
+      <div>
 </div>
