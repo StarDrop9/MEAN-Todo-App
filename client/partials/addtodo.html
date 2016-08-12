@@ -22,7 +22,7 @@
       <br/> 
      <input type="button" class="btn btn-info" class="pull-left" value="Examine ToDos" ng-click="loadMore()" />
      <table class="table1">
-      <tr  ng-style="font color:'red'" ng-repeat="todo in todos | limitTo:totalDisplayed |orderBy :'-priority'"><td>{{$index + 1}}</td> &#xA0;&#xA0;<td>{{todo.todo}}</td></tr>
+      <tr ng-style="{color:'green'}" ng-repeat="todo in todos | limitTo:totalDisplayed |orderBy :'-priority'"><td>{{$index + 1}}</td> &#xA0;&#xA0;<td>{{todo.todo}}</td></tr>
       </table>
       <div>
 </div>
