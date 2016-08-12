@@ -174,6 +174,42 @@ $scope.updateLabelTest = function($event, _id, i, label) {
         $scope.todos.splice(i, 1);
       }
     });
+
+
+
+
+
+  $scope.fontcolor = {
+    color: 'white'
+  }
+  $scope.fontsize = {
+    fontsize: '1.5em'
+  }
+
+  $scope.margeStyleObj = function(objectList) {
+    var obj = {};
+    objectList.forEach(function(x) {
+      for (var i in x)
+        obj[i] = x[i];
+    });
+    return obj;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   };
 
 
