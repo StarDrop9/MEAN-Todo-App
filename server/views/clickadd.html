@@ -61,9 +61,9 @@
 
 <table class="table">
    
-<tr ng-repeat="d in data | limitTo:totalDisplayed"><td>{{d}}</td></tr>
+<tr ng-repeat="d in data | limitTo:totalDisplayed"><td>{{}}</td></tr>
 
-     <tr ng-repeat="todo in todos | limitTo:totalDisplayed"><td>{{totalDisplayed}} &#xA0;&#xA0;  {{todo.todo}}</td></tr>
+     <tr ng-repeat="todo in todos | limitTo:totalDisplayed"><td>{{d}} &#xA0;&#xA0;  {{todo.todo}}</td></tr>
 </table>
 
   </body>
