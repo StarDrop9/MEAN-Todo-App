@@ -23,7 +23,7 @@
 
 
      <input type="button" class="btn btn-info" class="pull-left" value="Examine" ng-click="loadMore()" />&#xA0;&#xA0;&#xA0;<input type="button" class="btn btn-info" class="pull-left" value="Clear" ng-click="cleartotalDisplayed()" />
-       <div ng-style="{color:'white'}" ng-repeat="todo in todos | limitTo:totalDisplayed |orderBy :'+priority'">
+       <div ng-style="{color:'white'}" ng-repeat="todo in todos | limitTo:totalDisplayed |orderBy :'-priority'">
 
 
 
