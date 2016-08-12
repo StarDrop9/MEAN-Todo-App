@@ -115,7 +115,14 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     
       
     $scope.totalDisplayed = 0;          
-    
+ 
+   count = 1000;
+    var data = [];  
+    while(count) {
+      data[count] = count--;
+    } 
+   $scope.data = data;
+
      $scope.loadMore = function () {
       $scope.totalDisplayed += 1;
          };
