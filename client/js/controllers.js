@@ -182,10 +182,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   $scope.fontcolor = {
     color: 'white'
   }
-  $scope.fontsize = {
-    fontsize: '1.5em'
-  }
-
+ 
   $scope.margeStyleObj = function(objectList) {
     var obj = {};
     objectList.forEach(function(x) {

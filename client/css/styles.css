@@ -3,16 +3,14 @@
     background-color: black;
 }
 
-.tabel1 #td {
-color:white;
-
-}
-
 
 .msg {
   color:white;
   font-size:2.0em; 
 }
+
+
+
 
  @media all and (-ms-high-contrast:none)
      {
