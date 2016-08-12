@@ -119,7 +119,9 @@ $scope.updateLabelTest = function($event, _id, i, label) {
       $scope.totalDisplayed += 3;
          };
     
-    
+      $scope.cleartotalDisplayed = function () {
+      $scope.totalDisplayed = 0;
+         };
     
     
 
@@ -176,9 +178,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     });
 
 
-
-
-
+/*
   $scope.fontcolor = {
     color: 'white'
   }
@@ -191,21 +191,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     });
     return obj;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*/
 
   };
 
