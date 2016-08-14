@@ -43,7 +43,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
+<script type="text/javascript" src="cordova.js"></script>
 
 
  
@@ -55,6 +55,16 @@
 
 <body ng-controller="TodoCtrl" >
 <!--<div class="foo">Hi There!!!</div> -->
+
+
+<!-- Added new kps 08/14/2016 -->
+<div class="app">
+  <h1>PhoneGap</h1>
+  <div id="deviceready" class="blink">
+  <p class="event listening">Connecting to Device</p>
+  <p class="event received">Device is Ready</p>
+  </div>
+</div>
 
 <div class="row col-md-12" >
 <div ng-include="'/partials/navbar.html'"></div>
