@@ -1,12 +1,12 @@
 {
   "name": "TodoApp",
   "version": "0.1.0",
-  "description": "A MEAN stack Todo App",
+  "description": "Todo-Idea App",
   "main": "server/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Arvind Ravulavaru",
+  "author": "Kurt Starck",
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.6.5",
