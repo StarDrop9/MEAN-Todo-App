@@ -2,7 +2,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
   $scope.todos = [];
   $scope.isEditable = [];
   $scope.rowLimit = 2 ;
-  $scope.priorities= []
+  
   $scope.label = "Category";
   $scope.labels = [{ label: "Inspiration" },{ label: "Design" },{ label: "Personal" },{ label: "Magnetism" },{ label: "Drones" },{ label: "Anti-Hacking" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
   $scope.image = "/pics/JackiesLionSmllerTapper.png";   
@@ -11,7 +11,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
 
 
      $scope.added = function(){
-       debugger
+       debugger[{priority:"Now"},{priority:"Today" },{priority:"Action" },{priority:"High"},{priority:"Medium"},{priority:"Low"},{priority:"Completed"}];
         $scope.appState ="added";
         $timeout(function () {
        var appState = $scope.appState = "removed";
