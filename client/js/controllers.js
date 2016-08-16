@@ -10,16 +10,16 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
   $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/NatureImg2.png")'; 
 
   $scope.setlogin = function(){
-   debugger
+   debugger;
+   $scope.loginState ="false";
    alert("In Process")
-
   }
 
   
 
 
      $scope.added = function(){
-       debugger
+       debugger;
         $scope.appState ="added";
         $timeout(function () {
        var appState = $scope.appState = "removed";
