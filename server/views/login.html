@@ -4,9 +4,13 @@
 <head >
 <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
 <!--rest of header links-->
-<Div ng-include="'/partials/header.html'"></div?
+</head>
 
-
+<body>
+<div ng-controller="TodoCtrl">
+  <div ng-include src="header.url"></div>
+  <script type="text/ng-template" id="header.html"></script>
+</div>
 
 
 <body><div class="form-container">

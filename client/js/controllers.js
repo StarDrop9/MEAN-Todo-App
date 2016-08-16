@@ -6,27 +6,23 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
   $scope.label = "Category";
   $scope.labels = [{ label: "Inspiration" },{ label: "Design" },{ label: "Personal" },{ label: "Magnetism" },{ label: "Drones" },{ label: "Anti-Hacking" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
   $scope.image = "/pics/JackiesLionSmllerTapper.png";   
-
+  $scope.header = {name: "header.html", url: "/partials/header.html"};
   $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/NatureImg2.png")'; 
 
   $scope.setlogin = function(){
    debugger;
    $scope.loginState ="false";
    alert("In Process")
-  }
+   }
 
-  
-
-
-     $scope.added = function(){
-       debugger;
-        $scope.appState ="added";
-        $timeout(function () {
-       var appState = $scope.appState = "removed";
-        console.log(appState);
+  $scope.added = function(){
+   debugger;
+    $scope.appState ="added";
+    $timeout(function () {
+    var appState = $scope.appState = "removed";
+    console.log(appState);
     }, 2000);
-         
-        }
+  }
 
   // get all Todos on Load would like to add label and priority focus for loads
   todosFactory.getTodos().then(function(data) {
