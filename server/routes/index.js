@@ -9,6 +9,8 @@
 //var db = mongojs('mongodb://heroku_fdk06q24:4me4grt80flpddgfgj8rcpbv61@ds011820.mlab.com:11820/heroku_fdk06q24', ['todos']);
 
   router.get('/', function(req, res) {
+  debugger
+
     res.render('login.ejs');
   });
 
