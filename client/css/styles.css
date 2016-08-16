@@ -1,10 +1,22 @@
+/*   Added kps */
+  .form-container {
+     width: 400px;
+     margin: auto;
+     }
 
+  .credits {
+    border-top: 1px solid #ddd;
+    margin-top: 40px;
+    padding-top: 20px;
+    }
+    
 
 
 
 
  
  body {
+    padding-top: 100px;
     background-color: black;
 }
 
