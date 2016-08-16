@@ -11,7 +11,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
 
 
      $scope.added = function(){
-       debugger[{priority:"Now"},{priority:"Today" },{priority:"Action" },{priority:"High"},{priority:"Medium"},{priority:"Low"},{priority:"Completed"}];
+       debugger
         $scope.appState ="added";
         $timeout(function () {
        var appState = $scope.appState = "removed";
