@@ -1,5 +1,7 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="todoApp" ng-controller="TodoCtrl" >
+
+
 <head>
     <meta charset="utf-8" />
     <title>Login</title>
@@ -35,7 +37,7 @@
         <div class="form-group">
             
            <!-- <button type="submit" class="btn btn-primary">Login</button> -->
-            <input type="button" class="btn btn-info" class="pull-center" value="Submit" ng-click="setlogin()"  ng-model="login" />
+           <input type="button" class="btn btn-info" class="pull-center" value="Login" ng-click="add($event,label,priority)"  ng-model="todoInput" />
             <a href="/register" class="btn btn-link">Register</a>
         </div>
     </form>
