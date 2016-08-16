@@ -11,7 +11,7 @@
   router.get('/', function(req, res) {
   debugger
 
-    res.render('login.ejs');
+    res.render('login');
   });
 
   /* GET ToDo page. */
