@@ -7,7 +7,15 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
   $scope.labels = [{ label: "Inspiration" },{ label: "Design" },{ label: "Personal" },{ label: "Magnetism" },{ label: "Drones" },{ label: "Anti-Hacking" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
   $scope.image = "/pics/JackiesLionSmllerTapper.png";   
 
- $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/NatureImg2.png")'; 
+  $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/NatureImg2.png")'; 
+
+  $scope.setlogin = function(){
+   debugger
+   alert("In Process")
+
+  }
+
+  
 
 
      $scope.added = function(){
