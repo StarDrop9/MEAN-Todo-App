@@ -11,7 +11,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
 
   $scope.setlogin = function(){
    debugger;
-   $scope.loginState ="false";
+   //$scope.loginState ="false";
    alert("In Process")
    }
 

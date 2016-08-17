@@ -1,8 +1,7 @@
 ﻿<!DOCTYPE html>
-<html ng-app="todoApp" ng-controller="TodoCtrl" >
+<html ng-app="todoApp" >
 
 <head >
-
 <!--<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAA
 AAAAAAD//////////3Z/hv9YYmj/W2Rq/zw/QP8jHx//KCcp/yYhHv8iHyD/RElO/2Jpbv9IUFT/
 q7K1///////8/Pz///////////9ocHf/SlNa/0ZJS/8rMDf/MUNe/zxcgP82TGn/Ki00/y4qKf9U
@@ -25,19 +24,18 @@ h/9Ddan/XpzP/32z2P98tNf/XZvR/zphif8sKCr/ICIq/6Ckqf///////Pz8////////////SElM
 /Pz/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAA=="rel="icon" type="image/x-icon" /> -->
 
-
-<script type="text/javascript" src="/lib/angular/angular.min.js"></script>
-<!--rest of header links-->
+ <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+ <link rel="stylesheet" type="text/css" href="/css/styles.css">   
 </head>
 
+
+<Styles>
+#a {color:white}
+</styles>
+
 <body>
-<div ng-controller="TodoCtrl">
-  <div ng-include="'/partials/header.html'"></div>
-  <script type="text/ng-template" id="header.html"></script>
-</div>
 
-
-<body><div class="form-container">
+<body><div class="form-container" ng-controller="TodoCtrl">
     <h2>Login</h2>
     <form method="post">
         <div class="form-group">
@@ -53,6 +51,7 @@ AAAAAAAAAAAAAA=="rel="icon" type="image/x-icon" /> -->
            <!-- <button type="submit" class="btn btn-primary">Login</button> -->
            <input type="button" class="btn btn-info" class="pull-center" value="Login" ng-click="setlogin()"  ng-model="login" />
             <a href="/register" class="btn btn-link">Register</a>
+            <a href="/index">ZZZ</a>
         </div>
     </form>
 </div>

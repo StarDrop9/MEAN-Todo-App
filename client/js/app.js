@@ -19,9 +19,7 @@ todoApp = angular.module('todoApp', ['ngRoute','puElasticInput','monospaced.elas
         });
   });
 
-
-
-
+/*
 var app = {
     // Application Constructor
     initialize: function() {
@@ -53,3 +51,4 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+*/
