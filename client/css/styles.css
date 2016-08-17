@@ -1,7 +1,11 @@
 /*   Added kps */
-
+.login{
+    background-color:black ;
+    color:white;
+    margin: 0 auto;
+}
  .form-container {
-   width: 200px;
+   width: 300px;
    margin: auto;
    color:white;
     }
