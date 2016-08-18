@@ -1,26 +1,62 @@
 <!DOCTYPE html>
-<html ng-app="todoApp">
+<html ng-app="todoApp" >
 
-<head>
- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- <meta http-equiv="x-ua-compatible" content="ie=edge">
+<head >
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>The Page</title>
 
- <title>Register</title>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/animations.css">
 
- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
- <link rel="stylesheet" type="text/css" href="/css/styles.css">   
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
- <link rel="stylesheet" type="text/css" href="/css/styles.css">   
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js/factory.js"></script>
+  <script type="text/javascript" src="/js/controllers.js"></script>
 
+ <script type="text/javascript" src="/lib/angular-elastic-input/src/angular-elastic-input.js"></script>
+ <script type="text/javascript" src="/lib/angular-elastic/elastic.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/lib/angular/angular.min.js"></script>
-<script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<style>
+.login{
+    background-color:black ;
+    color:white;
+    margin: 0 auto;
+}
+
+}
+a.login:link {
+    color: white;
+}
+a.login:visited {
+    color: white;
+}
+a.login:hover {
+    color: white;
+    text-decoration: none;
+}
+a.login:active {
+    color: white;
+}
+</style>
 </head>
 
-<body class="login">
+<body class="login" ng-controller="TodoCtrl" >
+<div class="row col-md-12" >
+
+<div ng-include="'/partials/navbarhp.html'"></div>
+ <!-- <hr/> -->
+  <!--  <ng-view></ng-view> -->
+</div>
 
  <div class="col-md-2 col-md-offset-5 login" ng-controller="TodoCtrl">
    <h2>Re<a class="login" href="/index">g</a>ister</h2>

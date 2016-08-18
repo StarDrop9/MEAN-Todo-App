@@ -1,26 +1,4 @@
 /*   Added kps */
-.login{
-    background-color:black ;
-    color:white;
-    margin: 0 auto;
-}
-
-}
-a.login:link {
-    color: white;
-}
-a.login:visited {
-    color: white;
-}
-a.login:hover {
-    color: white;
-    text-decoration: none;
-}
-a.login:active {
-    color: white;
-}
-
-
 
  .form-container {
    width: 300px;

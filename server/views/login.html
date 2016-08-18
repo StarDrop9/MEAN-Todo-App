@@ -3,50 +3,61 @@
 
 <head >
 <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>The Page</title>
 
-
-<!--<link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAABILAAASCwAAAAAA
-AAAAAAD//////////3Z/hv9YYmj/W2Rq/zw/QP8jHx//KCcp/yYhHv8iHyD/RElO/2Jpbv9IUFT/
-q7K1///////8/Pz///////////9ocHf/SlNa/0ZJS/8rMDf/MUNe/zxcgP82TGn/Ki00/y4qKf9U
-WmD/PUVJ/6Opq////////Pz8//7+/v//////doCH/0hOUv83QlP/P2GL/0h8q/9Lh7n/SYvC/0Fq
-k/80SWb/RERF/1BYXP+fpaj///////z8/P///////////3d+hP84QE3/QGmd/02Wyv9SnMf/WaDR
-/1KWvf9PhrH/RHeo/zlTdP9NX3L/sLW4///////8/P3///////////9fZW3/OFyI/0+Rwf9qstb/
-Z6rQ/16hy/9tosP/da3P/1SIpv9Zlc7/MExz/6apqP///////Pz8//////////3/WW+N/0yAsf9Q
-l8f/f7DP/4m30v90t9z/fb3h/2Chyf9kpcz/YafU/zBckP+Zn6b///////v8/P///////////2WK
-uP9Mlsb/VJ7L/4O11P9xrtP/VWt8/05wh/9opsv/gLXW/2Ks1/8xYZD/mqKu///////7/Pz/////
-/////v9ggaj/Q5PG/4C42P+Ds87/UIqq/2F3hf9Yb3//Z6vS/4Gy0f9vpMb/P3qr/6C31P//////
-/P3+////////////XYOu/2Cgyv+Grsb/LDZB/0xTWf9XbHz/XXeK/2aevf+Fudf/fLjZ/1uZy/+d
-ttb///////z9/v///////////1qAqv9yrdT/aZOs/zE7Rv9NXm3/KSgw/y84Qv9MVmD/drbc/2un
-zP9OgbD/nbLP///////8/P3////////9+v9Ye5//fbDT/1t5jP8tN0X/OTpB/zQ5Qf9NY3b/WnGD
-/2qx3v9jlbr/L1OA/56ntv///////Pz9////////+/f/YIGd/2Kizf9chJ3/a4WY/2yUsP8xSFv/
-PkZQ/2qjyf9fos3/WozA/yg8WP+dnZ7///////v8/P/////////+/1hmc/8+fLT/b7Hg/4S/4f9l
-sNr/grna/26Mn/9Ec5T/S4m8/zlNa/8kJCz/n6Kn///////8/Pz//v7+//////9JR0n/Iy9B/zxj
-h/9Ddan/XpzP/32z2P98tNf/XZvR/zphif8sKCr/ICIq/6Ckqf///////Pz8////////////SElM
-/x8eIf8tKi3/KCo1/zhagP84a5P/RHao/ztilv8qLTf/KSgr/xsdI/+doKX///////v7/P//////
-/////0xNUv8jKC7/KzA2/ystMv8pJyn/LCst/zo/Sv80Nj3/MjM4/zY4P/8gIin/naGm///////7
-/Pz/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAA=="rel="icon" type="image/x-icon" /> -->
-
- 
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
- <link rel="stylesheet" type="text/css" href="/css/styles.css">   
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/animations.css">
 
+  <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js/factory.js"></script>
+  <script type="text/javascript" src="/js/controllers.js"></script>
+
+ <script type="text/javascript" src="/lib/angular-elastic-input/src/angular-elastic-input.js"></script>
+ <script type="text/javascript" src="/lib/angular-elastic/elastic.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
-  <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
 
+<link rel="stylesheet" type="text/css" href="/css/style.css">
 
+<style>
+.login{
+    background-color:black ;
+    color:white;
+    margin: 0 auto;
+}
+
+}
+a.login:link {
+    color: white;
+}
+a.login:visited {
+    color: white;
+}
+a.login:hover {
+    color: white;
+    text-decoration: none;
+}
+a.login:active {
+    color: white;
+}
+</style>
 </head>
 
-<body class="login">
+<body class="login" ng-controller="TodoCtrl" >
+<div class="row col-md-12" >
 
- <div class="col-md-2 col-md-offset-5 login" ng-controller="TodoCtrl">
+<div ng-include="'/partials/navbarhp.html'"></div>
+ <!-- <hr/> -->
+  <!--  <ng-view></ng-view> -->
+</div>
+ <div class="col-md-2 col-md-offset-5 login" >
     <h2 >Lo<a class="login" href="/index">g</a>in</h2>
     <form method="post">
         <div class="form-group">
