@@ -1,13 +1,21 @@
 todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeout) {
   $scope.todos = [];
   $scope.isEditable = [];
-  $scope.rowLimit = 2 ;
+  $scope.rowLimit = 12 ;
   $scope.priorities=[{priority:"Now"},{priority:"Today" },{priority:"Action" },{priority:"High"},{priority:"Medium"},{priority:"Low"},{priority:"Completed"}];
   $scope.label = "Category";
   $scope.labels = [{ label: "Inspiration" },{ label: "Design" },{ label: "Personal" },{ label: "Magnetism" },{ label: "Drones" },{ label: "Anti-Hacking" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
   $scope.image = "/pics/JackiesLionSmllerTapper.png";   
   $scope.header = {name: "header.html", url: "/partials/header.html"};
-  $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/NatureImg2.png")'; 
+  $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/NatureImg.jpg")'; 
+ // $scope.todo.item = 1 
+ 
+
+
+  $scope.change = function() {
+        $scope.priority="Now";
+      };
+     
 
   $scope.setlogin = function(){
    debugger;

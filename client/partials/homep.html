@@ -1,7 +1,7 @@
 <div class="container" ng-controller="TodoCtrl">
     <div class="row col-md-12">
         <!-- <div class="col-md-8 col-sm-8 col-xs-8" ng-init="label='Magnetism'"> -->
-        <Input list="priority" class="selectwidthauto" placeholder="Priority Search" ng-change="" ng-click="clearpriority()" class="form-control" ng-model="priority" /><datalist id="priority">
+        <Input list="priority" class="selectwidthauto" placeholder="Priority Search" ng-change="" ng-click="clearpriority()" class="form-control" ng-model="priority" ng-init="change()"/><datalist id="priority">
         <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
     </datalist>&#xA0;&#xA0;&#xA0;
  <input type="number" step="1" min="0" max="200" ng-model="rowLimit"  class="selectwidthauto" />
