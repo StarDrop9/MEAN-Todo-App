@@ -23,17 +23,24 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="cordova.js"></script>
+
 <link rel="stylesheet" type="text/css" href="/css/styles.css">
 </head>
 
 <!-- ng-style="{backgroundImage:imagePath,'backgroundRepeat':'no-repeat','background-size':'cover'}" -->
 
-<body ng-controller="TodoCtrl">
-<!--<div class="foo">Hi There!!!</div> -->
+<body  style="background:url('https://assets.imgix.net/skiier.png?w=400&amp;auto=format&amp;usm=20&amp;vib=10&amp;sat=10&amp;chromasub=444&amp;q=55&amp;fm=png8') no-repeat center top scroll;background-size: 70% auto;background-color:black;background-position: 7.0em 100px;">
+<!-- 
+background:url(images/banner1.png) no-repeat center top scroll;
+background-size: 100% auto;
+padding-bottom: 50%; -->
 
-<div class="row col-md-12" >
+<div class="row col-md-12" ng-controller="TodoCtrl" >
 <div ng-include="'/partials/navbarhp.html'"></div>
+
+
+ 
+
  <!-- <hr/> -->
   <!--  <ng-view></ng-view> -->
 </div>
