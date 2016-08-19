@@ -7,15 +7,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>Home Page</title>
-
-<!-- removed since added below  <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css"> -->
-  
-<!-- added 06/27/2016
-  <link rel="stylesheet" type="text/css" href="/css/animations.css">
- -->
   <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
   <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
-<!--  <script type="text/javascript" src="/lib/jquery/dist/jquery.js"></script> -->
   <script type="text/javascript" src="/js/app.js"></script>
   <script type="text/javascript" src="/js/factory.js"></script>
   <script type="text/javascript" src="/js/controllers.js"></script>
@@ -23,87 +16,19 @@
  <script type="text/javascript" src="/lib/angular-elastic-input/src/angular-elastic-input.js"></script>
  <script type="text/javascript" src="/lib/angular-elastic/elastic.js"></script>
 
-
-<!-- Added for Menu -->
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<!-- added 06/27/2016 
-<script type="text/javascript" src="/js/protractor.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
--->
 <link rel="stylesheet" type="text/css" href="/css/styles.css">
-
-
 </head>
-
 <body ng-controller="TodoCtrl" >
-
-
 <div class="row col-md-12">
 <div ng-include="'/partials/navbar.html'"></div>
- <div ng-include="'/partials/todays.html'"></div>
+<div ng-include="'/partials/todays.html'"></div>
 </div>
 
-<!--
-  <div class="container" ng-controller="TodoCtrl">
-   <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Home Sweet Home!</h1>
-    <hr/>
-  <div>
-   <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
-  </div>
-  <div ng-include="'/partials/homep.html'"></div>
-
- </div>
--->
-
- <!-- Add Bootstrap Menu Replace current link options--->
-
-
-
-
- <!-- 
- <div>
-   <select ng-model="template" ng-options="t.name for t in templates">
-   <option value="">(blank)</option>
-  </select>
-  url of the template: <code>{{template.url}}</code>
-  <hr/>
-  
-  <div class="slide-animate-container">
-      <div class="slide-animate" ng-include="template.url"></div>
-  </div>
-</div>
--->
- <!-- <div class="container" ng-controller="TodoCtrl">
-   <h1><img ng-src="{{image}}"/>&#xA0;&#xA0;&#xA0;&#xA0;Home Sweet Home!</h1>
-    <hr/>
-  <div>
-  <P><a href="/home">Home</a> &#xA0;&#xA0;&#xA0;<a href="/api/Todos">Data</a>&#xA0;&#xA0;&#xA0;<a href="/">Todos</a>&#xA0;&#xA0;&#xA0;<a href="https://keep.google.com/">G-Keep</a></P>
-  </div> 
-  <h4 ng-controller="homeCtrl">{{message}}</h4>
-     <div class="row col-md-12 todos">
-      <table>
-      <tr ng-repeat="todo in todos" ng-class-even="'stripedblue'"
-      ng-class-odd="'stripedbeige'">
-        <td>
-          {{todo.todo}}
-        </td>
-      </table>
-    </div>
-  </div>
-
-  -->
-  <!-- <ng-view></ng-view> try ng-include -->
-
-  <!-- Live reload script -->
-  <!-- <script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
-<div ng-include="'/partials/footer.html'"></div>
-
- -->
 </body>
 
 </html>

@@ -7,53 +7,9 @@
     }
 
  body {
-    padding-top: 30px;
+    padding-top: 0px;
     background-color: black;
 }
-
-/*Added .event class KPS 08/14/16 delete if not needed
-.event {
-    border-radius:4px;
-    -webkit-border-radius:4px;
-    color:#FFFFFF;
-    font-size:12px;
-    margin:0px 30px;
-    padding:2px 0px;
-}
-.event.listening {
-    background-color:#333333;
-    display:block;
-}
-.event.received {
-    background-color:#4B946A;
-    display:none;
-}
-.msg {
-  color:white;
-  font-size:2.0em; 
-}
- @media all and (-ms-high-contrast:none)
-     {
-     .foo { color: green } 
-     *::-ms-backdrop, .foo { color: red } 
-   
-background: url("") no-repeat center center fixed; 
--webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-
-filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod='scale')";
-     }
-*/
- 
-/*body {
-       background: url("https://meantodo1.herokuapp.com/pics/NatureImg.png") no-repeat center center fixed;
-       background-size: cover;
-        }
-*/
-
 
 {
    -webkit-border-radius: 0 !important;
@@ -88,19 +44,18 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod=
     background: #e7e7e7;
     font-size: 16px;
     color:#999999;
-
 }
 
-
 .navbar{
+  background-color: black;
   position: relative;
     right: 20px;
     top: 0px;
     padding: 0px;
     Z-index:3000; 
 }
-
 .navbar.navbar-brand {
+    background-color: black;
     margin-left:20px;
     position: absolute;
     width:70px;
@@ -108,16 +63,12 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod=
     top: 0px;
     padding: 0px;
 }
-
-
 #myNavbar {
+    background-color: black;
     margin-left:200px;
     position: relative;
     left:10px;   
 }
-
-
-
 
 @media (max-width: 991px) {
     .todo .btn {
@@ -138,6 +89,7 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod=
 }
 @media (max-width: 991px) {
   .navbar-brand {
+    background-color: black;
     margin-left:10px;
     position: absolute;
     width:100px;
@@ -171,7 +123,13 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='', sizingMethod=
 }
 
 @media (max-width: 450px) {
+
+.navbar {
+  background-color: black;
+}
+
 .navbar-brand {
+    background-color: black;
     margin-left:10px;
     position: absolute;
     width:100px;
@@ -208,9 +166,10 @@ footer {
 
 
 .navbar {
-  background: transparent !important; 
+  background-color: black;
+ /* background: transparent !important; */
   border-color:transparent;
-  z-index:999;  
+  z-index:3000;  
 }
 
 
