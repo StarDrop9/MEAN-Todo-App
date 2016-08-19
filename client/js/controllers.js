@@ -5,7 +5,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
   $scope.priorities=[{priority:"Now"},{priority:"Today" },{priority:"Action" },{priority:"High"},{priority:"Medium"},{priority:"Low"},{priority:"Completed"}];
   $scope.label = "Category";
   $scope.labels = [{ label: "Inspiration" },{ label: "Design" },{ label: "Personal" },{ label: "Magnetism" },{ label: "Drones" },{ label: "Anti-Hacking" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
-  $scope.image = "/pics/TigerEye.png";   
+  $scope.image = "/pics/greenstar50.png";   
   $scope.header = {name: "header.html", url: "/partials/header.html"};
  // $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/MobilePic.png")'; 
  $scope.imagePath='url("https://assets.imgix.net/skiier.png?w=400&amp;auto=format&amp;usm=20&amp;vib=10&amp;sat=10&amp;chromasub=444&amp;q=55&amp;fm=png8")';
