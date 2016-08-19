@@ -12,6 +12,14 @@ router.get('/', function(req, res) {
       res.render('homepage');
   });
 
+router.get('/testa', function(req, res) {
+      res.render('testanimate');
+  });
+
+router.get('/test2', function(req, res) {
+      res.render('test2');
+  });
+
   router.get('/login', function(req, res) {
       res.render('login');
   });

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head >
+  <meta charset="UTF-8">
+  <title>Example - example-ng-switch-production</title>
+  
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+  
+  
+  <script>
+ (function(angular) {
+  'use strict';
+angular.module('switchExample', ['ngAnimate'])
+  .controller('ExampleController', ['$scope', function($scope) {
+    $scope.items = ['settings', 'home', 'other'];
+    $scope.selection = $scope.items[0];
+    $scope.templates =['partials/header.html','/partials/footer','/partials/todo'];   
+   }]);
+})(window.angular);
+  </script>
+  
+  
+  
+  <Style>
+ animate-switch-container {
+  position:relative;
+  background:white;
+  border:1px solid black;
+  height:400px;
+  overflow:hidden;
+}
+
+.animate-switch {
+  padding:10px;
+}
+
+.animate-switch.ng-animate {
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+
+.animate-switch.ng-leave.ng-leave-active,
+.animate-switch.ng-enter {
+  top:-50px;
+}
+.animate-switch.ng-leave,
+.animate-switch.ng-enter.ng-enter-active {
+  top:0;
+}
+
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/
+</Style>
+  
+  
+
+  
+</head>
+<body ng-app="switchExample">
+  <div ng-controller="ExampleController">
+  <select ng-model="selection" ng-options="item for item in items">
+  </select>
+  <code>selection={{selection}}</code>
+  <hr/>
+  <div class="animate-switch-container"
+    ng-switch on="selection">
+      <div class="animate-switch" ng-switch-when="settings"><Div ng-include="'/partials/navbar.html'"></Div></div>
+      <div class="animate-switch" ng-switch-when="home">Home Span</div>
+      <div class="animate-switch" ng-switch-default>default</div>
+  </div>
+</div>
+</body>
+</html>
+
+<!-- 
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

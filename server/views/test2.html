@@ -1,0 +1,76 @@
+<html ng-app="todoApp">
+
+<head >
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>The Page</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/animations.css">
+
+  <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="/js/app.js"></script>
+  <script type="text/javascript" src="/js/factory.js"></script>
+  <script type="text/javascript" src="/js/controllers.js"></script>
+
+ <script type="text/javascript" src="/lib/angular-elastic-input/src/angular-elastic-input.js"></script>
+ <script type="text/javascript" src="/lib/angular-elastic/elastic.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+
+<style>
+.login{
+    background-color:black ;
+    color:white;
+    }
+
+}
+a.login:link {
+    color: white;
+}
+a.login:visited {
+    color: white;
+}
+a.login:hover {
+    color: white;
+    text-decoration: none;
+}
+a.login:active {
+    color: white;
+}
+</style>
+</head>
+
+<body class="login" ng-controller="TodoCtrl" >
+
+
+<form>
+  Pick a topic:
+  <input type="radio" ng-model="myVar" value="dogs">Dogs
+  <input type="radio" ng-model="myVar" value="login">Login
+  <input type="radio" ng-model="myVar" value="navbar">Navbar
+</form>
+
+<div ng-switch="myVar">
+  <div ng-switch-when="dogs">
+     <h1>Dogs</h1>
+     <p>Welcome to a world of dogs.</p>
+  </div>
+  <div ng-switch-when="login">
+       <Div ng-include="'/partials/login.html'"></Div>
+  </div>
+  <div ng-switch-when="navbar">
+     <Div ng-include="'/partials/navbar.html'"></Div>
+  </div>
+</div>
+
+
+</body>
+</html>
