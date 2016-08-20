@@ -101,6 +101,7 @@
 
 
    #myNavbar {
+    background-color: black;
     margin-left:10px;
     position: relative;
     left:5px;   
@@ -139,10 +140,11 @@
 }
 
    #myNavbar {
+    background-color: black;
     margin-left:10px;
     position: relative;
     left:5px;   
-    
+
 }
 }
   
