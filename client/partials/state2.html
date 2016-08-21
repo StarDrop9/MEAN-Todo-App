@@ -1,6 +1,5 @@
-
-
- <nav class="navbar navbar-inverse">
+<!-- partials/state2.html Show state 2 when user is registered-->
+<nav class="navbar navbar-inverse">
   <div class="container-fluid">
      <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -12,11 +11,11 @@
      </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-center">
-        <li class=""><a href="/index">ToDos</a></li>
+       <li><a ui-sref="state2.todo">ToDos</a></li>
         <!-- <li><a href="/">Todos</a></li> -->
-         <li><a href="/today">ToDays</a></li>
-         <li><a href="/home">Priority</a></li>
-         <li><a href="/add">Category</a></li>
+        <li><a ui-sref="state2.todays">ToDays</a></li>
+        <li><a ui-sref="state2.home">Priority</a></li>
+        <li><a ui-sref="state2.add">Category</a></li>
          <!--<li><a href="/search">Search</a></li>
          <li><a href="/archive">Archive</a></li> 
          <li><a href="https://keep.google.com/">G-Keep</a></li>
@@ -41,3 +40,6 @@
     </div>
   </div>
 </nav>
+
+<a ui-sref="state2.list">Show List</a>
+<div ui-view></div>

@@ -7,21 +7,12 @@
  
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<title>The Page</title>
+<title>The Index Page</title>
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
- 
-    
-<!-- removed since added below  <link rel="stylesheet" type="text/css" href="/lib/bootstrap/dist/css/bootstrap.min.css"> -->
-
-
-<!-- added 06/27/2016
-  <link rel="stylesheet" type="text/css" href="/css/animations.css">
- -->
   <script type="text/javascript" src="/lib/angular/angular.min.js"></script>
   <script type="text/javascript" src="/lib/angular-route/angular-route.min.js"></script>
-<!--  <script type="text/javascript" src="/lib/jquery/dist/jquery.js"></script> -->
   <script type="text/javascript" src="/js/app.js"></script>
   <script type="text/javascript" src="/js/factory.js"></script>
   <script type="text/javascript" src="/js/controllers.js"></script>
@@ -29,30 +20,15 @@
  <script type="text/javascript" src="/lib/angular-elastic-input/src/angular-elastic-input.js"></script>
  <script type="text/javascript" src="/lib/angular-elastic/elastic.js"></script>
 
- 
-<!-- added 06/27/2016
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
-<script type="text/javascript" src="/js/protractor.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-animate.js"></script>
--->
-
-
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<script type="text/javascript" src="cordova.js"></script>
-
-
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
  
-  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+ <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
 </head>
-
-<!-- ng-style="{backgroundImage:imagePath,'backgroundRepeat':'no-repeat','background-size':'cover'}" -->
 
 <body ng-controller="TodoCtrl" >
 <!--<div class="foo">Hi There!!!</div> -->
@@ -60,7 +36,9 @@
 <div class="row col-md-12" >
 <div ng-include="'/partials/navbar.html'"></div>
  <!-- <hr/> -->
-    <ng-view></ng-view>
+  <!-- not working since ui-router added  <ng-view></ng-view> added ng-include for now unitl moved to states-->
+<div ng-include="'/partials/todo.html'"></div>
+
 </div>
 
   <!-- Live reload script -->
@@ -68,27 +46,6 @@
 
 <footer><a href="#"><span class="glyphicon glyphicon-user"></span> ToDos</a>&#xA0;&#xA0;&#xA0;<a href="#"><span class="glyphicon glyphicon-log-in"></span> ToDays</a></footer>
 -->
-
-
-
-<!-- 
-<div ng-include="'/partials/footer.html'"></div>
-
-<svg class="spinner" width="65px" height="65px" viewBox="0 0 66 66">
-  <circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
-</svg>
-
-<div id="wrapper">
-<div class="profile-main-loader">
-  <div class="loader">
-    <svg class="circular-loader"viewBox="25 25 50 50" >
-      <circle class="loader-path" cx="50" cy="50" r="20" fill="none" stroke="#70c542" stroke-width="2" />
-    </svg>
-  </div>
-</div>
-</div>
--->
-
 
 </body>
 </html>

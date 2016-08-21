@@ -12,6 +12,19 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
  // $scope.todo.item = 1 
  
 
+var wathcer = $scope.$watch('myVar', function(newValue, oldValue) {
+    console.log("newValue=" + newValue);
+    console.log("oldValue=" + oldValue);
+       //  if newvalue = "login" {}
+        });
+// wathcer(); to clear watcher
+
+$scope.getBodyStyle = function () {
+  debugger
+return "{'background-image':'url(https://www.google.com/images/srpr/logo4w.png)'}"
+   // return "{backgroundImage:imagePath,'backgroundRepeat':'no-repeat','background-size':'cover'}";
+};
+
 
   $scope.change = function() {
         $scope.priority="Now";

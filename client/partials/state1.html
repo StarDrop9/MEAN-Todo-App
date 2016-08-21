@@ -1,0 +1,40 @@
+<!-- partials/state1.html  put all routes in states provider-->
+
+ <p ng-model="myVar"/>
+ <nav class="navbar navbar-inverse" >
+  <div class="container-fluid">
+         <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+     <a class="navbar-brand" href="#"><img style="height:50px;width:50px" ng-src="{{image}}"/></a>
+        </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+     <!--     <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+      <li><a href="login"><span class="glyphicon glyphicon-log-in" ng-model="myVar" ng-click="setmyVar()"></span> Login</a></li> -->
+        <li><a class="glyphicon glyphicon-user" id="register" href="" ng-click="myVar = 'register'">Register</a></li>
+        <li><a class="glyphicon glyphicon-log-in" id="login" href="" ng-click="myVar = 'login'">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<a ui-sref="state1.list">Show List</a>
+<div ui-view></div>
+
+<div ng-switch="myVar">
+ <!--
+  <div ng-switch-when="todo">
+       <Div ng-include="'/partials/todo.html'"></Div>
+  </div>
+-->
+    <div ng-switch-when="login">
+       <Div ng-include="'/partials/login.html'"></Div>
+  </div>
+  <div ng-switch-when="register">
+     <Div ng-include="'/partials/register.html'"></Div>
+  </div>
+</div>
