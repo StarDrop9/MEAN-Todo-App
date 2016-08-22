@@ -1,28 +1,22 @@
 <!-- partials/state1.html  put all routes in states provider-->
-
- <p ng-model="myVar"/>
- <nav class="navbar navbar-inverse" >
-  <div class="container-fluid">
-         <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-     <a class="navbar-brand" href="#"><img style="height:50px;width:50px" ng-src="{{image}}"/></a>
-        </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-     <!--     <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
-      <li><a href="login"><span class="glyphicon glyphicon-log-in" ng-model="myVar" ng-click="setmyVar()"></span> Login</a></li> -->
-       <li> <a ui-sref="state1.register"><span class="glyphicon glyphicon-user"></span>Sign up</a></li>
-       <li> <a ui-sref="state1.login"><span class="glyphicon glyphicon-user"></span>Login</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
 <!-- <a ui-sref="state1.list">Show List</a>-->
+
+<div class="flex-container" ng-controller ="TodoCtrl">
+  <div class="flex-item">
+    <a class="login" ui-sref="state2"><span class="fa fa-star fa-3x"></span></a>
+  
+  </div>
+  <div class="flex-item">
+  <a class="login" ui-sref="state1.register"><span class="glyphicon glyphicon-user"></span>Sign up</a>
+  </div>
+  <div class="flex-item">
+  <a class="login" ui-sref="state1.login"><span class="glyphicon glyphicon-log-in"></span>Login</a>
+  </div>
+</div>
+
+
+
+
 
 <div ui-view></div>
 

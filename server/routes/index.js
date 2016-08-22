@@ -9,7 +9,7 @@
 //var db = mongojs('mongodb://heroku_fdk06q24:4me4grt80flpddgfgj8rcpbv61@ds011820.mlab.com:11820/heroku_fdk06q24', ['todos']);
 
 router.get('/', function(req, res) {
-      res.render('homepage');
+      res.render('NewHome');
   });
 
 router.get('/testa', function(req, res) {
@@ -17,7 +17,7 @@ router.get('/testa', function(req, res) {
   });
 
 router.get('/test2', function(req, res) {
-      res.render('test2');
+      res.render('NewHome');
   });
 
   router.get('/login', function(req, res) {
