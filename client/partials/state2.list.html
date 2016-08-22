@@ -1,4 +1,24 @@
 <!-- partials/state2.list.html -->
+
+<style>
+  .horizontal-collapse {
+    height: 70px;
+  }
+</style>
+<div ng-controller="CollapseDemoCtrl">
+	<button type="button" class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle collapse Vertically</button>
+	<hr>
+	<div uib-collapse="isCollapsed">
+		<div class="well well-lg">Some content</div>
+	</div>
+
+	<button type="button" class="btn btn-default" ng-click="isCollapsedHorizontal = !isCollapsedHorizontal">Toggle collapse Horizontally</button>
+	<hr>
+	<div class="horizontal-collapse" uib-collapse="isCollapsedHorizontal" horizontal>
+		<div class="well well-lg">Some content</div>
+	</div>
+</div>
+
 <h3>List of State 2 Things</h3>
 <ul>
   <li ng-repeat="thing in things">{{ thing }}</li>

@@ -1,0 +1,27 @@
+
+ <div class="col-md-2 col-md-offset-5 " ng-controller="TodoCtrl">
+   <h2>Re<a class="login" href="/index">g</a>ister</h2>
+        <form method="post">
+        <div class="form-group">
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" id="firstName" class="form-control" value="" required />
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input type="text" name="lastName" id="lastName" class="form-control" value="" required />
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username" class="form-control" value="" required />
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" class="form-control" required />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Register</button>
+           <a ui-sref="state1.login"><span class="glyphicon glyphicon-user"></span>Cancel</a>  
+        </div>
+    </form>
+</div>
+</body>

@@ -1,4 +1,4 @@
-todoApp = angular.module('todoApp', ['ngRoute','ui.router','puElasticInput','monospaced.elastic'])
+todoApp = angular.module('todoApp', ['ngRoute','ui.router','ui.bootstrap','puElasticInput','monospaced.elastic'])
 
   .config(function($stateProvider, $urlRouterProvider) {
   //
@@ -11,6 +11,21 @@ todoApp = angular.module('todoApp', ['ngRoute','ui.router','puElasticInput','mon
       url: "/state1",
       templateUrl: "partials/state1.html"
     })
+    
+   .state('state1.register', {
+      url: "/register",
+      templateUrl: "partials/state1.register.html",
+      controller: function($scope) {
+              }
+    })
+
+   .state('state1.login', {
+      url: "/login",
+      templateUrl: "partials/state1.login.html",
+      controller: function($scope) {
+              }
+    })
+
     .state('state1.list', {
       url: "/list",
       templateUrl: "partials/state1.list.html",
@@ -53,6 +68,13 @@ todoApp = angular.module('todoApp', ['ngRoute','ui.router','puElasticInput','mon
     .state('state2.add', {
       url: "/add",
       templateUrl: "partials/homeul.html",
+      controller: function($scope) {
+        
+      }
+    })
+    .state('state2.ad', {
+      url: "/ad",
+      templateUrl: "partials/addtodo.html",
       controller: function($scope) {
         
       }
