@@ -1,15 +1,60 @@
 <!-- partials/state2.html Show state 2 when user is registered-->
 <style>
+.pcbar {
+    margin: auto;
+    width: 70%;
+    border: 0px solid green;
+    padding: 10px;
+}
 .pcbar li {
     display: inline;
     color : green;
 }
+
 .phonebar {display:none }
+.tabbar{display:none }
+
+
+@media (max-width: 991px) {
+.pcbar {display:none }
+.phonebar{display:none }
+
+
+.tabbar {
+    margin: auto;
+    width: 80%;
+    border: 0px solid green;
+    padding: 10px;
+}
+
+
+.tabbar {display:block; }
+
+.tabbar li {
+    display: inline;
+    color : green;
+}
+
+.icon {
+  height:33px;
+  width:33px;  
+}
+}
+
 
 @media (max-width: 450px) {
 .pcbar {display:none }
+.tabbar{display:none }
 
 .phonebar {display:block; }
+
+.phonebar {
+    margin: auto;
+    width: 85%;
+    border: 0px solid green;
+    padding: 10px;
+}
+
 
 .phonebar li {
     display: inline;
@@ -22,15 +67,11 @@
 }
 }
 
-.pcbar {}
-    margin: auto;
-    width: 60%;
-    border: 3px solid #73AD21;
-    padding: 10px;
-}
+
+
 </style>
 
-<div class="pcbar" ng-controller ="TodoCtrl">
+<div class="pcbar" >
   <br>
   <ul class="">
    <li><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i><font size="5">Add</a>&#xA0;&#xA0;</li>
@@ -42,7 +83,19 @@
 </div>
 
 
-<div class="phonebar" ng-controller ="TodoCtrl">
+<div class="tabbar" >
+  <br>
+  <ul class="">
+   <li><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i><font size="5"></a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.todo"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.todays"><i class="fa fa-list-ol fa-2x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.prior"><i class="fa fa-exclamation fa-2x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.cat"><i class="fa fa-indent fa-2x" aria-hidden=""></i></a></font></li>
+   </ul>
+</div>
+
+
+<div class="phonebar" >
   <br>
   <ul class="">
    <li><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-2x" aria-hidden="true"></i><font size="5"></a>&#xA0;&#xA0;</li>
