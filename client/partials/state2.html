@@ -22,86 +22,41 @@
 }
 }
 
+.pcbar {}
+    margin: auto;
+    width: 60%;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
 </style>
 
 <div class="pcbar" ng-controller ="TodoCtrl">
   <br>
   <ul class="">
-   <li><a class="login" ui-sref="state2.ad">Add</a>&#xA0;&#xA0;</li>
-   <li><a class="login" ui-sref="state2.todo">Todos</a>&#xA0;&#xA0;</li>
-   <li><a class="login" ui-sref="state2.todays">Todays</a>&#xA0;&#xA0;</li>
-   <li><a class="login" ui-sref="state2.prior">Priority</a>&#xA0;&#xA0;</li>
-   <li><a class="login" ui-sref="state2.cat">Category</a></li>
-  </ul>
+   <li><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i><font size="5">Add</a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.todo"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>Todos</a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.todays"><i class="fa fa-list-ol fa-2x" aria-hidden="true"></i>Todays</a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.prior"><i class="fa fa-exclamation fa-2x" aria-hidden="true"></i>Priority</a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.cat"><i class="fa fa-indent fa-2x" aria-hidden="true"></i>Category</a></font></li>
+   </ul>
 </div>
-</div>
-
 
 
 <div class="phonebar" ng-controller ="TodoCtrl">
   <br>
   <ul class="">
-   <li><a class="" ui-sref="state2.ad"><img class="icon" src= "/pics/icons/add.png"></a>&#xA0;&#xA0;</li>
-   <li><a class="" ui-sref="state2.todo"><img class="icon" src= "/pics/icons/modify.png"></a>&#xA0;&#xA0;</li>
-   <li><a class="" ui-sref="state2.todays"><img class="icon" src= "/pics/icons/todays.jpg"></a>&#xA0;&#xA0;</li>
-   <li><a class="" ui-sref="state2.prior"><img class="icon" src= "/pics/icons/priority.jpg"></a>&#xA0;&#xA0;</li>
-   <li><a class="" ui-sref="state2.cat"><img class="icon" src= "/pics/icons/category.png"></a></li>
-  </ul>
+   <li><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-2x" aria-hidden="true"></i><font size="5"></a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.todo"><i class="fa fa-pencil-square-o fa-1x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.todays"><i class="fa fa-list-ol fa-1x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.prior"><i class="fa fa-exclamation fa-1x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.cat"><i class="fa fa-indent fa-1x" aria-hidden="true"></i></a>
+   </font></li>
+   </ul>
 </div>
-</div>
 
 
 
 
-
-<!--
-
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span> 
-      </button>
-      <a class="login"ui-sref="state2.ad"><span class="fa fa-plus fa-3x"></span></a>
-      <!-- <a class="navbar-brand" href="/ad"></a> 
-     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-center">
-       <li><a ui-sref="state2.todo">ToDos</a></li>
-        <!-- <li><a href="/">Todos</a></li> 
-        <li><a ui-sref="state2.todays">ToDays</a></li>
-        <li><a ui-sref="state2.home">Priority</a></li>
-        <li><a ui-sref="state2.add">Category</a></li>
-         <!--<li><a href="/search">Search</a></li>
-         <li><a href="/archive">Archive</a></li> 
-         <li><a href="https://keep.google.com/">G-Keep</a></li>
-         <li><a href="/api/todos">Data</a></li>-->
-       <!--
-                <li class="dropdown">
-                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Sites<b class="caret"></b></a>
-                <ul class="dropdown-menu" ">
-                  <li><a href="http://HITL.org">HITL</a></li>
-                  <li><a href="https://keep.google.com/">Keep</a></li>
-                  <li><a href="https://soundcloud.com/stream">Music</a></li>
-                  <li><a href="http://stackoverflow.com/questions/">Stacks</a></li>
-                  <li><a href="https://www.facebook.com/login">FB</a></li>
-                  <li><a href="http://angularlearn.teachable.com/courses">New Course</a></li>
-                  
-                </ul>
-              </li> 
-  
-       </ul>
- <!--     
-      <ul class="nav navbar-nav navbar-right">
-        <li><a ui-sref="state1.register"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
-        <li><a ui-sref="state1.login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-       </ul>
-
-    </div>
-  </div>
-</nav>
- -->   
+   
 <!-- <a ui-sref="state2.list">Show List</a> -->
 <div ui-view></div>
