@@ -65,9 +65,9 @@ todoApp = angular.module('todoApp', ['ngRoute','ui.router','ui.bootstrap','puEla
         
       }
     })
-    .state('state2.add', {
-      url: "/add",
-      templateUrl: "partials/homeul.html",
+    .state('state2.prior', {
+      url: "/prior",
+      templateUrl: "partials/homep.html",
       controller: function($scope) {
         
       }
@@ -75,6 +75,13 @@ todoApp = angular.module('todoApp', ['ngRoute','ui.router','ui.bootstrap','puEla
     .state('state2.ad', {
       url: "/ad",
       templateUrl: "partials/addtodo.html",
+      controller: function($scope) {
+        
+      }
+    })
+    .state('state2.cat', {
+      url: "/cat",
+      templateUrl: "partials/homeul.html",
       controller: function($scope) {
         
       }

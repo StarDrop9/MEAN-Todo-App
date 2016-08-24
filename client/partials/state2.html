@@ -1,15 +1,52 @@
 <!-- partials/state2.html Show state 2 when user is registered-->
+<style>
+.pcbar li {
+    display: inline;
+    color : green;
+}
+.phonebar {display:none }
 
+@media (max-width: 450px) {
+.pcbar {display:none }
 
-<div class="" ng-controller ="TodoCtrl">
-  <a class="login" ui-sref="state2.ad"><span class="fa fa-plus fa-3x"></span></a>&#xA0;&#xA0;
-  <a class="login" ui-sref="state2.todo">ToDo</a>&#xA0;&#xA0;
-   <a class="login" ui-sref="state2.todays">ToDays</a>&#xA0;&#xA0;
-  <a class="login" ui-sref="state2.add">Priority</a>&#xA0;&#xA0;
-  <a class="login" ui-sref="state2.todays">Category</a>
-  </div>
+.phonebar {display:block; }
+
+.phonebar li {
+    display: inline;
+    color : green;
+}
+
+.icon {
+  height:33px;
+  width:33px;  
+}
+}
+
+</style>
+
+<div class="pcbar" ng-controller ="TodoCtrl">
+  <ul class="">
+   <li><a class="login" ui-sref="state2.ad">Add</a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.todo">Todos</a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.todays">Todays</a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.prior">Priority</a>&#xA0;&#xA0;</li>
+   <li><a class="login" ui-sref="state2.cat">Category</a></li>
+  </ul>
+</div>
 </div>
 
+
+
+<div class="phonebar" ng-controller ="TodoCtrl">
+  <ul class="">
+   <li><a class="" ui-sref="state2.ad"><img class="icon" src= "/pics/icons/add.png"></a>&#xA0;&#xA0;</li>
+   <li><a class="" ui-sref="state2.todo"><img class="icon" src= "/pics/icons/modify.png"></a>&#xA0;&#xA0;</li>
+   <li><a class="" ui-sref="state2.todays"><img class="icon" src= "/pics/icons/todays.jpg"></a>&#xA0;&#xA0;</li>
+   <li><a class="" ui-sref="state2.prior"><img class="icon" src= "/pics/icons/priority.jpg"></a>&#xA0;&#xA0;</li>
+   <li><a class="" ui-sref="state2.cat"><img class="icon" src= "/pics/icons/category.png"></a></li>
+  </ul>
+</div>
+</div>
 
 
 
