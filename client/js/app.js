@@ -9,7 +9,11 @@ todoApp = angular.module('todoApp', ['ngRoute','ui.router','ui.bootstrap','puEla
   $stateProvider
     .state('state1', {
       url: "/state1",
-      templateUrl: "partials/state1.html"
+      templateUrl: "partials/state1.html",
+      controller: function($scope) {
+          $scope.myValue= false;
+      
+              }
     })
     
    .state('state1.register', {
@@ -26,31 +30,18 @@ todoApp = angular.module('todoApp', ['ngRoute','ui.router','ui.bootstrap','puEla
               }
     })
 
-    .state('state1.list', {
-      url: "/list",
-      templateUrl: "partials/state1.list.html",
-      controller: function($scope) {
-        $scope.items = ["A", "List", "Of", "Items"];
-      }
-    })
     .state('state2', {
       url: "/state2",
       templateUrl: "partials/state2.html"
     })
-    .state('state2.list', {
-      url: "/list",
-      templateUrl: "partials/state2.list.html",
-      controller: function($scope) {
-        $scope.things = ["A", "Set", "Of", "Things"];
-      }
-    })
+    
     .state('state2.todo', {
       url: "/todo",
       templateUrl: "partials/todo.html",
       controller: function($scope) {
-        
-      }
+            }
     })
+    
     .state('state2.todays', {
       url: "/todays",
       templateUrl: "partials/todays.html",
@@ -58,6 +49,7 @@ todoApp = angular.module('todoApp', ['ngRoute','ui.router','ui.bootstrap','puEla
         
       }
     })
+    
     .state('state2.home', {
       url: "/home",
       templateUrl: "partials/homep.html",
@@ -65,6 +57,7 @@ todoApp = angular.module('todoApp', ['ngRoute','ui.router','ui.bootstrap','puEla
         
       }
     })
+    
     .state('state2.prior', {
       url: "/prior",
       templateUrl: "partials/homep.html",
@@ -72,13 +65,15 @@ todoApp = angular.module('todoApp', ['ngRoute','ui.router','ui.bootstrap','puEla
         
       }
     })
+    
     .state('state2.ad', {
       url: "/ad",
       templateUrl: "partials/addtodo.html",
       controller: function($scope) {
-        
-      }
+        $scope.myValue= false;
+       }
     })
+    
     .state('state2.cat', {
       url: "/cat",
       templateUrl: "partials/homeul.html",

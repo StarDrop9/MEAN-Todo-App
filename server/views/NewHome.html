@@ -33,7 +33,12 @@
 <link rel="stylesheet" type="text/css" href="/css/styles.css">
 
 <style>
-.msg {display: inline;}
+
+IMG.displayed {
+    display: block;
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto }
 
 .login{
     background-color:black ;
@@ -52,7 +57,7 @@ a.login:hover {
     text-decoration: none;
 }
 a.login:active {
-    color: green;
+    color: white;
 
 }
 .flex-container {
@@ -85,13 +90,17 @@ a.login:active {
 For newer versions of Font Awesom
 
 
+
+
 </style>
 
 </head>
 <!-- try css body tag {} -->
-<body class="login" > 
+<body class="login" ng-controller="TodoCtrl" > 
 
 <div ui-view></div>
+
+<div ng-show="myValue"><img  class="displayed" src="/pics/skiier.png" /></div>
 
     <!-- We'll also add some navigation: 
     <a ui-sref="state1">State 1</a>

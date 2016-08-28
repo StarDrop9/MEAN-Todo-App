@@ -10,7 +10,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
  // $scope.imagePath='url("https://meantodo1.herokuapp.com/pics/MobilePic.png")'; 
  $scope.imagePath='url("https://assets.imgix.net/skiier.png?w=400&amp;auto=format&amp;usm=20&amp;vib=10&amp;sat=10&amp;chromasub=444&amp;q=55&amp;fm=png8")';
  // $scope.todo.item = 1 
- 
+$scope.myValue = true; 
 
 var wathcer = $scope.$watch('myVar', function(newValue, oldValue) {
     console.log("newValue=" + newValue);
