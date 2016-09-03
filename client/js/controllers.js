@@ -2,7 +2,7 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
   $scope.todos = [];
   $scope.isEditable = [];
   $scope.rowLimit = 12 ;
-  $scope.priorities=[{priority:"Now"},{priority:"Today" },{priority:"Action" },{priority:"High"},{priority:"Medium"},{priority:"Low"},{priority:"Completed"}];
+  $scope.priorities=[{priority:"Urgent"},{priority:"Now"},{priority:"Today" },{priority:"Action" },{priority:"High"},{priority:"Medium"},{priority:"Low"},{priority:"Completed"}];
   $scope.label = "Category";
   $scope.labels = [{ label: "Inspiration" },{ label: "Design" },{ label: "Personal" },{ label: "Magnetism" },{ label: "Drones" },{ label: "Anti-Hacking" },{ label: "Splitting Water" },{ label: "Antigravity" }, { label: "Flying" }, { label: "Tech Scouting"}, { label: "Free Energy"}, { label: "Coding"},{ label: "Health"}, { label: "Survival Training"}]
   $scope.image = "/pics/plus.png";   
@@ -334,5 +334,13 @@ todoApp.controller ('homeCtrl', function($scope) {
 $scope.message = "Be Brave and confront evil with Valor"
 }) ;
 
+todoApp.controller ('loginCtrl', function($scope,$rootScope) {
+debugger;
+
+$rootScope.hidePic = false;
+$rootScope.status = "Logged In";
+//console.log($rootScope.hidePic)
+console.log($rootScope.status)
+}) ;
 
 

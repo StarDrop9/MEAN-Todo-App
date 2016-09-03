@@ -74,11 +74,11 @@
 <div class="pcbar" >
   <br>
   <ul class="">
-   <li><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i><font size="5">Add</a>&#xA0;&#xA0;</li>
+   <li><font size="5"><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-2x" aria-hidden="true"></i>Add</a>&#xA0;&#xA0;</li>
    <li><a class="login" ui-sref="state2.todo"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>Todos</a>&#xA0;&#xA0;</li>
    <li><a class="login" ui-sref="state2.todays"><i class="fa fa-list-ol fa-2x" aria-hidden="true"></i>Todays</a>&#xA0;&#xA0;</li>
-   <li><a class="login" ui-sref="state2.prior"><i class="fa fa-exclamation fa-2x" aria-hidden="true"></i>Priority</a>&#xA0;&#xA0;</li>
-   <li><a class="login" ui-sref="state2.cat"><i class="fa fa-indent fa-2x" aria-hidden="true"></i>Category</a></font></li>
+   <li><a class="login" ui-sref="state2.cat"><i class="fa fa-indent fa-2x" aria-hidden="true"></i>Category</a>&#xA0;&#xA0</li>
+   <li><a class="login" ui-sref="state2.prior"><i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i>Priority</a></font></li>
    </ul>
 </div>
 
@@ -86,11 +86,11 @@
 <div class="tabbar" >
   <br>
   <ul class="">
-   <li><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i><font size="5"></a>&#xA0;&#xA0;</li>
+   <li><font size="5"><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-2x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
    <li><a class="login" ui-sref="state2.todo"><i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
    <li><a class="login" ui-sref="state2.todays"><i class="fa fa-list-ol fa-2x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
-   <li><a class="login" ui-sref="state2.prior"><i class="fa fa-exclamation fa-2x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
-   <li><a class="login" ui-sref="state2.cat"><i class="fa fa-indent fa-2x" aria-hidden=""></i></a></font></li>
+   <li><a class="login" ui-sref="state2.cat"><i class="fa fa-indent fa-2x" aria-hidden="true"></i></a>&#xA0;&#xA0</li>
+   <li><a class="login" ui-sref="state2.prior"><i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i></a></font></li>
    </ul>
 </div>
 
@@ -98,16 +98,20 @@
 <div class="phonebar" >
   <br>
   <ul class="">
-   <li><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-2x" aria-hidden="true"></i><font size="5"></a>&#xA0;&#xA0;</li>
+   <li><font size="5"><a class="login" ui-sref="state2.ad"><i class="fa fa-check-circle fa-1x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
    <li><a class="login" ui-sref="state2.todo"><i class="fa fa-pencil-square-o fa-1x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
    <li><a class="login" ui-sref="state2.todays"><i class="fa fa-list-ol fa-1x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
-   <li><a class="login" ui-sref="state2.prior"><i class="fa fa-exclamation fa-1x" aria-hidden="true"></i></a>&#xA0;&#xA0;</li>
-   <li><a class="login" ui-sref="state2.cat"><i class="fa fa-indent fa-1x" aria-hidden="true"></i></a>
+   <li><a class="login" ui-sref="state2.cat"><i class="fa fa-indent fa-1x" aria-hidden="true"></i>&#xA0;&#xA0</a>
+   <li><a class="login" ui-sref="state2.prior"><i class="fa fa-exclamation-triangle fa-1x" aria-hidden="true"></i></a></font></li>
    </font></li>
    </ul>
 </div>
-
-
+<div ng-controller="loginCtrl">
+  <div ng-hide=false>
+  <input type="checkbox" ng-model="status" />Logged In 
+  loginCtrl: {{status}}
+  </div>
+</div>
 
 
    

@@ -87,9 +87,6 @@ a.login:active {
 .fa-star:hover {
   color:white;
 }
-For newer versions of Font Awesom
-
-
 
 
 </style>
@@ -99,9 +96,13 @@ For newer versions of Font Awesom
 <body class="login" ng-controller="TodoCtrl" > 
 
 <div ui-view></div>
+<div ng-controller="loginCtrl">
+<div ng-hide=true>
+<input type="checkbox" ng-model="hidePic" />Hide Picture 
+loginCtrl: {{hidePic}}</div>
 
-<div ng-show="myValue"><img  class="displayed" src="/pics/skiier.png" /></div>
-
+<div ng-hide="hidePic"><img  class="displayed" src="/pics/skiier.png" /></div>
+<div>
     <!-- We'll also add some navigation: 
     <a ui-sref="state1">State 1</a>
     <a ui-sref="state2">State 2</a>
