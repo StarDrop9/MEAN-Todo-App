@@ -153,6 +153,8 @@ input {color:black;}
   
 
 
+
+
 .selectwidthauto
 {
      width:auto !important;
@@ -179,168 +181,8 @@ footer {
 }
 
 
-
-/*Try latter suing -custom 
-
-
-.navbar-brand
-{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin:0 auto;
-}
-
-.navbar-custom a {
-    color: #3399ff;
-}
-*/
-
-/* for Navtest.html custom style sheet from MDB */
-
 .side-nav {
 width:140px ;
 
 }
-
-/* kps added 08/04 
-
-.desktop {
-    display:block;
-}
- 
-.mobile {
-    display:none;
-}
-
-
-@media (max-width : 600px) {
-   .desktop {display:none}
-    .mobile {display:block}
-}
-
-.stripedblue {
-      color:#007FFF;
-      background-color:#DBE9F4;
-    }
-    .stripedbeige {
-      color:#000000;
-      background-color:#F5F5DC;
-    }
-
-*/
-
-
-/* Spinner Code */
-
-/*
-@-webkit-keyframes rotator {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
-  }
-}a
-
-@keyframes rotator {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg);
-  }
-}
-
-@-webkit-keyframes colors {
-  0% {
-    stroke: #4285F4;
-  }
-  25% {
-    stroke: #4285F4;
-  }
-  50% {
-    stroke: #4285F4;
-  }
-  75% {
-    stroke: #4285F4;
-  }
-  100% {
-    stroke: #4285F4;
-  }
-}
-
-@keyframes colors {
-  0% {
-    stroke: #4285F4;
-  }
-  25% {
-    stroke: #4285F4;
-  }
-  50% {
-    stroke: #4285F4;
-  }
-  75% {
-    stroke: #4285F4;
-  }
-  100% {
-    stroke: #4285F4;
-  }
-}
-
-@-webkit-keyframes dash {
-  0% {
-    stroke-dashoffset: 187;
-  }
-  50% {
-    stroke-dashoffset: 46.75;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-  100% {
-    stroke-dashoffset: 187;
-    -webkit-transform: rotate(450deg);
-    transform: rotate(450deg);
-  }
-}
-
-@keyframes dash {
-  0% {
-    stroke-dashoffset: 187;
-  }
-  50% {
-    stroke-dashoffset: 46.75;
-    -webkit-transform: rotate(135deg);
-    transform: rotate(135deg);
-  }
-  100% {
-    stroke-dashoffset: 187;
-    -webkit-transform: rotate(450deg);
-    transform: rotate(450deg);
-  }
-}
-
-.spinner {
-  -webkit-animation: rotator 1.4s linear infinite;
-  animation: rotator 1.4s linear infinite;
-}
-
-.path {
-  stroke-dasharray: 187;
-  stroke-dashoffset: 0;
-  -webkit-transform-origin: center;
-  transform-origin: center;
-  fill: -ms-input-placeholder;
-  fill: -webkit-input-placeholde;
-  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-}
-
-*/
 
