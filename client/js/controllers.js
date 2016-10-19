@@ -193,16 +193,13 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   };
 
 
-
-
-
 // Update the edited Todo
-  $scope.edit2 = function($event,i,label,priority) {
+  $scope.edit2 = function($event,i,todo,label,priority) {
    if ($event.which == 1 && $event.target.value.trim()) {
      var _t = $scope.todos[i];
       todosFactory.updateTodoTest({
        "_id": _t._id,
-      "todo": todo,
+       "todo": todo,
        "isCompleted": _t.isCompleted,
        "label": label,
        "priority":priority
