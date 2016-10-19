@@ -38,7 +38,7 @@
                     <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
                 </datalist>     
               </div>
-              <input ng-show="isEditable[$index]" type="button" class="btn btn-info" value="Save" ng-click="edit2($event,$index,todo,label,priority)" ng-model="todoInput" />
+              <input ng-show="isEditable[$index]" type="button" class="btn btn-info" value="Save" ng-click="edit2($event,$index,label,priority)" ng-model="todoInput" />
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
               </div>
             
