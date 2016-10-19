@@ -199,7 +199,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
      var _t = $scope.todos[i];
       todosFactory.updateTodoTest({
        "_id": _t._id,
-       "todo": $scope.todoInput,
+       "todo": _t.todo,
        "isCompleted": _t.isCompleted,
        "label": label,
        "priority":priority
