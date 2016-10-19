@@ -12,12 +12,30 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
  // $scope.todo.item = 1 
 $scope.myValue = true; 
 
+
+ $scope.todoInput = "";
+ 
+ $scope.$watch(function () {
+        return $scope.todoInput;
+    },
+   function (newValue, oldValue) {
+    
+        if(newValue == oldValue){return;}
+        
+        console.log(newValue);
+        
+        $scope.todoInput = newValue;
+    }, true);
+
+
 var wathcer = $scope.$watch('myVar', function(newValue, oldValue) {
-    console.log("newValue=" + newValue);
-    console.log("oldValue=" + oldValue);
+   // console.log("newValue=" + newValue);
+   // console.log("oldValue=" + oldValue);
        //  if newvalue = "login" {}
         });
 // wathcer(); to clear watcher
+
+
 
 $scope.getBodyStyle = function () {
   debugger
@@ -194,8 +212,8 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
 
 // Update the edited Todo
-  $scope.edit2 = function($event,i,todo,label,priority) {
-   if ($event.which == 1 && $event.target.value.trim()) {
+  $scope.edit2 = function($event,i,label,priority) {
+   if ($event.which == 1 && $scope.todoInput) {
      var _t = $scope.todos[i];
       todosFactory.updateTodoTest({
        "_id": _t._id,
