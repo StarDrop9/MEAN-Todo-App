@@ -57,7 +57,7 @@ return "{'background-image':'url(https://www.google.com/images/srpr/logo4w.png)'
    debugger; // Set the debugger inside 
       console.log(priority);
 
-    if ( $event.which == 13 && $scope.todoInput ) {
+    if ( $event.which == 1 && $scope.todoInput ) {
       todosFactory.saveTodo({
         "todo": $scope.todoInput,
         "isCompleted": false,
@@ -191,6 +191,12 @@ $scope.updateLabelTest = function($event, _id, i, label) {
       });
     }
   };
+
+
+
+
+
+
 
   // Delete a Todo
 
