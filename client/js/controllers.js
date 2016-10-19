@@ -57,7 +57,7 @@ return "{'background-image':'url(https://www.google.com/images/srpr/logo4w.png)'
    debugger; // Set the debugger inside 
       console.log(priority);
 
-    if ( $event.which == 1 && $scope.todoInput ) {
+    if ( $event.which == 13 && $scope.todoInput ) {
       todosFactory.saveTodo({
         "todo": $scope.todoInput,
         "isCompleted": false,
@@ -196,6 +196,29 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
 
 
+// Update the edited Todo
+  $scope.edit2 = function($event, i, label,priority) {
+   if ($event.which == 1 && $event.target.value.trim()) {
+     var _t = $scope.todos[i];
+      todosFactory.updateTodoTest({
+       "_id": _t._id,
+      "todo": $event.target.value.trim(),
+       "isCompleted": _t.isCompleted,
+       "label": label,
+       "priority":priority
+      }).then(function(data) {
+        console.log(label);
+       if (data.data.updatedExisting) {
+         _t.todo = $event.target.value.trim();
+        _t.label = label;
+        _t.priority = priority;
+          $scope.isEditable[i] = false;
+        } else {
+          alert('Oops something went wrong!');
+        }
+      });
+    }
+  };
 
 
   // Delete a Todo
