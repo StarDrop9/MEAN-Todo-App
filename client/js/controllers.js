@@ -390,7 +390,6 @@ console.log($rootScope.status)
 }) ;
 
 
-var fessmodule = angular.module('todoApp', []);
 
 fessmodule.controller('fessCntrl', function ($scope) {
     $scope.todo = function ($event) {
