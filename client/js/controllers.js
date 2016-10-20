@@ -382,7 +382,6 @@ $scope.message = "Be Brave and confront evil with Valor"
 }) ;
 
 todoApp.controller ('loginCtrl', function($scope,$rootScope) {
-debugger;
 
 $rootScope.hidePic = false;
 $rootScope.status = "Logged In";
@@ -391,10 +390,10 @@ console.log($rootScope.status)
 }) ;
 
 
-var fessmodule = angular.module('myModule', []);
+var fessmodule = angular.module('todoApp', []);
 
 fessmodule.controller('fessCntrl', function ($scope) {
-    $scope.chat = function ($event) {
+    $scope.todo = function ($event) {
         var button = $event.currentTarget;
     };
 
