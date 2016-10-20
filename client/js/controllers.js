@@ -389,9 +389,10 @@ $rootScope.status = "Logged In";
 console.log($rootScope.status)
 }) ;
 
+var todoApp = angular.module('todoApp', []);
 
 
-fessmodule.controller('fessCntrl', function ($scope) {
+todoApp.controller('fessCntrl', function ($scope) {
     $scope.todo = function ($event) {
         var button = $event.currentTarget;
     };
@@ -412,5 +413,5 @@ fessmodule.controller('fessCntrl', function ($scope) {
 
 });
 
-fessmodule.$inject = ['$scope'];
+todoApp.$inject = ['$scope'];
 
