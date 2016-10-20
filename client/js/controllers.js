@@ -214,7 +214,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 // Update the edited Todo
   $scope.edit2 = function($event,i,label,priority) {
    debugger;
-   console.log($rootscope.textModel)
+   console.log($rootScope.textModel)
    if ($event.which == 1 ) {
      var _t = $scope.todos[i];
     todosFactory.updateTodoTest({
@@ -395,10 +395,10 @@ todoApp.controller('fessCntrl', function ($scope,$rootScope) {
         var button = $event.currentTarget;
     };
 
-    $rootscope.textModel = "";
+    $rootScope.textModel = "";
 
     $scope.$watch(function () {
-        return $rootscope.textModel;
+        return $rootScope.textModel;
     },
     function (newValue, oldValue) {
         
@@ -406,7 +406,7 @@ todoApp.controller('fessCntrl', function ($scope,$rootScope) {
         
         console.log(newValue);
         
-        $rootscope.textModel = newValue;
+        $rootScope.textModel = newValue;
     }, true);
 
 });
