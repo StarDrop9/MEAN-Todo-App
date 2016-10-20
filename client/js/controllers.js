@@ -215,12 +215,9 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   $scope.edit2 = function($event,i,label,priority) {
    if ($event.which == 1 ) {
      var _t = $scope.todos[i];
-      var todo = _t.todo;
-      console.log(todo);
-      console.log($scope.todoInput);
-      todosFactory.updateTodoTest({
+    todosFactory.updateTodoTest({
        "_id": _t._id,
-       "todo": $scope.todoInput,
+       "todo": $scope.textModel,
        "isCompleted": _t.isCompleted,
        "label": label,
        "priority":priority
@@ -388,8 +385,6 @@ $rootScope.status = "Logged In";
 //console.log($rootScope.hidePic)
 console.log($rootScope.status)
 }) ;
-
-
 
 todoApp.controller('fessCntrl', function ($scope) {
     $scope.todo = function ($event) {
