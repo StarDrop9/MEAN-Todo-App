@@ -416,4 +416,3 @@ fessmodule.controller('fessCntrl', function ($scope) {
 
 fessmodule.$inject = ['$scope'];
 
-
