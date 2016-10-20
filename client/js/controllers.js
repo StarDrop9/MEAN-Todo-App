@@ -215,6 +215,9 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   $scope.edit2 = function($event,i,label,priority) {
    if ($event.which == 1 ) {
      var _t = $scope.todos[i];
+      var todo = todos.todo;
+      console.log(todo);
+      console.log($scope.todoInput);
       todosFactory.updateTodoTest({
        "_id": _t._id,
        "todo": $scope.todoInput,
@@ -222,7 +225,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
        "label": label,
        "priority":priority
       }).then(function(data) {
-        console.log(label);
+       // console.log(label);
        if (data.data.updatedExisting) {
          _t.todo = $event.target.value.trim();
         _t.label = label;
