@@ -386,8 +386,10 @@ $rootScope.status = "Logged In";
 console.log($rootScope.status)
 }) ;
 
+
 todoApp.controller('fessCntrl', function ($scope) {
-    $scope.textM = function ($event) {
+
+    $scope.todoInput = function ($event) {
         var button = $event.currentTarget;
     };
 
