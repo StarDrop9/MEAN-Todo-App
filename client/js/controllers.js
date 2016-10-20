@@ -389,7 +389,6 @@ $rootScope.status = "Logged In";
 console.log($rootScope.status)
 }) ;
 
-var todoApp = angular.module('todoApp', []);
 
 
 todoApp.controller('fessCntrl', function ($scope) {
