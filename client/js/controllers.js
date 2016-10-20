@@ -213,6 +213,8 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
 // Update the edited Todo
   $scope.edit2 = function($event,i,label,priority) {
+   debugger;
+   console.log($scope.textModel)
    if ($event.which == 1 ) {
      var _t = $scope.todos[i];
     todosFactory.updateTodoTest({
