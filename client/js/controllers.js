@@ -389,16 +389,16 @@ console.log($rootScope.status)
 }) ;
 
 
-todoApp.controller('fessCntrl', function ($scope,$rootScope) {
+todoApp.controller('fessCntrl', function ($scope) {
 
     $scope.todoInput = function ($event) {
         var button = $event.currentTarget;
     };
 
-    $rootScope.textModel = "";
+    $scope.textModel = "";
 
     $scope.$watch(function () {
-        return $rootScope.textModel;
+        return $scope.textModel;
     },
     function (newValue, oldValue) {
         
@@ -406,7 +406,8 @@ todoApp.controller('fessCntrl', function ($scope,$rootScope) {
         
         console.log(newValue);
         
-        $rootScope.textModel = newValue;
+        $scope.textModel = newValue;
+
     }, true);
 
 });
