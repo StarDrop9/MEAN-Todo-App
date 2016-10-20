@@ -391,3 +391,29 @@ console.log($rootScope.status)
 }) ;
 
 
+var fessmodule = angular.module('myModule', []);
+
+fessmodule.controller('fessCntrl', function ($scope) {
+    $scope.chat = function ($event) {
+        var button = $event.currentTarget;
+    };
+
+    $scope.textModel = "";
+
+    $scope.$watch(function () {
+        return $scope.textModel;
+    },
+    function (newValue, oldValue) {
+        
+        if(newValue == oldValue){return;}
+        
+        console.log(newValue);
+        
+        $scope.textModel = newValue;
+    }, true);
+
+});
+
+fessmodule.$inject = ['$scope'];
+
+
