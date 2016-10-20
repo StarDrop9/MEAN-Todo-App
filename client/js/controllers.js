@@ -215,7 +215,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   $scope.edit2 = function($event,i,label,priority) {
    if ($event.which == 1 ) {
      var _t = $scope.todos[i];
-      var todo = todos.todo;
+      var todo = _t.todo;
       console.log(todo);
       console.log($scope.todoInput);
       todosFactory.updateTodoTest({
