@@ -387,7 +387,7 @@ console.log($rootScope.status)
 }) ;
 
 todoApp.controller('fessCntrl', function ($scope) {
-    $scope.todo = function ($event) {
+    $scope.textM = function ($event) {
         var button = $event.currentTarget;
     };
 
