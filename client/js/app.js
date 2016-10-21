@@ -75,6 +75,22 @@ console.log(status)
 
     })
     
+.state('state2.todoB', {
+      url: "/todoB",
+      templateUrl: "partials/todoB.html",
+      controller: function($scope) {
+            },
+    
+    //added for testing
+    // resolve: { loginRequired : accessRestrictionHandler } 
+
+    })
+
+
+
+
+
+
     .state('state2.todays', {
       url: "/todays",
       templateUrl: "partials/todays.html",
