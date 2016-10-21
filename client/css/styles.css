@@ -1,5 +1,10 @@
 /*   Added kps */
 
+table {
+    table-layout: auto;
+}
+
+
 input {color:black;}
 
 
