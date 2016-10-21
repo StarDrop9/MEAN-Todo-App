@@ -1,10 +1,7 @@
 <div class="container" ng-controller="TodoCtrl">
   <div class="row col-md-12">
-    <TABLE BORDER="0" CELLPADDING="3" CELLSPACING="3">
-     <TR>
-     <TD><textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 600px;background-color:white;"></textarea>
-       </TD></TR>
-       <TR>
+       <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 600px;background-color:white;"></textarea>
+     
        <TABLE BORDER="0" CELLPADDING="7" CELLSPACING="7">
         <TD><Input list="priority" class="selectwidthauto" placeholder="     Priority" ng-change="" ng-click="clearpriority()" class="form-control" ng-model="priority" /><datalist id="priority">
           <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
@@ -13,14 +10,11 @@
           <option ng-repeat="x1 in labels" value="{{x1.label}}">
           </datalist></TD>
         <TR>
+        <TD></TD>
         <TD><input type="button" class="btn btn-info" class="pull-center" value="Add" ng-click="add($event,label,priority)"  ng-model="todoInput" /></TD>
-        <TD>2nd Table</TD>
         </TR>
        </TABLE>
-     </TD>
-     </TR>
-    </TABLE>
-  </div>
+       </div>
 
   <div class="row col-md-12 todos">
       <div class="alert alert-success text-center" ng-hide="todos.length > 0">
