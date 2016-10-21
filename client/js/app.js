@@ -1,8 +1,7 @@
 todoApp = angular.module('todoApp', ['ngRoute','ui.router','ui.bootstrap','puElasticInput','monospaced.elastic'])
 
   .config(function($stateProvider, $urlRouterProvider) {
-  
- 
+   
 //Testing this security blocking funtion for access to .states 
  var accessRestrictionHandler = function($q, $rootScope, $state) {
             var deferred = $q.defer();
