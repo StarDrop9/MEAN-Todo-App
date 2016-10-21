@@ -1,8 +1,11 @@
 <div class="container" ng-controller="TodoCtrl">
   <div class="row col-md-12">
-    <TABLE BORDER="3" CELLPADDING="10" CELLSPACING="10">
-     <TD>
-       <TABLE BORDER="3" CELLPADDING="3" CELLSPACING="3">
+    <TABLE BORDER="0" CELLPADDING="3" CELLSPACING="3">
+     <TR>
+     <TD><textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;background-color:white;"></textarea>
+       </TD></TR>
+       <TR>
+       <TABLE BORDER="0" CELLPADDING="3" CELLSPACING="3">
         <TD><Input list="priority" class="selectwidthauto" placeholder="     Priority" ng-change="" ng-click="clearpriority()" class="form-control" ng-model="priority" /><datalist id="priority">
           <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
           </datalist></TD>
@@ -15,10 +18,10 @@
         </TR>
        </TABLE>
      </TD>
-     <TD> <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;background-color:white;"></textarea></TD>
+     </TR>
     </TABLE>
   </div>
-  
+
   <div class="row col-md-12 todos">
       <div class="alert alert-success text-center" ng-hide="todos.length > 0">
          <h3>Loading Todos!</h3>
