@@ -13,27 +13,12 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
 $scope.myValue = true; 
 
 
- $scope.todoInput = "";
- 
- $scope.$watch(function () {
-        return $scope.todoInput;
-    },
-   function (newValue, oldValue) {
-    
-        if(newValue == oldValue){return;}
-        
-        console.log(newValue);
-        
-        $scope.todoInput = newValue;
-    }, true);
-
-
-var wathcer = $scope.$watch('myVar', function(newValue, oldValue) {
+var watcher = $scope.$watch('myVar', function(newValue, oldValue) {
    // console.log("newValue=" + newValue);
    // console.log("oldValue=" + oldValue);
        //  if newvalue = "login" {}
         });
-// wathcer(); to clear watcher
+// watcher(); to clear watcher
 
 
 
@@ -248,27 +233,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
         $scope.todos.splice(i, 1);
       }
     });
-
-
-/*
-  $scope.fontcolor = {
-    color: 'white'
-  }
- 
-  $scope.margeStyleObj = function(objectList) {
-    var obj = {};
-    objectList.forEach(function(x) {
-      for (var i in x)
-        obj[i] = x[i];
-    });
-    return obj;
-  }
-*/
-
   };
-
-
-
 
 
  $scope.ChooseLabelString = function(label) {
@@ -316,20 +281,6 @@ $scope.isComplete = function(todo) {
     };
 
 
-
-
-// Blog a Todo kps 04/06/16
-// $scope.blogTodo = function(i) {
-//   alert(i);
-//  todosFactory.blogTodo($scope.todos[i]._id).then(function(data) {
-      //alert(i);
-//      if (data.data) {
-//        $scope.todos[i];
-//      }
-//    });
-//  };
-
-
 $scope.clearlabel = function (){
 $scope.label = "";
    }
@@ -351,24 +302,6 @@ $scope.ngChangeUpdatedLabel = function (label){
   console.log(updatedlabel); 
  }
 
-
-//$scope.priorityFilter = function (todos) {
- //    for (var i = todos.length - 1; i >= 0; i--) {
-   //  var todo = todos[i]
-     // debugger; 
-   //   var priority = parseFloat(todo.priority);
-   // if (!priorityFilter) {
-   //   return false;
-   // }
-   //  if(priority = priority) {
-   //   return true;
-  //  }
- //    return false;
-//  };
-//  };
-
-
-
 $scope.templates =
       [ { name: 'template1.html', url: '/partials/homep.html'},
         { name: 'template2.html', url: '/partials/todo.html'} ];
@@ -388,28 +321,3 @@ $rootScope.status = "Logged In";
 console.log($rootScope.status)
 }) ;
 
-
-todoApp.controller('fessCntrl', function ($scope) {
-
-    $scope.todoInput = function ($event) {
-        var button = $event.currentTarget;
-    };
-
-    $scope.textModel = "";
-
-    $scope.$watch(function () {
-        return $scope.textModel;
-    },
-    function (newValue, oldValue) {
-        
-        if(newValue == oldValue){return;}
-        
-        console.log(newValue);
-        
-        $scope.textModel = newValue;
-
-    }, true);
-
-});
-
-todoApp.$inject = ['$scope'];
