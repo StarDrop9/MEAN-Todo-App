@@ -38,11 +38,11 @@ todoApp.factory('todosFactory', function($http) {
   };
 
   _todoService.updateTodoTest = function(todo) {
-    debugger; // Set the debugger inside 
+    //debugger; // Set the debugger inside 
                 // this function
     //var todo = $httpParamSerializer({"_id":"56fef2921c91130b00ab4391","todo":"Add Login Piece to this application","isCompleted":false,"label":"Splitting Water"})
       //todo = angular.toJson(todo)
-       console.log(todo.label);
+      // console.log(todo.label);
     return $http.put(urlBase,todo, 
     {headers: { 'Content-Type': 'application/json' } });
   
