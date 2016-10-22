@@ -198,7 +198,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 //for Textarea change for todo save button
         $scope.textisChange = false;
         
-        $scope.isTextChange = function (text) {
+        $scope.isTextChange = function (textA) {
             $scope.textisChange = true;
             $scope.count = $scope.count + 1;
         $scope.textA = text;
@@ -209,14 +209,14 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
 
 // Update the edited Todo
-  $scope.edit2 = function($event,i,todo,label,priority) {
+  $scope.edit2 = function($event,i,textA,label,priority) {
    debugger;
-   console.log(todo)
+   console.log(textA)
    if ($event.which == 1 ) {
      var _t = $scope.todos[i];
     todosFactory.updateTodoTest({
        "_id": _t._id,
-       "todo": todo,
+       "todo": textA,
        "isCompleted": _t.isCompleted,
        "label": label,
        "priority":priority
