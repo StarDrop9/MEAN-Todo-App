@@ -197,13 +197,13 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
 //for Textarea change for todo save button
         $scope.textisChange = false;
-        
+        $scope.textA=""
         $scope.isTextChange = function (textA) {
             $scope.textisChange = true;
             $scope.count = $scope.count + 1;
-        $scope.textA = text;
-        console.log(text);
-          //  alert(text);
+        $scope.textA = textA;
+        console.log(textA);
+          //  alert(textA);
         }
 
 
