@@ -195,6 +195,18 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     }
   };
 
+//for Textarea change for todo save button
+        $scope.textisChange = false;
+        
+        $scope.isTextChange = function (text) {
+            $scope.textisChange = true;
+            $scope.count = $scope.count + 1;
+        $scope.textA = text;
+        console.log(text);
+            alert(text);
+        }
+
+
 
 // Update the edited Todo
   $scope.edit2 = function($event,i,label,priority) {
