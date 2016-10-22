@@ -203,20 +203,20 @@ $scope.updateLabelTest = function($event, _id, i, label) {
             $scope.count = $scope.count + 1;
         $scope.textA = text;
         console.log(text);
-            alert(text);
+          //  alert(text);
         }
 
 
 
 // Update the edited Todo
-  $scope.edit2 = function($event,i,label,priority) {
+  $scope.edit2 = function($event,i,todo,label,priority) {
    debugger;
-   console.log($scope.textA)
+   console.log(todo)
    if ($event.which == 1 ) {
      var _t = $scope.todos[i];
     todosFactory.updateTodoTest({
        "_id": _t._id,
-       "todo": $scope.textA,
+       "todo": todo,
        "isCompleted": _t.isCompleted,
        "label": label,
        "priority":priority
