@@ -42,7 +42,7 @@
               <div class="col-md-3 col-sm-3 col-xs-3">
                 <input type="button"  ng-show="!isEditable[$index]"  class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />&#xA0;&#xA0;
                  <input type="button" ng-show="!isEditable[$index]" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
-                <input ng-show="isEditable[$index]" type="button" class="btn btn-info" placeholder="Save" ng-click="edit2($event,$index,label,priority);" ng-model="todoInput"/>
+                <input ng-show="isEditable[$index]" type="button" class="btn btn-info" value="Save" ng-click="edit2($event,$index,label,priority);" ng-model="todoInput"/>
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
              </div>
       </div>        
