@@ -194,44 +194,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     }
   };
 
-//for Textarea change for todo save button
-        $scope.textisChange = false;
-        $scope.textA=""
-        $scope.isTextChange = function (textA) {
-            $scope.textisChange = true;
-            $scope.count = $scope.count + 1;
-        $scope.textA = textA;
-        console.log(textA);
-          //  alert(textA);
-        }
 
-
-
-// Update the edited Todo
-  $scope.edit2 = function($event,i,label,priority) {
-   //debugger;
-   console.log($scope.todoInput)
-   if ( $event.which == 1 && $scope.todoInput ) {
-     var _t = $scope.todos[i];
-    todosFactory.updateTodoTest({
-       "_id": _t._id,
-       "todo": $scope.todoInput,
-       "isCompleted": _t.isCompleted,
-       "label": label,
-       "priority":priority
-      }).then(function(data) {
-       // console.log(label);
-       if (data.data.updatedExisting) {
-         _t.todo = $event.target.value.trim();
-        _t.label = label;
-        _t.priority = priority;
-          $scope.isEditable[i] = false;
-        } else {
-          alert('Oops something went wrong!');
-        }
-      });
-    }
-  };
 
 
   // Delete a Todo
