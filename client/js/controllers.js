@@ -81,7 +81,6 @@ return "{'background-image':'url(https://www.google.com/images/srpr/logo4w.png)'
 $scope.add = function($event,label, priority) {
    debugger; // Set the debugger inside 
       console.log(priority);
-
     if ( $event.which == 1 && $scope.todoInput ) {
       todosFactory.saveTodo({
         "todo": $scope.todoInput,
@@ -209,14 +208,14 @@ $scope.updateLabelTest = function($event, _id, i, label) {
 
 
 // Update the edited Todo
-  $scope.edit2 = function($event,i,textA,label,priority) {
-   debugger;
-   console.log(textA)
-   if ($event.which == 1 ) {
+  $scope.edit2 = function($event,i,label,priority) {
+   //debugger;
+   console.log($scope.todoInput)
+   if ( $event.which == 1 && $scope.todoInput ) {
      var _t = $scope.todos[i];
     todosFactory.updateTodoTest({
        "_id": _t._id,
-       "todo": textA,
+       "todo": $scope.todoInput,
        "isCompleted": _t.isCompleted,
        "label": label,
        "priority":priority
