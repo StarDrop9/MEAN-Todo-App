@@ -20,10 +20,8 @@
       </div> 
     
    <div ng-repeat="todo in todos" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ?'strike':''">
-      <div class="col-md-1 col-sm-1 col-xs-1">
-         <input type="checkbox" ng-show="!isEditable[$index]" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
-      </div>
      <div class="col-md-8 col-sm-8 col-xs-8">
+      <input type="checkbox" ng-show="!isEditable[$index]" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
        <Div ng-show="!isEditable[$index]" Style="color:#99d6ff;float:left"><strong>{{todo.label}}</strong>&#xA0;&#xA0;&#xA0;&#xA0;</Div>&#xA0;&#xA0;&#xA0;&#xA0;<Div ng-show="!isEditable[$index]" Style="color:#3399ff;float:left"><strong>{{todo.priority}}</strong></div>
        <div ng-show="!isEditable[$index]">{{todo.todo}}</div>
          <div class="col-md-3 col-sm-3 col-xm-3">
