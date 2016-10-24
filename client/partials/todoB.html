@@ -27,7 +27,7 @@
          <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label,priority);" style="min-width: 200px; max-width: 400px;" ng-model="todoInput" >{{todo.todo}}</textarea>
          <!-- <pre>{{textA|json}}</pre> -->
              <div class="col-md-3 col-sm-3 col-xm-3">
-              <Input list="label" id="SA" ng-show="isEditable[$index]" ng-click="updateLabel($event, todo._id, $index, label)" class="form-control" ng-model="label" /> 
+              <Input list="label" id="SA" ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /> 
                <datalist id="label">
                 <option ng-repeat="x1 in labels" value="{{x1.label}}">
                </datalist>
@@ -40,7 +40,7 @@
               <div class="col-md-3 col-sm-3 col-xs-3">
                 <input type="button"  ng-show="!isEditable[$index]"  class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />&#xA0;&#xA0;
                  <input type="button" ng-show="!isEditable[$index]" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
-                <input ng-show="isEditable[$index]" type="button" class="btn btn-info" value="Save" ng-click="updateTodo($event, todo._id, $index,label,priority)" />
+                <input ng-show="isEditable[$index]" type="button" class="btn btn-info" value="Save" ng-click="updateTodo($event,$index,label,priority)" />
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
              </div>
        </div>        

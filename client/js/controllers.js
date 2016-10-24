@@ -188,25 +188,29 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     }
   };
 
- $scope.updateTodo = function($event, _id, i,label,priority) {
-debugger; 
-    var _t = $scope.todos[i];
-    todosFactory.updateTodo({
-      _id: _id,
-      isCompleted: false,
-      todo: _t.todo,
-      label:label,
-      priority:priority
-       }).then(function(data) {
-      if (data.data.updatedExisting) {
-         _t.label = label;
+ $scope.updateTodo = function($event, i, label,priority) {
+   if ($event.which == 1) {
+     var _t = $scope.todos[i];
+      todosFactory.updateTodoTest({
+       "_id": _t._id,
+      "todo": $scope.todoInput,
+       "isCompleted": _t.isCompleted,
+       "label": label,
+       "priority":priority
+      }).then(function(data) {
+        console.log(label);
+       if (data.data.updatedExisting) {
+         _t.todo = $scope.todoInput;
+        _t.label = label;
         _t.priority = priority;
-        $scope.isEditable[i] = false;
-            } else {
-        alert('Oops something went wrong!');
-      }
-    });
+          $scope.isEditable[i] = false;
+        } else {
+          alert('Oops something went wrong!');
+        }
+      });
+    }
   };
+
 
 
 
