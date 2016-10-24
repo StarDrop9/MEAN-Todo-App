@@ -298,7 +298,7 @@ $scope.ngChangeUpdatedLabel = function (label){
  }
 
 
-$scope.onUpdate = function (){
+$scope.onUpdate = function ($index){
 $scope.priority = "";
 $scope.isEditable[$index] = true;
    }
