@@ -45,7 +45,7 @@
               ng-init= "todo._priority={priority:todo.priority}"
               ng-change = "todo.priority = todo._priority"
               ng-options="priority.priority for priority in priorities">
-              <option value="" style="display: none;"></option>
+              <option value="" style="display: none;">{{todo.priority}}</option>
              </select>    
     <!-- <Input list="priority" ng-show="isEditable[$index]" placeholder="Priority" ng-change="" ng-click="" class="form-control selectwidthauto" ng-model="todo.priority" /><datalist id="priority">
     <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
