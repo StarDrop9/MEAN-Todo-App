@@ -283,7 +283,7 @@ $scope.clearpriority = function (){
 $scope.priority = "";
    }
 
-$scope.cleartodopriority = function (todo.priority){
+$scope.cleartodopriority = function (priority){
 debugger ;
 var todo.priority = "Priority";
      }
