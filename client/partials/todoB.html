@@ -35,7 +35,7 @@
            ng-change = "test()"
            ng-options="c.label as c.label for c in labels">
            </select>
-            <div>{{todo.label}}</div>
+           <!-- <div>{{todo.label}}</div> -->
      
            <select class="form-control" 
            ng-show="isEditable[$index]" 
@@ -43,7 +43,7 @@
            ng-change = "test()"
            ng-options="c.priority as c.priority for c in priorities">
            </select>
-            <div>{{todo.priority}}</div>
+           <!-- <div>{{todo.priority}}</div> -->
           <!--   <Input list="label" id="SA"  ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" ng-click="cleartodolabel()" class="form-control selectwidthauto" ng-model="todo.label" /> 
               <datalist id="label">
                 <option ng-repeat="x1 in labels" value="{{x1.label}}">
