@@ -43,10 +43,10 @@
                 <option ng-repeat="x1 in labels" value="{{x1.label}}">
                </datalist>
           -->     
-               <select class="form-control selectwidthauto" 
+              <select class="form-control selectwidthauto" 
               ng-show="isEditable[$index]" 
               ng-model="todo.priority"
-              ng-options="todo.priority for priority in prioroities ">
+              ng-options="todo.priority for priority in priorities ">
               <option value="" style="display: none;">--select--</option>
              </select>    
 
