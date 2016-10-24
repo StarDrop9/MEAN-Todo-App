@@ -33,7 +33,7 @@
            ng-show="isEditable[$index]" 
            ng-model="todo.label"
            ng-change = "test()"
-           ng-options="todo.label as c.label for c in labels">
+           ng-options="c.label as c.label for c in labels">
            </select>
             <div>{{todo.label}}</div>
      <!--   <Input list="label" id="SA"  ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" ng-click="cleartodolabel()" class="form-control selectwidthauto" ng-model="todo.label" /> 
