@@ -287,9 +287,6 @@ $scope.cleartodopriority = function (priority){
 debugger ;
 $scope.priority = "Priority";
      }
-
-
-
 $scope.ngChangeLabel = function (label){
  console.log(label);
   var label = label;
@@ -299,6 +296,26 @@ $scope.ngChangeUpdatedLabel = function (label){
   var updatedlabel = label;
   console.log(updatedlabel); 
  }
+
+
+$scope.onUpate = function (){
+$scope.priority = "";
+isEditable[$index] = true;
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 $scope.templates =
       [ { name: 'template1.html', url: '/partials/homep.html'},

@@ -34,11 +34,11 @@
                 <option ng-repeat="x1 in labels" value="{{x1.label}}">
                </datalist>
                <Input list="priority" ng-show="isEditable[$index]" placeholder="Priority" ng-change="" ng-click="" class="form-control selectwidthauto" ng-model="todo.priority" /><datalist id="priority">
-          <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
+               <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
               </div>
-              </div>
+      </div>
               <div class="col-md-3 col-sm-3 col-xs-3">
-                <input type="button"  ng-show="!isEditable[$index]"  class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />&#xA0;&#xA0;
+                <input type="button"  ng-show="!isEditable[$index]"  class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="onUpdat()" />&#xA0;&#xA0;
                  <input type="button" ng-show="!isEditable[$index]" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-info" value="Save" ng-click="updateTodo($event,$index,todo.label,todo.priority,todo.todo)" />
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
