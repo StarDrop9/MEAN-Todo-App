@@ -29,7 +29,7 @@
            <textarea ng-show="isEditable[$index]" ng-keypress="edit($event,$index,label,priority);" style="min-width: 250px; max-width: 400px;" ng-model="todo.todo" >{{todo.todo}}</textarea>
   <br>           
              <div class="col-md-3 col-sm-3 col-xm-3">
-              <Input list="label" id="SA"  ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" ng-click="todo.label=""" class="form-control selectwidthauto" ng-model="todo.label" /> 
+              <Input list="label" id="SA"  ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" ng-click="cleartodolabel()" class="form-control selectwidthauto" ng-model="todo.label" /> 
                <datalist id="label">
                 <option ng-repeat="x1 in labels" value="{{x1.label}}">
                </datalist>
