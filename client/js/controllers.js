@@ -12,6 +12,8 @@ todoApp.controller('TodoCtrl', function($rootScope, $scope, todosFactory,$timeou
  // $scope.todo.item = 1 
 $scope.myValue = true; 
 
+$scope.test = function() {
+console.log($scope.todo.label);}
 
 var watcher = $scope.$watch('myVar', function(newValue, oldValue) {
    // console.log("newValue=" + newValue);

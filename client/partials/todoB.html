@@ -28,11 +28,14 @@
        <textarea ng-show="isEditable[$index]" ng-keypress="" style="min-width: 250px; max-width: 400px;" ng-model="todo.todo" >{{todo.todo}}</textarea>
     <br>           
           <div class="col-md-3 col-sm-3 col-xm-3">
+          
           <select class="form-control" 
            ng-show="isEditable[$index]" 
            ng-model="todo.label"
-           ng-options="a.label for a in labels">
+           ng-change = "test()"
+           ng-options="todo.label as todo.label for label in labels">
            </select>
+            <div>{{todo.label}}</div>
      <!--   <Input list="label" id="SA"  ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" ng-click="cleartodolabel()" class="form-control selectwidthauto" ng-model="todo.label" /> 
               <datalist id="label">
                 <option ng-repeat="x1 in labels" value="{{x1.label}}">
@@ -45,7 +48,7 @@
               ng-init= "todo._priority={priority:todo.priority}"
               ng-change = "todo.priority = todo._priority"
               ng-options="priority.priority for priority in priorities">
-              <option value="" style="display: none;">{{todo.priority|json}}</option>
+              <option value="" style="display: none;">{{todo.priority}}</option>
              </select>    
     <!-- <Input list="priority" ng-show="isEditable[$index]" placeholder="Priority" ng-change="" ng-click="" class="form-control selectwidthauto" ng-model="todo.priority" /><datalist id="priority">
     <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
