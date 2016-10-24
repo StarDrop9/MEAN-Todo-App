@@ -274,17 +274,16 @@ $scope.isComplete = function(todo) {
         return todo.priority.indexOf($scope.CCC) !== -1;
     };
 
-
 $scope.clearlabel = function (){
 $scope.label = "";
    }
 
-
 $scope.clearpriority = function (){
-$scope.priority = "";
+debugger;
+$scope.todo.priority = "";
+
+
    }
-
-
 
 $scope.ngChangeLabel = function (label){
  console.log(label);
@@ -302,7 +301,6 @@ $scope.templates =
     $scope.template = $scope.templates[0];
 });
 
-
 todoApp.controller ('homeCtrl', function($scope) {
 $scope.message = "Be Brave and confront evil with Valor"
 }) ;
@@ -312,6 +310,6 @@ todoApp.controller ('loginCtrl', function($scope,$rootScope) {
 $rootScope.hidePic = false;
 $rootScope.status = "Logged In";
 //console.log($rootScope.hidePic)
-console.log($rootScope.status)
+//console.log($rootScope.status)
 }) ;
 
