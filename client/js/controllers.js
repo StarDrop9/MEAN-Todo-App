@@ -59,7 +59,6 @@ return "{'background-image':'url(https://www.google.com/images/srpr/logo4w.png)'
   $scope.save = function($event,label, priority) {
    debugger; // Set the debugger inside 
       console.log(priority);
-
     if ( $event.which == 13 && $scope.todoInput ) {
       todosFactory.saveTodo({
         "todo": $scope.todoInput,
@@ -72,8 +71,6 @@ return "{'background-image':'url(https://www.google.com/images/srpr/logo4w.png)'
       $scope.todoInput = '';
     // $scope.todo.Label = '';
     $scope.added();
-         
-
       }
   };
 
@@ -104,7 +101,6 @@ $scope.updateLabelTest = function($event, _id, i, label) {
        //var label = $event.target.id.value.trim()    
        var _t = $scope.todos[i];
     //console.log(_t);
-
      todosFactory.updateTodoLabel({
       _id: _id,
       todo: _t.todo,
@@ -140,8 +136,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     });
   };
 
-    
-      
+     
     $scope.totalDisplayed = 0;          
     $scope.loadMore = function () {
       $scope.totalDisplayed += 3;
@@ -150,8 +145,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
       $scope.cleartotalDisplayed = function () {
       $scope.totalDisplayed = 0;
          };
-    
-    
+ 
 
   //update the status of the Todo
   $scope.updateStatus = function($event, _id, i) {
@@ -194,6 +188,24 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     }
   };
 
+ $scope.updateTodo = function($event, _id, i,label,priority) {
+    var _t = $scope.todos[i];
+    todosFactory.updateTodo({
+      _id: _id,
+      isCompleted: false,
+      todo: _t.todo,
+      label:label,
+      priority:priority
+       }).then(function(data) {
+      if (data.data.updatedExisting) {
+         _t.label = label;
+        _t.priority = priority;
+        $scope.isEditable[i] = false;
+            } else {
+        alert('Oops something went wrong!');
+      }
+    });
+  };
 
 
 
