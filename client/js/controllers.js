@@ -279,9 +279,7 @@ $scope.label = "";
    }
 
 $scope.clearpriority = function (){
-debugger;
-todo.priority = "";
-return todo.priority
+$scope.priority = "";
    }
 
 $scope.ngChangeLabel = function (label){
