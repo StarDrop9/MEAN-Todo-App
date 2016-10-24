@@ -30,17 +30,22 @@
   <br>           
              <div class="col-md-3 col-sm-3 col-xm-3">
             
-              <select ng-show="isEditable[$index]" class="form-control"  ng-options="label.label for label in labels">
-              <option ng-model="todo.label" style="display: none;">{{todo.label}}</option>
+              <select class="form-control" 
+              ng-show="isEditable[$index]" 
+              ng-model="todo.label"
+              ng-options="label.label for label in labels trackby todo.label">
+              <option value="" style="display: none;">--select--</option>
              </select>
 
 
-
-
               <Input list="label" id="SA"  ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" ng-click="cleartodolabel()" class="form-control selectwidthauto" ng-model="todo.label" /> 
+               
                <datalist id="label">
                 <option ng-repeat="x1 in labels" value="{{x1.label}}">
                </datalist>
+               
+
+
                <Input list="priority" ng-show="isEditable[$index]" placeholder="Priority" ng-change="" ng-click="" class="form-control selectwidthauto" ng-model="todo.priority" /><datalist id="priority">
                <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
               </div>
