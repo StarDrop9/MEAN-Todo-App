@@ -275,6 +275,7 @@ $scope.isComplete = function(todo) {
     };
 
 $scope.clearlabel = function (){
+ debugger;
 $scope.label = "";
    }
 
