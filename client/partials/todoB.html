@@ -24,11 +24,8 @@
          <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
       </div>
      <div class="col-md-8 col-sm-8 col-xs-8">
-       <span ng-show="!isEditable[$index]" Style="color:#99d6ff;float:left">&#xA0;&#xA0;<strong>{{todo.label}}</strong>
-         <span ng-show="!isEditable[$index]" Style="color:#3399ff;float:left"><strong>{{todo.priority}}</strong></span>&#xA0;&#xA0;
-        </span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
-        
-           <textarea ng-show="isEditable[$index]" ng-keypress="" style="min-width: 250px; max-width: 400px;" ng-model="todo.todo" >{{todo.todo}}</textarea>
+       <span ng-show="!isEditable[$index]" Style="color:#99d6ff;float:left"><strong>{{todo.label}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]" Style="color:#3399ff;float:left"><strong>{{todo.priority}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
+       <textarea ng-show="isEditable[$index]" ng-keypress="" style="min-width: 250px; max-width: 400px;" ng-model="todo.todo" >{{todo.todo}}</textarea>
   <br>           
              <div class="col-md-3 col-sm-3 col-xm-3">
              <select class="form-control selectwidthauto" 
