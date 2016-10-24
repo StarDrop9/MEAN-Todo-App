@@ -275,13 +275,20 @@ $scope.isComplete = function(todo) {
     };
 
 $scope.clearlabel = function (){
- debugger;
+ //debugger;
 $scope.label = "";
    }
 
 $scope.clearpriority = function (){
 $scope.priority = "";
    }
+
+$scope.cleartodopriority = function (){
+$scope.todo.priority = "";
+   var todo.priority =""
+   }
+
+
 
 $scope.ngChangeLabel = function (label){
  console.log(label);
