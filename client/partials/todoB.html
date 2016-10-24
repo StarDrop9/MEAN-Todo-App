@@ -31,7 +31,7 @@
                <datalist id="label">
                 <option ng-repeat="x1 in labels" value="{{x1.label}}">
                </datalist>
-               <Input list="priority" class="selectwidthauto" placeholder="Priority" ng-change="" ng-click="cleartodopriority()" class="form-control" ng-model="todo.priority" /><datalist id="priority">
+               <Input list="priority" class="selectwidthauto" placeholder="Priority" ng-change="" ng-click="cleartodopriority(todo.priority)" class="form-control" ng-model="todo.priority" /><datalist id="priority">
           <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
               </div>
               </div>
