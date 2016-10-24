@@ -24,10 +24,9 @@
          <input type="checkbox" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
       </div>
      <div class="col-md-8 col-sm-8 col-xs-8">
-       <span ng-show="!isEditable[$index]" Style="color:#99d6ff;float:left"><strong>{{todo.label}}</strong>&#xA0;&#xA0;&#xA0;&#xA0;</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]" Style="color:#3399ff;float:left"><strong>{{todo.priority}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
-       <textarea ng-show="isEditable[$index]" ng-keypress="" style="min-width: 250px; max-width: 400px;" ng-model="todo.todo" >{{todo.todo}}</textarea>
-    <br>           
-          <div class="col-md-3 col-sm-3 col-xm-3">
+       <Div ng-show="!isEditable[$index]" Style="color:#99d6ff;float:left"><strong>{{todo.label}}</strong>&#xA0;&#xA0;&#xA0;&#xA0;</Div>&#xA0;&#xA0;&#xA0;&#xA0;<Div ng-show="!isEditable[$index]" Style="color:#3399ff;float:left"><strong>{{todo.priority}}</strong></div>
+       <div ng-show="!isEditable[$index]">{{todo.todo}}</div>
+         <div class="col-md-3 col-sm-3 col-xm-3">
           
           <select class="form-control" 
            ng-show="isEditable[$index]" 
@@ -43,6 +42,12 @@
            ng-change = "test()"
            ng-options="c.priority as c.priority for c in priorities">
            </select>
+  <textarea ng-show="isEditable[$index]" ng-keypress="" style="min-width: 250px; max-width: 400px;" ng-model="todo.todo" >{{todo.todo}}</textarea>
+       
+
+
+
+
            <!-- <div>{{todo.priority}}</div> -->
           <!--   <Input list="label" id="SA"  ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" ng-click="cleartodolabel()" class="form-control selectwidthauto" ng-model="todo.label" /> 
               <datalist id="label">
