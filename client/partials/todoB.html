@@ -28,7 +28,7 @@
        <textarea ng-show="isEditable[$index]" ng-keypress="" style="min-width: 250px; max-width: 400px;" ng-model="todo.todo" >{{todo.todo}}</textarea>
     <br>           
           <div class="col-md-3 col-sm-3 col-xm-3">
-          <select class="form-control selectwidthauto" 
+          <select class="form-control" 
            ng-show="isEditable[$index]" 
            ng-model="todo.label"
            ng-options="a.label for a in labels">
@@ -38,7 +38,7 @@
                 <option ng-repeat="x1 in labels" value="{{x1.label}}">
                </datalist>
           -->     
-              <select class="form-control selectwidthauto" 
+              <select class="form-control" 
               ng-show="isEditable[$index]"
               placeholder="Priority" 
               ng-model="todo._priority"
