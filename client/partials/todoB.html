@@ -33,7 +33,7 @@
              <select class="form-control selectwidthauto" 
               ng-show="isEditable[$index]" 
               ng-model="todo.label"
-              ng-options="label.label for label in labels ">
+              ng-options="label.label for label in labels">
               </select>
      <!--   <Input list="label" id="SA"  ng-show="isEditable[$index]" ng-change="ngChangeLabel(label)" ng-click="cleartodolabel()" class="form-control selectwidthauto" ng-model="todo.label" /> 
               <datalist id="label">
@@ -42,7 +42,9 @@
           -->     
               <select class="form-control selectwidthauto" 
               ng-show="isEditable[$index]" 
-              ng-model="todo.priority"
+              ng-model="todo._priority"
+              ng-init= "todo._priority={priority:todo.priority}"
+              ng-change = todo.priority= todo._priority
               ng-options="priority.priority for priority in priorities track by priority">
               <option value="" style="display: none;">--select--</option>
              </select>    
