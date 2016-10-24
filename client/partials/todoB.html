@@ -39,12 +39,13 @@
                </datalist>
           -->     
               <select class="form-control selectwidthauto" 
-              ng-show="isEditable[$index]" 
+              ng-show="isEditable[$index]"
+              placeholder="Priority" 
               ng-model="todo._priority"
               ng-init= "todo._priority={priority:todo.priority}"
               ng-change = "todo.priority = todo._priority"
               ng-options="priority.priority for priority in priorities">
-              <option value="" style="display: none;">--select--</option>
+              <option value="" style="display: none;"></option>
              </select>    
     <!-- <Input list="priority" ng-show="isEditable[$index]" placeholder="Priority" ng-change="" ng-click="" class="form-control selectwidthauto" ng-model="todo.priority" /><datalist id="priority">
     <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
