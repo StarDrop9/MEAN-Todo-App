@@ -30,7 +30,7 @@
   <br>           
              <div class="col-md-3 col-sm-3 col-xm-3">
             
-              <select data-ng-model="todo.label"  data-ng-options="label.label for label in labels" required="required">
+              <select ng-show="isEditable[$index]" data-ng-model="todo.label"  data-ng-options="label.label for label in labels" required="required">
               <option value="" style="display: none;">-- select --</option>
              </select>
 
