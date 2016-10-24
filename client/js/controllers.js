@@ -280,9 +280,8 @@ $scope.label = "";
 
 $scope.clearpriority = function (){
 debugger;
-$scope.todo.priority = "";
-
-
+todo.priority = "";
+return todo.priority
    }
 
 $scope.ngChangeLabel = function (label){
