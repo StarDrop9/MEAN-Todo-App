@@ -44,7 +44,7 @@
               <select class="form-control selectwidthauto" 
               ng-show="isEditable[$index]" 
               ng-model="todo.priority"
-              ng-options="priority.priority for priority in priorities ">
+              ng-options="priority.priority for priority in priorities track by todo.priority">
               <option value="" style="display: none;">--select--</option>
              </select>    
     <!-- <Input list="priority" ng-show="isEditable[$index]" placeholder="Priority" ng-change="" ng-click="" class="form-control selectwidthauto" ng-model="todo.priority" /><datalist id="priority">
