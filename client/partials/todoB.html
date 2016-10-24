@@ -30,8 +30,8 @@
   <br>           
              <div class="col-md-3 col-sm-3 col-xm-3">
             
-              <select ng-show="isEditable[$index]" class="form-control" ng-model="todo.label" ng-options="label.label for label in labels">
-              <option value="" style="display: none;">-- select --</option>
+              <select ng-show="isEditable[$index]" class="form-control"  ng-options="label.label for label in labels">
+              <option ng-model="todo.label" style="display: none;">-- select --</option>
              </select>
 
 
