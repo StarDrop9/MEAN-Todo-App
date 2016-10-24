@@ -189,6 +189,7 @@ $scope.updateLabelTest = function($event, _id, i, label) {
   };
 
  $scope.updateTodo = function($event, _id, i,label,priority) {
+debugger; 
     var _t = $scope.todos[i];
     todosFactory.updateTodo({
       _id: _id,
