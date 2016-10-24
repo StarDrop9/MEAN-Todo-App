@@ -188,20 +188,20 @@ $scope.updateLabelTest = function($event, _id, i, label) {
     }
   };
 
- $scope.updateTodo = function($event, i, label,priority) {
+ $scope.updateTodo = function($event, i, label,priority,todoInput) {
    debugger;
    if ($event.which == 1) {
      var _t = $scope.todos[i];
       todosFactory.updateTodoTest({
        "_id": _t._id,
-      "todo": $scope.todoInput,
+      "todo": todoInput,
        "isCompleted": _t.isCompleted,
        "label": label,
        "priority":priority
       }).then(function(data) {
         console.log(label);
        if (data.data.updatedExisting) {
-         _t.todo = $scope.todoInput;
+         _t.todo = todoInput;
         _t.label = label;
         _t.priority = priority;
           $scope.isEditable[i] = false;
