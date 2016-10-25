@@ -25,7 +25,7 @@
            <input type="checkbox" ng-show="!isEditable[$index]" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
           </div>
         
-         <div class="col-md-2>
+         <div class="col-md-2" ng-show="!isEditable[$index]">
          <span ng-show="!isEditable[$index]" Style="color:#99d6ff;float:left"><strong>{{todo.label}}</strong></span>
          </div>
         
