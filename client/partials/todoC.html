@@ -33,35 +33,34 @@
             <span ng-show="!isEditable[$index]" Style="color:#99d6ff;float:left">&#xA0;&#xA0;<strong>{{todo.label}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
           </div>
          
-    <div class="row">
-        <div class="col-md-12 ng-show="isEditable[$index]">
+    <Div class="row">
+        <div class="col-md-8 ng-show="isEditable[$index]">
            <select class="form-control selectwidthauto" 
            ng-show="isEditable[$index]" 
            ng-model="todo.label"
            ng-change = "test()"
            ng-options="c.label as c.label for c in labels">
-           </select>
+           </select>&#xA0;&#xA0;&#xA0;&#xA0;
            <select class="form-control selectwidthauto" 
            ng-show="isEditable[$index]" 
            ng-model="todo.priority"
            ng-change = "test()"
            ng-options="c.priority as c.priority for c in priorities">
            </select>
-           <textarea id="todo" ng-show="isEditable[$index]"ng-keypress="edit($event,$index,label,priority);" style="min-width: 200px; max-width: 400px;" >{{todo.todo}}</textarea>
-        </div>
+         </div>
     </Div>    
-
+<textarea id="todo" ng-show="isEditable[$index]"ng-keypress="edit($event,$index,label,priority);" style="min-width: 200px; max-width: 400px;" >{{todo.todo}}</textarea>
 
            <div class="col-md-3 col-sm-3 col-xs-3" ng-show="isEditable[$index]">
-            <input type="button" class="btn btn-info" value="Save" ng-click="edit2($event,$index,label,priority)" />
+           <input type="button" class="btn btn-info" value="Save" ng-click="edit2($event,$index,label,priority)" />
            <input type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />
            </div>
 
 
-         <div class="col-md-3 col-sm-3 col-xs-3" ng-show="!isEditable[$index]">
+           <div class="col-md-3 col-sm-3 col-xs-3" ng-show="!isEditable[$index]">
            <input type="button"  class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />&#xA0;&#xA0;
            <input type="button" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
-         </div>
+           </div>
                 
     </div>
  </div>
