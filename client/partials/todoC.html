@@ -1,9 +1,9 @@
 ​<div class="container-fluid" ng-controller="TodoCtrl">
-     <div class="row col-md-12">
-          <div>
-            <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;background-color:white;"></textarea>
+    <div class="row col-md-12">
+        <div>
+          <textarea  class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;background-color:white;"></textarea>
         </div>
-   <br>
+        <br>
         <Div>
           <Input list="priority" class="selectwidthauto" placeholder="Priority" ng-change="" ng-click="clearpriority()" class="form-control" ng-model="priority" /><datalist id="priority">
           <option ng-repeat="y1 in priorities" value="{{y1.priority}}">
@@ -12,18 +12,35 @@
           </datalist>
           <input type="button" class="btn btn-info" class="pull-center" value="Add" ng-click="add($event,label,priority)"  ng-model="todoInput" />
         </div>
-     </div>
+    </div>
 
-     <div> 
-      <div class="msg"  ng-show="appState == 'added'">This Todo - Idea has been added !</div> 
-      <br/> 
-     <input type="button" class="btn btn-info" class="pull-left" value="Examine" ng-click="loadMore()" />&#xA0;&#xA0;&#xA0;<input type="button" class="btn btn-info" class="pull-left" value="Clear" ng-click="cleartotalDisplayed()" />
-       <div ng-style="{color:'white'}" ng-repeat="todo in todos | limitTo:totalDisplayed |orderBy :'-priority'">
-          <div class="col-md-12 col-sm-12 col-xm-12">
-           <span>{{$index + 1}}</span>
-           <span ng-show="!isEditable[$index]"Style="Color:lightblue"><strong>{{todo.priority}}</strong></span>
-           <span ng-show="!isEditable[$index]"><strong>{{todo.label}}</strong></span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>&#xA0;&#xA0;&#xA0;&#xA0;
-          </div>
-      </div>
-      <div>
+    <div> 
+        <div class="msg"  ng-show="appState == 'added'">This Todo - Idea has been added !
+        </div> 
+        <br/> 
+        <div class="alert alert-success text-center" ng-hide="todos.length > 0">
+          <h3>Loading Todos!</h3>
+        </div> 
+
+
+        <div ng-repeat="todo in todos" class="todo col-md-12 col-sm-12 col-xs-12" ng-class="todo.isCompleted ? 'strike' : ''">
+        <div class="col-md-1 col-sm-1 col-xs-1">
+          <input type="checkbox" ng-show="!isEditable[$index]" ng-checked="todo.isCompleted" ng-click="updateStatus($event, todo._id, $index)">
+        </div>
+        <div class="col-md-10 col-sm-10 col-xs-10">
+          <span ng-show="!isEditable[$index]" Style="color:#99d6ff;float:left"><strong>{{todo.label}}</strong>&#xA0;&#xA0;&#xA0;&#xA0;</span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]" Style="color:#3399ff;float:left"><strong>{{todo.priority}}</strong></span>
+          <span ng-show="!isEditable[$index]">{{todo.todo}}</span>
+          <input type="button"  ng-show="!isEditable[$index]"  class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="onUpdate($index)" />&#xA0;&#xA0;
+          <input type="button" ng-show="!isEditable[$index]" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
+        </div>    
+
+
+    </div>
+      
+
+
+
+
+      
+    </div>
 </div>
