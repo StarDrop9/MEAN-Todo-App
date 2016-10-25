@@ -31,6 +31,8 @@
           <div class="col-md-8 col-sm-8 col-xs-8" ng-show="!isEditable[$index]" >
             <span ng-show="!isEditable[$index]" Style="color:#3399ff;float:left"><strong>{{todo.priority}}</strong></span>&#xA0;&#xA0;
             <span ng-show="!isEditable[$index]" Style="color:#99d6ff;float:left">&#xA0;&#xA0;<strong>{{todo.label}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
+            <input type="button"  class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />&#xA0;&#xA0;
+           <input type="button" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
           </div>
          
     <Div class="row">
@@ -58,9 +60,7 @@
 
 
            <div class="col-md-3 col-sm-3 col-xs-3" ng-show="!isEditable[$index]">
-           <input type="button"  class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="isEditable[$index] = true" />&#xA0;&#xA0;
-           <input type="button" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
-           </div>
+          </div>
                 
     </div>
  </div>
