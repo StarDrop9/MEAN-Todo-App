@@ -34,15 +34,13 @@
 
          
 
-         <div class="col-md-3 col-sm-3 col-xm-3" ng-show="isEditable[$index]">
-            <select class="form-control selectwidthauto" 
+        <div class="col-md-3 col-sm-3 col-xm-3" ng-show="isEditable[$index]">
+           <select class="form-control selectwidthauto" 
            ng-show="isEditable[$index]" 
            ng-model="todo.label"
            ng-change = "test()"
            ng-options="c.label as c.label for c in labels">
            </select>
-          </div>
-          <div class="col-md-2">
            <select class="form-control selectwidthauto" 
            ng-show="isEditable[$index]" 
            ng-model="todo.priority"
