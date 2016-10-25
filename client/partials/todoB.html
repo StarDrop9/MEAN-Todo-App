@@ -36,7 +36,7 @@
 
     <div class="col-md-12 col-sm-12 col-xs-12"> 
        <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-2">
            <select class="form-control selectwidthauto" 
            ng-show="isEditable[$index]" 
            ng-model="todo.label"
@@ -44,7 +44,7 @@
            ng-options="c.label as c.label for c in labels">
            </select>
           </div>
-          <div class="col-md-3">
+          <div class="col-md-2">
            <select class="form-control selectwidthauto" 
            ng-show="isEditable[$index]" 
            ng-model="todo.priority"
@@ -52,7 +52,7 @@
            ng-options="c.priority as c.priority for c in priorities">
            </select>
            </div>
-           <div class="col-md-3 col-sm-3 col-xs-3">
+           <div class="col-md-4 col-sm-4 col-xs-4">
                 <input type="button"  ng-show="!isEditable[$index]"  class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="onUpdate($index)" />&#xA0;&#xA0;
                  <input type="button" ng-show="!isEditable[$index]" class="btn btn-danger" class="pull-right" value="Delete" ng-click="delete($index)" />
                 <input ng-show="isEditable[$index]" type="button" class="btn btn-info" value="Save" ng-click="updateTodo($event,$index,todo.label,todo.priority,todo.todo)" />
