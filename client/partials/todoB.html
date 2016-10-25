@@ -39,7 +39,7 @@
            ng-change = "test()"
            ng-options="c.priority as c.priority for c in priorities">
            </select></span>
-            <span><textarea ng-show="isEditable[$index]" ng-keypress="" style="min-width: 230px; max-width: 400px;" ng-model="todo.todo" >{{todo.todo}}</textarea><span>
+            <span><textarea class="selectwidthauto" ng-show="isEditable[$index]" ng-keypress="" ng-model="todo.todo" >{{todo.todo}}</textarea><span>
     </div>
               <div class="col-md-3 col-sm-3 col-xs-3">
                 <input type="button"  ng-show="!isEditable[$index]"  class="btn btn-info" ng-disabled="todo.isCompleted" class="pull-right" value="Edit" ng-click="onUpdate($index)" />&#xA0;&#xA0;
