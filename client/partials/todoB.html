@@ -64,10 +64,8 @@
            <textarea id="todo" class="" ng-show="isEditable[$index]" ng-keypress="" ng-model="todo.todo" >{{todo.todo}}</textarea>
           </div>
           <div class="col-md-3">
-            <p class = "tpbutton btn-toolbar" style="text-align:center">
-          <input ng-show="isEditable[$index]" type="button" class="btn btn-info" value="Save" ng-click="updateTodo($event,$index,todo.label,todo.priority,todo.todo)" />
-           <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />     
-           </p>
+           <input ng-show="isEditable[$index]" type="button" class="btn btn-info" value="Save" ng-click="updateTodo($event,$index,todo.label,todo.priority,todo.todo)" />
+           <input ng-show="isEditable[$index]" type="button" class="btn btn-warning" value="Cancel" ng-click="isEditable[$index] = false" />      
           </div>
         </div>
      </div>
