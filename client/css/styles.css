@@ -1,7 +1,7 @@
 /*   Added kps */
 
 
-#todo {width:500;}
+#todo {width:400;}
 
 table {
     table-layout: auto;
@@ -136,7 +136,7 @@ input {color:black;}
 
 @media (max-width: 450px) {
 
-#todo {width:230;}
+#todo {width:selectwidthauto;}
 
 
 
