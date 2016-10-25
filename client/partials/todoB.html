@@ -44,7 +44,7 @@
 
   <div class="col-md-12" >
      <div class="row">
-          <div class="col-md-2  ng-show="isEditable[$index]" >
+          <div class="col-md-1  ng-show="isEditable[$index]" >
            <select class="form-control selectwidthauto" 
            ng-show="isEditable[$index]" 
            ng-model="todo.label"
@@ -53,7 +53,7 @@
            </select>
           </div>
           
-          <div class="col-md-2">
+          <div class="col-md-1">
            <select class="form-control selectwidthauto" 
            ng-show="isEditable[$index]" 
            ng-model="todo.priority"
@@ -61,7 +61,7 @@
            ng-options="c.priority as c.priority for c in priorities">
            </select>
            </div>
-           <div class="col-md-4">
+           <div class="col-md-6">
            <textarea class="selectwidthauto" ng-show="isEditable[$index]" ng-keypress="" ng-model="todo.todo" >{{todo.todo}}</textarea>
           </div>
           <div class="col-md-3">
