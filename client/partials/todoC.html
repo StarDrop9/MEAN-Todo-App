@@ -33,8 +33,8 @@
             <span ng-show="!isEditable[$index]" Style="color:#99d6ff;float:left">&#xA0;&#xA0;<strong>{{todo.label}}</strong></span>&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>
 
          
-
-        <div class="col-md-3 col-sm-3 col-xm-3" ng-show="isEditable[$index]">
+    <div class="row">
+        <div class="col-md-12 ng-show="isEditable[$index]">
            <select class="form-control selectwidthauto" 
            ng-show="isEditable[$index]" 
            ng-model="todo.label"
@@ -49,7 +49,7 @@
            </select>
            <textarea id="todo" ng-keypress="edit($event,$index,label,priority);" style="min-width: 200px; max-width: 400px;" >{{todo.todo}}</textarea>
         </div>
-        
+    </Div>    
 
 
            <div class="col-md-3 col-sm-3 col-xs-3" ng-show="isEditable[$index]">
