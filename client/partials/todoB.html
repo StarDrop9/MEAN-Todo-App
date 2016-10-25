@@ -29,22 +29,21 @@
          
 
         <div class="col-md-3 col-sm-3 col-xm-3">
-          <select class="form-control" 
+         <span><select class="form-control" 
            ng-show="isEditable[$index]" 
            ng-model="todo.label"
            ng-change = "test()"
            ng-options="c.label as c.label for c in labels">
            </select>
            <!-- <div>{{todo.label}}</div> -->
-     
            <select class="form-control" 
            ng-show="isEditable[$index]" 
            ng-model="todo.priority"
            ng-change = "test()"
            ng-options="c.priority as c.priority for c in priorities">
-           </select>
+           </select></span>
             <textarea ng-show="isEditable[$index]" ng-keypress="" style="min-width: 250px; max-width: 400px;" ng-model="todo.todo" >{{todo.todo}}</textarea>
-        
+           
           </div>
     </div>
               <div class="col-md-3 col-sm-3 col-xs-3">
