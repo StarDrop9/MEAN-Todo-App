@@ -33,9 +33,7 @@
            ng-model="todo.label"
            ng-change = "test()"
            ng-options="c.label as c.label for c in labels">
-           </select></span>
-           <!-- <div>{{todo.label}}</div> -->
-           <span><select class="form-control selectwidthauto" 
+           </select></span><span><select class="form-control selectwidthauto" 
            ng-show="isEditable[$index]" 
            ng-model="todo.priority"
            ng-change = "test()"
