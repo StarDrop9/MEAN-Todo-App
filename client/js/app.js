@@ -85,7 +85,16 @@ console.log(status)
 
     })
 
+.state('state2.todoC', {
+      url: "/todoC",
+      templateUrl: "partials/todoC.html",
+      controller: function($scope) {
+            },
+    
+    //added for testing
+    // resolve: { loginRequired : accessRestrictionHandler } 
 
+    })
 
 
 
