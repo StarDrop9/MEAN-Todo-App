@@ -143,26 +143,5 @@ console.log(status)
         
       }
     })
-
-.controller('elasticDemoController', ['$scope', '$log', function($scope, $log){
-        'use strict';
-
-        $scope.foo = 'This textarea is going to grow when you fill it with text. Just type a few more words in it and you will see. This textarea is going to grow when you fill it with text.';
-        $scope.bar = 'Elastic with a CSS transition. Try typing something...';
-
-        $scope.submit = function(){
-          $scope.bar = '';
-        };
-
-        $scope.show = true;
-      }])
-      .controller('elasticCallbackController', ['$scope', '$log', function($scope, $log){
-        'use strict';
-
-        $scope.$on('elastic:resize', function(){
-          $log.log('Height was adjusted!');
-        });
-      }]);
-
 });
 
