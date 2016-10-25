@@ -1,5 +1,8 @@
 /*   Added kps */
 
+
+#todo {width:500;}
+
 table {
     table-layout: auto;
 }
@@ -132,6 +135,10 @@ input {color:black;}
 }
 
 @media (max-width: 450px) {
+
+#todo {width:230;}
+
+
 
 .navbar {
   background-color: black;
