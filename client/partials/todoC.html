@@ -13,4 +13,17 @@
           <input type="button" class="btn btn-info" class="pull-center" value="Add" ng-click="add($event,label,priority)"  ng-model="todoInput" />
         </div>
      </div>
- 
+
+     <div> 
+      <div class="msg"  ng-show="appState == 'added'">This Todo - Idea has been added !</div> 
+      <br/> 
+     <input type="button" class="btn btn-info" class="pull-left" value="Examine" ng-click="loadMore()" />&#xA0;&#xA0;&#xA0;<input type="button" class="btn btn-info" class="pull-left" value="Clear" ng-click="cleartotalDisplayed()" />
+       <div ng-style="{color:'white'}" ng-repeat="todo in todos | limitTo:totalDisplayed |orderBy :'-priority'">
+          <div class="col-md-12 col-sm-12 col-xm-12">
+           <span>{{$index + 1}}</span>
+           <span ng-show="!isEditable[$index]"Style="Color:lightblue"><strong>{{todo.priority}}</strong></span>
+           <span ng-show="!isEditable[$index]"><strong>{{todo.label}}</strong></span>&#xA0;&#xA0;&#xA0;&#xA0;<span ng-show="!isEditable[$index]">{{todo.todo}}</span>&#xA0;&#xA0;&#xA0;&#xA0;
+          </div>
+      </div>
+      <div>
+</div>
