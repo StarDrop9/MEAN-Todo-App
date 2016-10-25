@@ -73,3 +73,21 @@
   </div>
 </div>
 
+
+<Div data-ng-controller="elasticDemoController">
+  <h1>Angular Elastic</h1>
+  <form data-ng-submit="submit()">
+    <p>
+      <textarea class="msd-elastic" data-ng-model="foo" id="first" data-ng-show="show" data-ng-controller="elasticCallbackController"></textarea>
+    </p>
+    <small data-ng-show="show"><a href data-ng-click="show = false">Hide</a> | </small>
+    <small data-ng-show="!show"><a href data-ng-click="show = true">Show</a> | </small>
+    <small><a href data-ng-click="foo = 'Model changed'">Change model</a></small>
+    <p>
+      <textarea class="animate msd-elastic: \n;" data-ng-model="bar"></textarea>
+    </p>
+    <p>
+      <input type="submit" value="Submit and reset">
+    </p>
+  </form>
+</div
