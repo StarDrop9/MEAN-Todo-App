@@ -4,7 +4,7 @@
             <textarea ng-show="isEditable[$index]" class="form-control input-lg" placeholder="+ Add ToDo-Idea" ng-keypress="save($event,label,priority)" ng-model="todoInput" style="min-width: 200px; max-width: 400px;background-color:white;"></textarea>
         </div>
         <br>
-        <Div ng-show="!isEditable[$index]">
+        <Div>
           <Input list="label" class="selectwidthauto" placeholder="Category" ng-change="ngChangeLabel(label)" ng-click="clearlabel()" class="form-control" ng-model="label" /><datalist id="label">
           <option ng-repeat="x1 in labels" value="{{x1.label}}">
           </datalist>&#xA0;&#xA0;&#xA0;&#xA0;
