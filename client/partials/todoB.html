@@ -60,8 +60,8 @@
            ng-options="c.priority as c.priority for c in priorities">
            </select>
            </div>
-           <div class="col-md-5">
-           <textarea id="todo" class="" ng-show="isEditable[$index]" ng-keypress="" ng-model="todo.todo" >{{todo.todo}}</textarea>
+           <div class="col-md-5" ng-controller="elasticDemoController">
+           <textarea id="todo" class="msd-elastic" ng-show="isEditable[$index]" ng-keypress="" ng-model="todo.todo" >{{todo.todo}}</textarea>
           </div>
           <div class="col-md-3">
            <input ng-show="isEditable[$index]" type="button" class="btn btn-info" value="Save" ng-click="updateTodo($event,$index,todo.label,todo.priority,todo.todo)" />
@@ -73,21 +73,3 @@
   </div>
 </div>
 
-
-<Div data-ng-controller="elasticDemoController">
-  <h1>Angular Elastic</h1>
-  <form data-ng-submit="submit()">
-    <p>
-      <textarea class="msd-elastic" data-ng-model="foo" id="first" data-ng-show="show" data-ng-controller="elasticCallbackController"></textarea>
-    </p>
-    <small data-ng-show="show"><a href data-ng-click="show = false">Hide</a> | </small>
-    <small data-ng-show="!show"><a href data-ng-click="show = true">Show</a> | </small>
-    <small><a href data-ng-click="foo = 'Model changed'">Change model</a></small>
-    <p>
-      <textarea class="animate msd-elastic: \n;" data-ng-model="bar"></textarea>
-    </p>
-    <p>
-      <input type="submit" value="Submit and reset">
-    </p>
-  </form>
-</div
