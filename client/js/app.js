@@ -89,6 +89,7 @@ console.log(status)
       url: "/todoC",
       templateUrl: "partials/todoC.html",
       controller: function($scope) {
+          $scope.myValue= false;
             },
     
     //added for testing
