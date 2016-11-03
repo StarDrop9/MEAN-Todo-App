@@ -15,7 +15,7 @@ todoApp.factory('todosFactory', function($http) {
 
  };
   _todoService.saveTodo = function(todo) {
-    //debugger; // Set the debugger inside 
+    debugger; // Set the debugger inside 
                 // this function
    console.log(todo);
     return $http.post(urlBase, todo);
