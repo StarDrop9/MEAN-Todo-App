@@ -1,7 +1,7 @@
 MEAN-Todo-App
 =============
 
-A Todo MEAN App - MongoDB, Expressjs, Angularjs and Nodejs
+A Todo MEAN App - MongoDB, Express, Angular and Node
 
 ### Install
 
