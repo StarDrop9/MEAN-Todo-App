@@ -4,11 +4,11 @@
   "description": "A MEAN stack Todo App",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1",
-    "bootstrap": "~3.2.0",
-    "angular": "~1.5.7",
-    "angular-route": "~1.5",
+    "jquery": "latest",
+    "bootstrap": "latest",
+    "angular": "latest",
+    "angular-route": "latest",
     "textarea-autosize": "latest",
-    "angular-elastic-input": "^2.3.0"
+    "angular-elastic-input": "latest"
   }
 }
